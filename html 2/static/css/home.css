@@ -1,0 +1,538 @@
+
+/* HEADER */
+.home header .logo:before{ background-image: url('../img/home/logoIcon.png'); }
+.home header .logo:after{ background-image: url('../img/home/logoText.png'); }
+.home header ul li a:hover, .home header ul li.active a { color: #f2563d; }
+
+/* INTRO */
+.home section.intro .text { 
+	font-size: 24px;
+	font-family: "Casper";
+	margin-top: -61px; 
+}
+
+.home section.intro .text h1{ 
+	font-size: 90px;
+	text-transform: uppercase;
+	font-family: "Brandon_bold";
+}
+
+.home section.intro .text .endIntro{ 
+	font-size: 48px;
+	text-transform: uppercase;
+	font-family: "Brandon_bold";
+}
+
+.home section.intro .text .endIntro .icon{ 
+	display: inline-block;
+	width: 35px; height: 64px;
+	margin-right: 2px;
+	background-image: url('../img/home/introLogo.png');
+	background-size: 35px;
+}
+
+@media screen and ( min-width: 1200px) {
+
+	.home section.intro .text { font-size: 36px; margin-top: -95px; }
+	.home section.intro .text h1{ font-size: 140px; }
+	.home section.intro .text .endIntro{ font-size: 72px; }
+	.home section.intro .text .endIntro .icon{ width: 55px; height: 101px; margin-right: 5px; background-size: 55px; }
+
+}
+
+/* NEWS */
+
+
+.home section.news {
+	background-color: #fff;
+}
+.home section.news h2 {
+	color: #d04834;
+}
+
+.home section.news .content {
+	position: relative;
+	width: 754px;
+	height: 305px; 
+	margin: 0 auto;
+}
+
+.home section.news .pictures {
+	position: absolute;
+	left: 0;
+	width: 474px; height: 305px;  
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+.home section.news .pictures .navigation{
+	position: absolute;
+	top: 0; right: 0;
+	z-index: 10;
+}
+
+.home section.news .pictures .navigation .btn{
+	width: 40px; height: 40px;
+	background-color: #f2563d;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.home section.news .pictures .navigation .btn.nextBtn {
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.home section.news .pictures .navigation .btn .icon{
+	width: 80px; height: 40px;
+	background-image: url('../img/home/arrow.png');
+	background-size: 40px; 
+-webkit-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.home section.news .pictures .navigation .btn:hover .icon{
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%)
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+}
+
+.home section.news .pictures .navigation .count{
+	width: 40px; height: 24px;
+	background-color: #fff;
+	font-size: 10px;
+	line-height: 24px;
+	font-family: "Casper";
+	color: #888;
+}
+
+.home section.news .pictures .picture {
+	position: absolute;
+	width: 100%; height: 100%;
+	background-size: cover;
+}
+
+.home section.news .texts {
+	position: absolute;
+	right: 0;
+	width: 228px; height: 305px;  
+	color: #888;
+	text-align: left;	
+	overflow: hidden;
+}
+
+.home section.news .texts .text{
+	height: 100%;
+	position: absolute;
+	left: 0; top: 0;
+}
+
+.home section.news .texts .date{
+	width: 5px;
+	font-family: "Brandon_black";
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #0b6ca0;
+	margin-bottom: 20px;
+}
+
+.home section.news .texts .title{
+	color: #d04834;
+	text-align: left;
+}
+
+
+.home section.news .button {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #fff;
+	background-color: #d04834;
+	border-color: #0b6ca0; 
+}
+
+@media screen and ( min-width: 1200px) {
+	
+	.home section.news .content { width: 1160px; height: 470px; }
+	.home section.news .pictures { width: 730px; height: 470px; }
+	.home section.news .pictures .navigation .btn{ width: 60px; height: 60px; }
+	.home section.news .pictures .navigation .btn .icon{ width: 120px; height: 60px; background-size: 60px; }
+	.home section.news .pictures .navigation .count{ width: 60px; height: 40px; font-size: 12px; line-height: 40px; }
+	.home section.news .texts { width: 350px; height: 470px; }
+	.home section.news .texts .date{ font-size: 24px; margin-bottom: 30px; }
+}
+
+/* COURS */
+
+.home section.cours {
+	position: relative;
+}
+
+.home section.cours h2 {
+	color: #177fb6;
+}
+
+.home section.cours .text {
+	margin: 0 auto;
+	width: 462px;
+	font-size: 11px;
+	line-height: 17px;
+	font-family: "Casper";
+	color: #555;
+	text-align: justify;
+}
+
+.home section.cours .text p{
+	margin-bottom: 20px;
+}
+
+.home section.cours .text p:first-child{
+	font-size: 13px;
+	line-height: 17px;
+	font-family: "Brandon_bold";
+}
+
+.home section.cours .text p.subtitle{
+	font-family: "Brandon_black";
+	font-size: 16px;
+	text-align: center;
+	color: #177fb6;
+	margin-bottom: 6px;
+}
+
+.home section.cours .button{
+	color: #FFF;
+	border-bottom-color: #f5ba62;
+	background-color: #177fb6;
+}
+
+.home section.cours .hands {
+	width: 100%; height: 100%;
+	position: absolute;
+	top: 0; left: 0;
+	overflow: hidden;
+	z-index: -1;
+	background-color: #e6e4de;
+}
+.home section.cours .hands div {
+	width: 300px; height: 300px;
+	position: absolute;
+	background: url('../img/home/coursHand.jpg') center no-repeat;
+}
+.home section.cours .hands .hand2 {
+	top: 0; right: -50px;
+	-webkit-transform: rotate(70deg);
+	-ms-transform: rotate(70deg);
+	-o-transform: rotate(70deg);
+	transform: rotate(70deg);
+}
+.home section.cours .hands .hand3 {
+	bottom: 0; right: 0;
+	-webkit-transform: rotate(190deg);
+	-ms-transform: rotate(190deg);
+	-o-transform: rotate(190deg);
+	transform: rotate(190deg);
+}
+
+@media screen and ( min-width: 1200px) {
+	.home section.cours { padding-top: 100px; padding-bottom: 52px; }
+	.home section.cours .title { font-size: 80px; margin-bottom: 80px; }
+	.home section.cours .text { width: 710px; }
+	.home section.cours .text p { font-size: 14px; line-height: 22px; margin-bottom: 30px;}
+	.home section.cours .text p:first-child { font-size: 18px; line-height: 26px;}
+	.home section.cours .text p.subtitle { font-size: 24px; margin-bottom: 10px;}
+}
+
+/* TRANSITION */
+.home section.transition .content {
+	background-image: url('../img/home/transition.jpg');
+}
+
+/* PROCHAINEMENT */
+.home section.prochainement {
+	padding-bottom: 0;
+	position: relative;
+}
+
+.home section.prochainement h2 {
+	color: #c2cc96;
+}
+
+.home section.prochainement .actu {
+	position: relative;
+	width: 700px; height: 350px;
+	background-color: #fff;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.home section.prochainement .actu .image{
+	position: absolute;
+	top: 0; left: 0;
+	width: 350px; height: 350px;
+}
+.home section.prochainement .actu .image img {
+	width: 100%;
+}
+
+.home section.prochainement .actu .date {
+	position: absolute;
+	width: 78px; height: 78px;
+	background-color: #5b7c47;
+	line-height: 78px;
+	top: 0; right: 50%;
+	z-index: 2;
+	text-align: center;
+}
+
+.home section.prochainement .actu .date .content{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	font-family: 'Brandon_bold';
+	font-size: 13px;
+	line-height: 14px;
+	color: #FFF;
+	text-align: left;
+}
+
+.home section.prochainement .actu .date .content b{
+	color: #c2cc96;
+	font-size: 16px;
+}
+
+.home section.prochainement .actu .text{
+	position: absolute;
+	top: 0; right: 0;
+	width: 350px; height: 350px;
+	line-height: 350px;
+	padding: 0 52px;
+}
+
+.home section.prochainement .actu .text .content {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	text-align: left;
+	color: #888;
+}
+
+.home section.prochainement .actu .text .content .title{
+	line-height: 25px;
+	color: #617528;
+	margin-bottom: 0;
+}
+
+.home section.prochainement .actu .text .content .baseline{
+	font-family: 'Brandon_black';
+	font-size: 16px;
+	line-height: 16px;
+	color: #c2cc96;
+	margin-bottom: 20px;
+}
+
+.home section.prochainement .actu .text .content .smallButton{
+	background-color: #b0321d;
+	border-bottom-color: #6e3f2c;
+	color: #FFF;
+	text-align: center;
+	line-height: 26px; height: 30px;
+	font-size: 10px;
+	width: 120px;
+}
+
+.home section.prochainement .actu .text .content .baseline:before {
+	content: "/ ";
+	color: #b0321d;
+}
+
+.home section.prochainement .actu:nth-child(odd) .image { left: auto; right: 0; }
+.home section.prochainement .actu:nth-child(odd) .text { left: 0; right: auto; }
+.home section.prochainement .actu:nth-child(odd) .date { left: 50%; right: auto; }
+
+.home section.prochainement>.button{
+	background-color: #b0321d;
+	border-bottom-color: #6e3f2c;
+	color: #FFF;
+	margin: 65px 0;
+}
+
+
+.home section.prochainement .mediators {
+	width: 100%; height: 100%;
+	position: absolute;
+	top: 0; left: 0;
+	overflow: hidden;
+	background: url('../img/home/prochainement.jpg') center #68833d; 
+	background-size: cover;
+	z-index: -1;
+}
+.home section.prochainement .mediators div {
+	width: 300px; height: 300px;
+	position: absolute;
+}
+.home section.prochainement .mediators .mediator1 { background: url('../img/home/mediator3.png') center no-repeat; top: 0; right: -60px; }
+.home section.prochainement .mediators .mediator2 { background: url('../img/home/mediator2.png') center no-repeat; top: 420px; left: -100px; }
+.home section.prochainement .mediators .mediator3 { background: url('../img/home/mediator.png') center no-repeat; top: 1020px; right: 22px; }
+
+
+@media screen and ( min-width: 1200px) {
+	.home section.prochainement .actu { width: 1080px; height: 540px; }
+	.home section.prochainement .actu .image { width: 540px; height: 540px; } 
+	.home section.prochainement .actu .text { width: 540px; height: 540px; line-height: 540px; }
+	.home section.prochainement .actu .text .content .title{ font-size: 36px; line-height: 38px;}
+	.home section.prochainement .actu .text .content .baseline{ font-size: 24px; line-height: 25px; margin-bottom: 30px; }
+	.home section.prochainement>.button { margin: 100px 0; }
+	.home section.prochainement .actu .text .content .smallButton { font-size: 12px; height: 46px; line-height: 40px; width: 185px;}
+	.home section.prochainement .actu .date { width: 120px; height: 120px; line-height: 120px; }
+	.home section.prochainement .actu .date .content{ font-size: 20px; line-height: 21px; }
+	.home section.prochainement .actu .date .content b{ font-size: 24px; }
+}
+
+
+/* EN ACTION  */
+.home section.action {
+	background-color: #fff; 
+	padding-bottom: 0;
+}
+
+.home section.action h2{
+	color: #0c6da0;
+}
+
+.home section.action>.button{
+	background-color: #0c6da0;
+	border-bottom-color: #f4b251;
+	color: #FFF;
+	margin: 0 0 52px 0;
+}
+
+.home section.action .content {
+	position: relative;
+	width: 806px;
+	height: 325px;
+	margin: 0 auto;
+}
+
+.home section.action .arrow{
+	position: absolute;
+	left: 0; top: 97px;
+	width: 40px; height: 40px;
+	background-color: #f4b251;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.home section.action .arrow.next {
+	left: auto; right: 0;
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.home section.action .arrow .icon{
+	width: 80px; height: 40px;
+	background-image: url('../img/home/arrow.png');
+	background-size: 40px; 
+-webkit-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.home section.action .arrow:hover .icon{
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%)
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+}
+
+
+.home section.action .slider {
+	position: relative;
+	overflow: hidden;
+	width: 702px; height: 325px;
+	margin: 0 auto;
+}
+
+.home section.action .albums {
+	text-align: left;
+	font-size: 0;
+	width: 10000px;
+}
+
+.home section.action .albums .album{
+	position: relative;
+	display: inline-block;
+	width: 234px; height: 234px;
+	background-color: #ddd;
+}
+
+.home section.action .albums .album img{
+	width: 100%; height: 100%;
+}
+
+.home section.action .albums .album .text{
+	padding: 14px;
+}
+
+.home section.action .albums .album .text .title{
+	font-size: 16px;
+	color: #0c6da0;
+	margin: 0;
+}
+
+.home section.action .albums .album .text .infos{
+	display: inline-block;
+	color: #f4b251;
+	font-family: "Brandon_black";
+	font-size: 13px;
+	margin-right: 10px;
+}
+
+.home section.action .albums .album .text .infos:before{ content: "/ "; }
+
+.home section.action .albums .album .hover {
+	width: 100%; height: 100%;
+	position: absolute;
+	top: 0; left: 0;
+	background: rgba(244,178,81,.6);
+	border: 6px solid rgb(244,178,81);
+	opacity: 0;
+	cursor: pointer;
+}
+.home section.action .albums .album .hover span {
+	width: 100%; height: 100%;
+	position: absolute;
+	left: 0; top: 0;
+	background: url('../img/home/mediator_hover.png') center no-repeat;
+}
+.home section.action .albums .album:hover .hover {
+	opacity: 1;
+}
+
+@media screen and ( min-width: 1200px) {
+	.home section.action>.button { margin: 0 0 80px 0; }
+	.home section.action .arrow{ width: 60px; height: 60px; top:150px;}
+	.home section.action .arrow .icon{ width: 120px; height: 60px; background-size: 60px; }
+	.home section.action .content { width: 1240px; height: 500px; }
+	.home section.action .slider { width: 1080px; height: 500px;}
+	.home section.action .albums .album { width: 360px; height: 360px;}
+	.home section.action .albums .album .text{ padding: 20px }
+	.home section.action .albums .album .text .title{ font-size: 24px; }
+	.home section.action .albums .album .text .infos{ font-size: 20px; }
+}

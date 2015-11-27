@@ -1,0 +1,162 @@
+
+/* HEADER */
+.ecole header .logo:before{ background-image: url('../img/ecole/logoIcon.png'); }
+.ecole header .logo:after{ background-image: url('../img/ecole/logoText.png'); }
+.ecole header ul li a:hover, .ecole header ul li.active a { color: #599adf; }
+
+/* INTRO */
+.ecole section.intro .text { 
+	color: #599adf;
+	margin-top: -60px;
+}
+
+/* PRESENTATION */
+.ecole section.presentation {
+	height: 264px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Brandon_bold";
+	background: url('../img/ecole/bg_presentation.jpg') no-repeat center;
+	background-size: cover;
+	padding-top: 80px;
+}
+.ecole section.presentation span {
+	width: 80px; height: 6px;
+	position: relative;
+	margin-top: 25px;
+	display: inline-block;
+	background: #c94731;
+}
+.ecole section.presentation span::after {
+	content: '';
+	width: 80px; height: 6px;
+	position: absolute;
+	top: 6px; left: 0;
+	display: inline-block;
+	background: #fff;
+}
+
+/* TRANSITION */
+.ecole section.transition .content {
+	background-image: url('../img/ecole/transition.jpg');
+}
+
+/* A PROPOS */
+.ecole section.apropos {
+	background: #fff;
+	text-align: center;
+	color: #888;
+	padding-bottom: 100px;
+}
+.ecole section.apropos h2 { color: #538fcf }
+.ecole section.apropos .line {
+	width: 1100px;
+	display: inline-block;
+	font-family: "Casper";
+	text-align: justify;
+	line-height: 22px;
+}
+.ecole section.apropos .letterspace { width: 30px; display: inline-block; }
+.ecole section.apropos .line .left { float: left; }
+.ecole section.apropos .line .right { float: right; }
+.ecole section.apropos .line.line1 { margin-bottom: 80px; }
+.ecole section.apropos .line.line1 p { width: 300px; margin-top: 80px }
+.ecole section.apropos .line.line1 a { color: #538fcf; }
+.ecole section.apropos .line.line2 p { width: 460px; margin-top: 80px }
+.ecole section.apropos .line.line2 a { color: #d04834; text-decoration: underline; font-family: "Brandon_black"; }
+.ecole section.apropos .line b { width: 300px; font-family: "Brandon_bold"; }
+.ecole section.apropos .line .button {
+	color: #fff;
+	background-color: #d04834;
+	border-color: #538fcf;
+	margin-top: 50px;
+	font-size: 12px;
+}
+
+/* TRANSITION2 */
+.ecole section.transition2 .content {
+	background-image: url('../img/ecole/transition2.jpg');
+}
+
+/* L'EQUIPE */
+.ecole section.equipe {
+	height: 2000px;
+	color: #fff;
+	background: url('../img/ecole/bg_equipe.jpg') center #c94731; 
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+.ecole section.equipe .wall {
+	width: 1080px;
+	display: inline-block;
+	background: #fff;
+	color: #666;
+	text-align: left;
+}
+.ecole section.equipe .wall .text {
+	padding: 65px 65px 0 65px;
+	float: left;
+	width: 50%;
+}
+
+.ecole section.equipe .wall .title {
+	font-family: "Brandon_black";
+	font-size: 36px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	color: #538fcf;
+}
+.ecole section.equipe .wall .baseline {
+	font-family: 'Brandon_black';
+	font-size: 24px;
+	color: #c2cc96;
+	margin-bottom: 20px;
+	color: #32567d;
+}
+.ecole section.equipe .wall .baseline::before {
+	content: "/ ";
+	color: #b0321d;
+}
+.ecole section.equipe .wall .description {
+	font-size: 14px;
+}
+.ecole section.equipe .wall .description a {
+	color: #d04834;
+	text-decoration: underline;
+	font-family: "Brandon_black";
+	text-transform: uppercase;
+}
+
+.ecole section.equipe .wall .mainline, .ecole section.equipe .wall .littleline { height: 540px; }
+
+.ecole section.equipe .wall .mainline {
+	width: 100%;
+	background: #fff;
+}
+.ecole section.equipe .wall .mainline .img {
+	width: 50%; height: 100%;
+	float: left;
+}
+
+.ecole section.equipe .wall .littleline {
+	width: 33.333333333%; float: left;
+}
+.ecole section.equipe .wall .littleline .img {
+	width: 100%; height: 360px;
+}
+
+.ecole section.equipe .wall .littleline .text { width: 100%; padding: 45px; }
+.ecole section.equipe .wall .littleline .title { font-size: 24px; }
+.ecole section.equipe .wall .littleline .baseline { font-size: 20px; }
+
+.ecole section.equipe .wall .white { background: #fff }
+
+.ecole section.equipe .wall .lightblue { background: #538fcf }
+.ecole section.equipe .wall .lightblue .title { color: #fff }
+.ecole section.equipe .wall .lightblue .baseline { color: #fff }
+
+.ecole section.equipe .wall .blue { background: #32567d }
+.ecole section.equipe .wall .blue .title { color: #dc4e36 }
+.ecole section.equipe .wall .blue .baseline { color: #fff }
+.ecole section.equipe .wall .blue .baseline::before { color: #538fcf; }

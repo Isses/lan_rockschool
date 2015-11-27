@@ -1,0 +1,158 @@
+
+/* HEADER */
+.temoignages header .logo:before{ background-image: url('../img/temoignages/logoIcon.png'); }
+.temoignages header .logo:after{ background-image: url('../img/temoignages/logoText.png'); }
+.temoignages header ul li a:hover, .temoignages header ul li.active a { color: #bd4476; }
+
+/* INTRO */
+.temoignages section.intro .bg {
+	background: url('../img/temoignages/intro.jpg') no-repeat center;
+	background-size: cover;
+}
+.temoignages section.intro .text { 
+	color: #bd4476;
+	margin-top: -60px;
+}
+.temoignages section.intro .scrolldown {
+    background: url('../img/temoignages/mediator_scrolldown.png') center no-repeat;
+}
+.temoignages section.intro .text { 
+	font-size: 24px;
+	font-family: "Casper";
+	margin-top: -61px; 
+}
+.temoignages section.intro .text h1{ 
+	font-size: 90px;
+	text-transform: uppercase;
+	font-family: "Brandon_bold";
+}
+@media screen and ( min-width: 1200px) {
+
+	.temoignages section.intro .text { font-size: 36px; margin-top: -95px; }
+	.temoignages section.intro .text h1{ font-size: 140px; }
+}
+
+/* PRESENTATION */
+.temoignages section.presentation {
+	height: 264px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Brandon_bold";
+	background: url('../img/temoignages/bg_presentation.jpg') no-repeat center;
+	background-size: cover;
+	padding-top: 80px;
+}
+.temoignages section.presentation span {
+	width: 80px; height: 6px;
+	position: relative;
+	margin-top: 25px;
+	display: inline-block;
+	background: #ddb371;
+}
+.temoignages section.presentation span::after {
+	content: '';
+	width: 80px; height: 6px;
+	position: absolute;
+	top: 6px; left: 0;
+	display: inline-block;
+	background: #fff;
+}
+
+/* TRANSITION */
+.temoignages section.transition .content {
+	background-image: url('../img/temoignages/transition.jpg');
+}
+
+/* ELEVES */
+.temoignages section.eleves {
+	background: #fff;
+}
+.temoignages section.eleves .contain {
+	width: 1100px;
+	display: inline-block;
+	font-family: "Casper";
+	color: #888;
+}
+.temoignages section.eleves .line {
+	width: 100%;
+	margin-bottom: 80px;
+}
+.temoignages section.eleves .linecontain {
+	display: inline-block;
+}
+.temoignages section.eleves .line .full {
+	width: 100%
+}
+
+.temoignages section.eleves .line .img { float: left; }
+.temoignages section.eleves .line .text { float: left; margin: 110px 0 0 80px; text-align: left; }
+.temoignages section.eleves .line .full .text { float: right; margin: 110px 0 0 0; }
+
+.temoignages section.eleves .line .text .space { display: inline-block; width: 35px }
+
+.temoignages section.eleves .line:nth-child(even) .img { float: right; }
+.temoignages section.eleves .line:nth-child(even) .text { float: right; margin: 110px 80px 0 0; }
+.temoignages section.eleves .line:nth-child(even) .full .text { float: left; margin: 110px 0 0 0; }
+
+.temoignages section.eleves .line .text.left { float: left; margin-left: 80px; }
+
+.temoignages section.eleves .line .text.taille1 { width: 320px; }
+.temoignages section.eleves .line .text.taille2 { width: 400px; }
+.temoignages section.eleves .line .text.taille3 { width: 460px; }
+.temoignages section.eleves .line .text.taille4 { width: 560px; }
+.temoignages section.eleves .line .text.taille5 { width: 240px; }
+.temoignages section.eleves .line .text.louisevalentina { margin-top: 200px; }
+.temoignages section.eleves .line.bertrand { position: relative; top: -160px; margin-bottom: -80px; }
+.temoignages section.eleves .line.bertrand .text { margin-top: 240px }
+.temoignages section.eleves .line.raphaelle .text { margin-top: 50px !important}
+
+.temoignages section.eleves .line .yellow { color: #e9bc76; }
+
+.temoignages section.eleves .line .presentation {
+	text-align: justify;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 23px;
+	position: relative;
+}
+
+.temoignages section.eleves .line .presentation::after, .temoignages section.eleves .line .presentation::before {
+	content: '';
+	width: 30px; height: 26px;
+	position: absolute;
+}
+.temoignages section.eleves .line .presentation::before {
+	top: -40px; left: 0;
+	background: url('../img/temoignages/note1.gif') center no-repeat;
+}
+.temoignages section.eleves .line .presentation::after {
+	bottom: -40px; right: 0;
+	background: url('../img/temoignages/note2.gif') center no-repeat;
+}
+.temoignages section.eleves .line .auteur { font-size: 28px; color: #e9bc76; font-family: "Brandon_bold"; }
+.temoignages section.eleves .line .auteur .prenom { color: #bd4476; font-size: 36px; text-transform: uppercase; }
+.temoignages section.eleves .line .auteur .prenom b { font-size: 28px; }
+.temoignages section.eleves .line .auteur .age { color: #561f36; }
+.temoignages section.eleves .line .auteur .age::before { content:' / '; color: #e9bc76; }
+.temoignages section.eleves .line .auteur .pratiques { display: block; }
+
+.temoignages section.eleves .line .separator {
+	width: 50px; height: 4px;
+	position: relative;
+	margin: 60px 0 30px;
+	display: inline-block;
+	background: #e9bc76;
+}
+.temoignages section.eleves .line .separator::after {
+	content: '';
+	width: 50px; height: 4px;
+	position: absolute;
+	top: 4px; left: 0;
+	display: inline-block;
+	background: #bd4476;
+}
+
+/* TRANSITION2 */
+.temoignages section.transition2 .content {
+	background-image: url('../img/temoignages/transition2.jpg');
+}

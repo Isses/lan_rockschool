@@ -1,0 +1,69 @@
+
+/* HEADER */
+.medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }
+.medias header .logo:after{ background-image: url('../img/medias/logoText.png'); }
+.medias header ul li a:hover, .medias header ul li.active a { color: #faad39; }
+
+/* INTRO */
+.medias section.intro .bg {
+	background: url('../img/medias/intro.jpg') no-repeat center;
+	background-size: cover;
+}
+.medias section.intro .text { 
+	color: #faad39;
+	margin-top: -60px;
+}
+.medias section.intro .scrolldown {
+    background: url('../img/medias/mediator_scrolldown.png') center no-repeat;
+}
+.medias section.intro .text { 
+	font-size: 24px;
+	font-family: "Casper";
+	margin-top: -61px; 
+}
+.medias section.intro .text h1{ 
+	font-size: 90px;
+	text-transform: uppercase;
+	font-family: "Brandon_bold";
+}
+@media screen and ( min-width: 1200px) {
+
+	.medias section.intro .text { font-size: 36px; margin-top: -95px; }
+	.medias section.intro .text h1{ font-size: 140px; }
+}
+
+/* PRESENTATION */
+.medias section.presentation {
+	height: 264px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Brandon_bold";
+	background: url('../img/medias/bg_presentation.jpg') no-repeat center;
+	background-size: cover;
+	padding-top: 80px;
+}
+.medias section.presentation span {
+	width: 80px; height: 6px;
+	position: relative;
+	margin-top: 25px;
+	display: inline-block;
+	background: #8a66c3;
+}
+.medias section.presentation span::after {
+	content: '';
+	width: 80px; height: 6px;
+	position: absolute;
+	top: 6px; left: 0;
+	display: inline-block;
+	background: #fff;
+}
+
+/* TRANSITION */
+.medias section.transition .content {
+	background-image: url('../img/medias/transition.jpg');
+}
+
+/* TRANSITION2 */
+.medias section.transition2 .content {
+	background-image: url('../img/medias/transition2.jpg');
+}

@@ -1,0 +1,198 @@
+/* FONTS */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
+
+body{
+	background-color: #333;
+	height: 100%;
+}
+
+header {
+	position: fixed;
+	width: 100%; height: 65px;
+	background: url('../img/common/nav_texture.jpg') bottom #000;
+	background-size: auto 65px;
+	z-index: 20;
+}
+
+header .logo{
+	position: absolute;
+	width: 145px; height: 145px;
+	background-color: #fff;
+}
+
+header .logo:before,
+header .logo:after{
+	content: "";
+	position: absolute;
+	left: 0; top:0;
+	width: 145px; height: 145px;
+	background: url('../img/home/logoIcon.png') center no-repeat;
+	background-size: 72px;
+}
+
+header ul{
+	text-align: left;
+	padding-left: 145px;
+	height: 100%;
+	font-size: 0;
+}
+
+header ul li{
+	position: relative;
+	height: 65px; line-height: 45px; 
+	width: 15%;
+	display: inline-block;
+	font-family: "Brandon_bold";
+	color: #FFF;
+	text-align: center;
+	font-size: 10px;
+}
+
+header ul li a{
+	display: block;
+	width: 100%; height: 100%;
+	color: #FFF;
+	cursor: pointer;
+}
+
+header ul li a:after{
+	content: "";
+	position: absolute;
+	height: 26px; width: 26px; 
+	left: 50%; margin-left: -13px;
+	bottom: 50%; margin-bottom: -25px;
+	background: url('../img/common/nav_switch.png');
+	background-size: 26px;
+}
+
+header.collapsed {
+	height: 42px;
+}
+header.collapsed .logo {
+	height: 42px;
+}
+header.collapsed .logo:before,
+header.collapsed .logo:after { 
+	-webkit-transform: scale(.7) translateY(-57px);
+	-ms-transform: scale(.7) translateY(-57px);
+	-o-transform: scale(.7) translateY(-57px);
+	transform: scale(.7) translateY(-57px);
+}
+
+header.collapsed .logo:after{ 
+	opacity: 0;
+}
+
+header.collapsed ul li {
+	height: 42px;
+}
+
+header.collapsed ul li a:after {
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+}
+
+@media screen and ( min-width: 1200px) {
+	header { height: 100px; background-size: auto 100px;}
+	header ul{ padding-left: 222px; }
+	header .logo{ width: 222px; height: 222px; background-size: 110px; }
+	header .logo:before,header .logo:after{ width: 222px; height: 222px; background-size: 110px; }
+	header ul li{ height: 100px; line-height: 70px; width: 160px; font-size: 14px; }
+	header ul li a:after{ height: 40px; width: 40px; margin-left: -20px; margin-bottom: -40px;background-size: 40px; }
+
+	header.collapsed { height: 65px; }
+	header.collapsed .logo{ height: 65px; }
+	header.collapsed .logo:before,header.collapsed .logo:after{ 
+		-webkit-transform: scale(.7) translateY(-87px);
+		-ms-transform: scale(.7) translateY(-87px);
+		-o-transform: scale(.7) translateY(-87px);
+		transform: scale(.7) translateY(-87px);
+	}
+	header.collapsed ul li{ height: 65px; line-height: 65px;}
+
+}
+
+header,
+header .logo,
+header .logo:before,
+header .logo:after,
+header ul,
+header ul li,
+header ul li a:after{
+-webkit-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+}
+
+header ul li {
+-webkit-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000), width 0.1ms ease; 
+   -moz-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000), width 0.1ms ease; 
+     -o-transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000), width 0.1ms ease; 
+        transition: all 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000), width 0.1ms ease;
+}
+
+
+footer {
+	width: 100%; height: 115px;
+	background: url('../img/common/footer_texture.jpg') top #000;
+	background-size: auto 65px;
+	background-repeat: repeat-x;
+	color: #FFF;
+	font-family: "Casper";
+	font-size: 12px;
+	vertical-align: bottom;
+	text-align: center;
+}
+footer .contain {
+	width: 80%;
+	padding: 50px 0 0 80px;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+}
+footer a { color: #fff; }
+footer .logo {
+	width: 80px; height: 80px;
+	position: absolute;
+	top: 45px; left: -60px;
+	background: url('../img/common/footer_logo.png') center;
+}
+footer .contact, footer .follow { float: left; }
+footer .follow { margin-left: 130px; }
+footer .credits {
+	position: absolute;
+	bottom: 0; right: 0;
+	margin-bottom: -10px;
+}
+footer .pictosocial {
+	width: 30px; height: 30px;
+	display: inline-block;
+}
+footer .pictofb {  background: url('../img/common/footer_facebook.gif') center; }
+footer .pictoytb { background: url('../img/common/footer_youtube.gif') center; }
+
+footer h4 {
+	font-family: "Brandon_bold";
+	font-size: 18px;
+	margin-bottom: 22px;
+}
+
+footer p {
+	display: inline-block;
+	width: 185px;
+	vertical-align: bottom;
+}
+
+footer p h4 { margin-bottom: 30px; width: 100%;}
+
+@media screen and ( min-width: 1200px) {
+	footer { height: 175px; background-size: auto 100px;}
+	footer .contain { width: 1240px; }
+}
+

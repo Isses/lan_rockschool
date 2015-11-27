@@ -1,0 +1,328 @@
+
+/* HEADER */
+.cours header .logo:before{ background-image: url('../img/cours/logoIcon.png'); }
+.cours header .logo:after{ background-image: url('../img/cours/logoText.png'); }
+.cours header ul li a:hover, .cours header ul li.active a { color: #f4b251; }
+
+/* INTRO */
+.cours section.intro .bg {
+	background: url('../img/cours/intro.jpg') no-repeat center;
+	background-size: cover;
+}
+.cours section.intro .text { 
+	color: #f4b251;
+	margin-top: -60px;
+}
+.cours section.intro .scrolldown {
+    background: url('../img/cours/mediator_scrolldown.png') center no-repeat;
+}
+.cours section.intro .text { 
+	font-size: 24px;
+	font-family: "Casper";
+	margin-top: -61px; 
+}
+.cours section.intro .text h1{ 
+	font-size: 90px;
+	text-transform: uppercase;
+	font-family: "Brandon_bold";
+}
+@media screen and ( min-width: 1200px) {
+
+	.cours section.intro .text { font-size: 36px; margin-top: -95px; }
+	.cours section.intro .text h1{ font-size: 140px; }
+}
+
+/* PRESENTATION */
+.cours section.presentation {
+	height: 264px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Brandon_bold";
+	background: url('../img/cours/bg_presentation.jpg') no-repeat center;
+	background-size: cover;
+	padding-top: 80px;
+}
+.cours section.presentation span {
+	width: 80px; height: 6px;
+	position: relative;
+	margin-top: 25px;
+	display: inline-block;
+	background: #0b6ca0;
+}
+.cours section.presentation span::after {
+	content: '';
+	width: 80px; height: 6px;
+	position: absolute;
+	top: 6px; left: 0;
+	display: inline-block;
+	background: #fff;
+}
+
+/* TRANSITION */
+.cours section.transition .content {
+	background-image: url('../img/cours/transition.jpg');
+}
+
+/* FORMULES */
+.cours section.formules {
+	background: #fff;
+	font-family: "Casper";
+	color: #888;
+	padding-bottom: 100px;
+}
+.cours section.formules .contain {
+	width: 1120px;
+	display: inline-block;
+}
+.cours section.formules h2 {
+	color: #f4b251;
+}
+.cours section.formules h3 {
+	font-size: 36px;
+	font-family: "Brandon_black";
+	margin-bottom: 40px;
+	color: #f4b251;
+	text-align: left;
+	text-transform: uppercase;
+}
+.cours section.formules h4 {
+	font-size: 24px;
+	font-family: "Brandon_black";
+	margin-bottom: 10px;
+	color: #1572a3;
+}
+.cours section.formules p {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 30px;
+}
+.cours section.formules p:last-of-type { margin-bottom: 0 }
+.cours section.formules a {
+	font-family: "Brandon_black";
+	color: #0b6ca0;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+.cours section.formules .blue { color: #1572a3 }
+
+.cours section.formules .paragraphintro {
+	width: 800px;
+	display: inline-block;
+}
+.cours section.formules .paragraphintro h3 {
+	color: #1572a3;
+	text-align: center;
+}
+.cours section.formules .baseline {
+	text-align: justify;
+	color: #1572a3;
+	font-family: "Brandon_black";
+	font-size: 24px;
+	display: block;
+	margin-bottom: 40px;
+}
+.cours section.formules .baseline::before {
+	content: "/ ";
+	color: #f4b251;
+}
+.cours section.formules .smallbaseline .baseline {
+	margin-bottom: 10px;
+}
+
+.cours section.formules .line {
+	width: 100%;
+	display: inline-block;
+	margin-top: 80px;
+	position: relative;
+}
+.cours section.formules .line .img {
+	width: 720px;
+	float: left;
+}
+.cours section.formules .line .text {
+	width: 320px; height: 100%;
+	position: absolute;
+	top: 0;
+}
+.cours section.formules .line .text p { font-size: 13px; }
+
+.cours section.formules .line:nth-child(odd) .img { float: right; }
+.cours section.formules .line:nth-child(odd) .text { left: 0; }
+.cours section.formules .line:nth-child(even)  .text { right: 0; }
+
+.cours section.formules .btnprice {
+	width: 100%;
+	border: 2px solid #f4b251;
+	padding: 24px;
+	font-family: "Brandon_black";
+	font-size: 22px;
+	color: #0b6ca0;
+	margin-top: 40px;
+}
+.cours section.formules .btnprice span { color: #f4b251 }
+
+.cours section.formules h3.blue {
+	color: #09c0b8;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 80px;
+}
+.cours section.formules h3 span { font-size: 24px; }
+
+.cours section.formules .button.btnsummer {
+	width: auto;
+	padding: 0 40px;
+	font-size: 12px;
+	background: #0b6ca0;
+	color: #fff;
+	border-color: #f4b251;
+	float: right;
+}
+.cours section.formules .button.left {
+	float: left;
+}
+
+/* TRANSITION2 */
+.cours section.transition2 .content {
+	background-image: url('../img/cours/transition2.jpg');
+}
+
+/* EN ACTION  */
+.cours section.action {
+	background: url('../img/cours/bg_actions.jpg') center no-repeat;
+	background-size: cover; 
+	padding-bottom: 0;
+}
+
+.cours section.action h2{
+	color: #fff;
+}
+
+.cours section.action>.button{
+	background-color: #fff;
+	border-bottom-color: #f4b251;
+	color: #0c6da0;
+	margin: 0 0 52px 0;
+}
+
+.cours section.action .content {
+	position: relative;
+	width: 806px;
+	height: 325px;
+	margin: 0 auto;
+}
+
+.cours section.action .arrow{
+	position: absolute;
+	left: 0; top: 97px;
+	width: 40px; height: 40px;
+	background-color: #f4b251;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.cours section.action .arrow.next {
+	left: auto; right: 0;
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.cours section.action .arrow .icon{
+	width: 80px; height: 40px;
+	background-image: url('../img/home/arrow.png');
+	background-size: 40px; 
+-webkit-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.cours section.action .arrow:hover .icon{
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%)
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+}
+
+
+.cours section.action .slider {
+	position: relative;
+	overflow: hidden;
+	width: 702px; height: 325px;
+	margin: 0 auto;
+}
+
+.cours section.action .albums {
+	text-align: left;
+	font-size: 0;
+	width: 10000px;
+}
+
+.cours section.action .albums .album{
+	position: relative;
+	display: inline-block;
+	width: 234px; height: 234px;
+	background-color: #ddd;
+}
+
+.cours section.action .albums .album img{
+	width: 100%; height: 100%;
+}
+
+.cours section.action .albums .album .text{
+	padding: 14px;
+}
+
+.cours section.action .albums .album .text .title{
+	font-size: 16px;
+	color: #fff;
+	margin: 0;
+}
+
+.cours section.action .albums .album .text .infos{
+	display: inline-block;
+	color: #f4b251;
+	font-family: "Brandon_black";
+	font-size: 13px;
+	margin-right: 10px;
+}
+
+.cours section.action .albums .album .text .infos:before{ content: "/ "; }
+
+.cours section.action .albums .album .hover {
+	width: 100%; height: 100%;
+	position: absolute;
+	top: 0; left: 0;
+	background: rgba(244,178,81,.6);
+	border: 6px solid rgb(244,178,81);
+	opacity: 0;
+	cursor: pointer;
+}
+.cours section.action .albums .album .hover span {
+	width: 100%; height: 100%;
+	position: absolute;
+	left: 0; top: 0;
+	background: url('../img/home/mediator_hover.png') center no-repeat;
+}
+.cours section.action .albums .album:hover .hover {
+	opacity: 1;
+}
+
+@media screen and ( min-width: 1200px) {
+	.cours section.action>.button { margin: 0 0 80px 0; }
+	.cours section.action .arrow{ width: 60px; height: 60px; top:150px;}
+	.cours section.action .arrow .icon{ width: 120px; height: 60px; background-size: 60px; }
+	.cours section.action .content { width: 1240px; height: 500px; }
+	.cours section.action .slider { width: 1080px; height: 500px;}
+	.cours section.action .albums .album { width: 360px; height: 360px;}
+	.cours section.action .albums .album .text{ padding: 20px }
+	.cours section.action .albums .album .text .title{ font-size: 24px; }
+	.cours section.action .albums .album .text .infos{ font-size: 20px; }
+}

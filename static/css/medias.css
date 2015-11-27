@@ -1,0 +1,229 @@
+
+/* HEADER */
+.medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }
+.medias header .logo:after{ background-image: url('../img/medias/logoText.png'); }
+.medias header ul li a:hover, .medias header ul li.active a { color: #faad39; }
+
+/* INTRO */
+.medias section.intro .bg {
+	background: url('../img/medias/intro.jpg') no-repeat center;
+	background-size: cover;
+}
+.medias section.intro .text { 
+	color: #faad39;
+	margin-top: -60px;
+}
+.medias section.intro .scrolldown {
+    background: url('../img/medias/mediator_scrolldown.png') center no-repeat;
+}
+
+/* PRESENTATION */
+.medias section.presentation {
+	height: 264px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Brandon_bold";
+	background: url('../img/medias/bg_presentation.jpg') no-repeat center;
+	background-size: cover;
+	padding-top: 60px;
+}
+.medias section.presentation span {
+	width: 80px; height: 6px;
+	position: relative;
+	margin-top: 25px;
+	display: inline-block;
+	background: #8a66c3;
+}
+.medias section.presentation span::after {
+	content: '';
+	width: 80px; height: 6px;
+	position: absolute;
+	top: 6px; left: 0;
+	display: inline-block;
+	background: #fff;
+}
+
+/* TRANSITION */
+.medias section.transition .content {
+	background-image: url('../img/medias/transition.jpg');
+}
+
+/* WALLS */
+.medias .wall {
+	width: 780px;
+	display: inline-block;
+	background: #fff;
+	color: #666;
+	text-align: left;
+}
+.medias .wall .text {
+	padding: 40px 40px 0 40px;
+	float: left;
+	width: 50%;
+}
+
+.medias .wall .title {
+	font-family: "Brandon_black";
+	font-size: 28px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	color: #617528;
+}
+.medias .wall .baseline {
+	font-family: 'Brandon_black';
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #aab283;
+}
+.medias .wall .baseline::before {
+	content: "/ ";
+	color: #b0321d;
+}
+.medias .wall .description {
+	font-size: 12px;
+}
+.medias .wall .description a {
+	color: #d04834;
+	text-decoration: underline;
+	font-family: "Brandon_black";
+	text-transform: uppercase;
+}
+
+.medias .wall .littleline { height: 420px; }
+.medias .wall .littleline {
+	width: 33.333333333%;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+.medias .wall .littleline .img {
+	width: 100%; height: 265px;
+	background-size: cover !important;
+}
+.medias .wall .littleline.fullimg .img {
+	height: 100%;
+}
+
+.medias .wall .littleline .text {
+	width: 100%;
+	padding: 45px;
+	position: absolute;
+	bottom: 0; left: 0;
+}
+.medias .wall .littleline .title { font-size: 24px; }
+.medias .wall .littleline .baseline { font-size: 20px; margin-bottom: 16px; }
+.medias .wall .littleline .moreinfos {
+	font-family: "Casper";
+	color: #fff;
+	font-size: 12px;
+	text-align: justify;
+	height: 0;
+	opacity: 0;
+}
+.medias .wall .littleline .moreinfosbtn {
+	width: 100%;
+	padding: 30px 0;
+	position: absolute;
+	bottom: -150px; left: 0;
+	background: #fff;
+	text-align: center;
+}
+.medias .wall .littleline .moreinfosbtn .button {
+	width: 190px; height: 46px;
+	line-height: 42px;
+}
+
+.medias .wall .littleline:hover .text { height: 360px; }
+.medias .wall .littleline:hover .moreinfos { opacity: 1; height: auto; }
+.medias .wall .littleline:hover .moreinfosbtn { bottom: 0; }
+
+.medias .wall .date {
+	position: absolute;
+	width: 60px; height: 60px;
+	background-color: #5b7c47;
+	line-height: 60px;
+	top: 0; left: 0;
+	z-index: 1;
+	text-align: center;
+}
+.medias .wall .date .content{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	font-family: 'Brandon_bold';
+	font-size: 13px;
+	line-height: 15px;
+	color: #FFF;
+	text-align: left;
+}
+.medias .wall .date .content b { color: #c2cc96; font-size: 10px; }
+.medias .wall .date .content .sub { font-size: 10px; }
+.medias .wall .date .content .year { top: -2px; position: relative; }
+
+
+.medias .wall .white, .medias .wall .white .text { background: #fff }
+.medias .wall .white .title { color: #4f368f; }
+.medias .wall .white .baseline { color: #4f368f }
+.medias .wall .white .baseline::before { color: #ba2f1a; }
+.medias .wall .white .moreinfosbtn { background: #4f368f; }
+.medias .wall .white .button { background: #ba2f1a; border-color: #c99df2; color: #fff; }
+
+.medias .wall .orange, .medias .wall .orange .text { background: #faad39 }
+.medias .wall .orange .title { color: #fff; }
+.medias .wall .orange .baseline { color: #fff }
+.medias .wall .orange .baseline::before { color: #4f368f; }
+.medias .wall .orange .moreinfosbtn { background: #fff; }
+.medias .wall .orange .button { background: #4f368f; border-color: #c99df2; color: #fff; }
+
+.medias .wall .lightpurple, .medias .wall .lightpurple .text { background: #c99df2 }
+.medias .wall .lightpurple .title { color: #fff; }
+.medias .wall .lightpurple .baseline { color: #fff }
+.medias .wall .lightpurple .baseline::before { color: #fbb736; }
+.medias .wall .lightpurple .moreinfosbtn { background: #fff; }
+.medias .wall .lightpurple .button { background: #fbb736; border-color: #4e3396; color: #fff; }
+
+.medias .wall .darkpurple, .medias .wall .darkpurple .text { background: #4e3396 }
+.medias .wall .darkpurple .title { color: #fff; }
+.medias .wall .darkpurple .baseline { color: #fff }
+.medias .wall .darkpurple .baseline::before { color: #d3a6f5; }
+.medias .wall .darkpurple .moreinfosbtn { background: #fff; }
+.medias .wall .darkpurple .button { background: #faa639; border-color: #826cd4; color: #fff; }
+
+
+@media screen and ( min-width: 1100px) {
+	
+	.medias .wall { width: 1080px; }
+	.medias .wall .text { padding: 65px 65px 0 65px; }
+	.medias .wall .description { font-size: 14px; }
+	.medias .wall .baseline { font-size: 24px; }
+	.medias .wall .title { font-size: 36px; }
+	.medias .wall .littleline { height: 540px; }
+	.medias .wall .littleline .img { height: 360px }
+}
+
+/* ENPHOTOS */
+.medias section.enphotos {
+	background: #fff;
+	color: #4f368f;
+	padding-bottom: 100px;
+}
+.medias section.enphotos .morepictures {
+	color: #fff;
+	background: #826cd4;
+	border-color: #faad39;
+	margin-top: 80px;
+}
+
+/* ENVIDEOS */
+.medias section.envideo {
+	color: #fff;
+	background: url('../img/medias/bg_envideo.jpg') center no-repeat;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+/* TRANSITION2 */
+.medias section.transition2 .content {
+	background-image: url('../img/medias/transition2.jpg');
+}
