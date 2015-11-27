@@ -1,5 +1,5 @@
     <section class="action">
-        <h2>en action</h2>
+        <h2 class="hiddenBlock">en action</h2>
         <div class="content">
             <div class="arrow prev"><div class="icon"></div></div>
             <div class="arrow next"><div class="icon"></div></div>

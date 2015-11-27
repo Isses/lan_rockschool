@@ -18,6 +18,46 @@ section>h2 {
 	text-transform: uppercase;
 }
 
+section>h2 span {
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	transform: translateY(50px);
+	-webkit-transition: all .6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-o-transition: all .6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	transition: all .6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+section>h2.visible span {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+section>h2 span:nth-child(1) { -webkit-transition-delay: .05s; -o-transition-delay: .05s; transition-delay: .05s; }
+section>h2 span:nth-child(2) { -webkit-transition-delay: .1s; -o-transition-delay: .1s; transition-delay: .1s; }
+section>h2 span:nth-child(3) { -webkit-transition-delay: .15s; -o-transition-delay: .15s; transition-delay: .15s; }
+section>h2 span:nth-child(4) { -webkit-transition-delay: .2s; -o-transition-delay: .2s; transition-delay: .2s; }
+section>h2 span:nth-child(5) { -webkit-transition-delay: .25s; -o-transition-delay: .25s; transition-delay: .25s; }
+section>h2 span:nth-child(6) { -webkit-transition-delay: .3s; -o-transition-delay: .3s; transition-delay: .3s; }
+section>h2 span:nth-child(7) { -webkit-transition-delay: .35s; -o-transition-delay: .35s; transition-delay: .35s; }
+section>h2 span:nth-child(8) { -webkit-transition-delay: .4s; -o-transition-delay: .4s; transition-delay: .4s; }
+section>h2 span:nth-child(9) { -webkit-transition-delay: .45s; -o-transition-delay: .45s; transition-delay: .45s; }
+section>h2 span:nth-child(10) { -webkit-transition-delay: .5s; -o-transition-delay: .5s; transition-delay: .5s; }
+section>h2 span:nth-child(11) { -webkit-transition-delay: .55s; -o-transition-delay: .55s; transition-delay: .55s; }
+section>h2 span:nth-child(12) { -webkit-transition-delay: .6s; -o-transition-delay: .6s; transition-delay: .6s; }
+section>h2 span:nth-child(13) { -webkit-transition-delay: .65s; -o-transition-delay: .65s; transition-delay: .65s; }
+section>h2 span:nth-child(14) { -webkit-transition-delay: .7s; -o-transition-delay: .7s; transition-delay: .7s; }
+section>h2 span:nth-child(15) { -webkit-transition-delay: .75s; -o-transition-delay: .75s; transition-delay: .75s; }
+section>h2 span:nth-child(16) { -webkit-transition-delay: .8s; -o-transition-delay: .8s; transition-delay: .8s; }
+section>h2 span:nth-child(17) { -webkit-transition-delay: .85s; -o-transition-delay: .85s; transition-delay: .85s; }
+section>h2 span:nth-child(18) { -webkit-transition-delay: .9s; -o-transition-delay: .9s; transition-delay: .9s; }
+section>h2 span:nth-child(19) { -webkit-transition-delay: .95s; -o-transition-delay: .95s; transition-delay: .95s; }
+section>h2 span:nth-child(20) { -webkit-transition-delay: 1.0s; -o-transition-delay: 1.0s; transition-delay: 1.0s; }
+
 @media screen and ( min-width: 1200px) {
 	section { padding-top: 100px; padding-bottom: 52px; }
 	section>h2 { font-size: 80px; margin-bottom: 80px; }
@@ -56,6 +96,7 @@ section .description p {
 /*------*/
 
 section .button{
+	position: relative;
 	font-family: "Brandon_bold";
 	font-size: 11px;
 	display: inline-block;
@@ -63,11 +104,38 @@ section .button{
 	line-height: 40px;
 	height: 44px; width: 180px;
 	color: #333;
-	border-bottom: 4px solid #333;
-	background-color: #CCC;
 	cursor: pointer;
 	text-align: center;
+	overflow: hidden;
 }
+
+section .button .primary,
+section .button .secondary {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+	background-color: #999;
+}
+section .button .secondary {
+	top: 100%; margin-top: -4px;
+	background-color: #333;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+
+section .button .buttonText {
+	position: relative;
+	z-index: 2;
+}
+
+section .button:hover .secondary{
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
 @media screen and ( min-width: 1200px) {
 	section .button{ font-size: 14px; line-height: 60px; height: 66px; width: 224px; border-bottom-width: 6px; }
 }

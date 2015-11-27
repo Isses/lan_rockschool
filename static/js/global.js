@@ -6,6 +6,8 @@ var doc = $(document);
 var nav = $('header');
 var transitionEl = $('section.transition');
 
+var hiddenBlocks = $('.hiddenBlock');
+
 w.scroll(function() {
 	var scrollValue = w.scrollTop();
 	var headSize = (ww > 1200)?65:42;
@@ -26,6 +28,17 @@ w.scroll(function() {
 			$(item).find('.content').css({ y: (-1+ratio)*diff });
 		});		
 	}
+	if( hiddenBlocks.length > 0 ) {
+		var keepShowing = true;
+		while( keepShowing ) {
+			if( hiddenBlocks.first().offset().top - scrollValue - wh + 100 < 0 ) {
+				hiddenBlocks.first().addClass('visible');
+				hiddenBlocks.splice(0,1);
+			} else {
+				keepShowing = false;
+			}
+		}
+	}
 });
 
 // Resize window
@@ -42,7 +55,20 @@ w.resize(function(){
 });
 w.resize();
 
+// CUSTOM BLOCKS FOR ANIMATION
+$('section>h2').each( function(index, item) {
+	var html = $(item).html();
+	var content = "";
+	for (var i in html) {
+		content += "<span>"+html[i]+"</span>";
+	}
+	$(item).html(content);
+});
 
+$('section .button').each( function(index, item) {
+	var html = $(item).html();
+	$(item).html('<div class="primary"></div><div class="secondary"></div><div class="buttonText">'+html+'</div>');
+});
 //
 //
 //

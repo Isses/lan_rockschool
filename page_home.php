@@ -14,7 +14,7 @@
 	</section>
 
 	<section class="news">
-		<h2>AUX NOUVELLES !</h2>
+		<h2 class="hiddenBlock">AUX NOUVELLES !</h2>
 		<?	
 			// GET NEWS DATAS
 			$pictures = array();
@@ -68,7 +68,7 @@
 	</section>
 
 	<section class="cours">
-		<h2>les cours</h2>
+		<h2 class="hiddenBlock">les cours</h2>
 		<div class="text">
 			<p>La Rock School de Paris est une jeune école de musique qui enseigne le chant, la guitare, le piano, la basse et la batterie de manière ludique, fun et pédagogique à Paris et en proche banlieue. Les cours sont adaptés à la demande de l' élève et sont ouverts à tous âges et tous niveaux.
 			L’école enseigne aussi bien du rock que du blues, de la funk, du reggae ou du jazz. A vous de décider !
@@ -93,7 +93,7 @@
 	</section>
 
 	<section class="prochainement">
-		<h2>prochainement</h2>
+		<h2 class="hiddenBlock">prochainement</h2>
 		<div class="actu">
 			<div class="date">
 				<div class="content">
