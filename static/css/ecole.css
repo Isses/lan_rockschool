@@ -2,9 +2,7 @@
 /* HEADER */
 .ecole header .logo:before{ background-image: url('../img/ecole/logoIcon.png'); }
 .ecole header .logo:after{ background-image: url('../img/ecole/logoText.png'); }
-.ecole header ul li a:hover, .ecole header ul li.active a { color: #599adf; }
 
-.ecole header li a.active {color: #599adf; }
 
 /* INTRO */
 .ecole section.intro .text { 

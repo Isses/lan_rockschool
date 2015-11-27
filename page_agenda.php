@@ -23,7 +23,7 @@
 	</section>
 
 	<section class="prochainement">
-		<h2>prochainement...</h2>
+		<h2 class="hiddenBlock">prochainement...</h2>
 		<div class="actu">
 			<div class="date">
 				<div class="content">
@@ -80,7 +80,7 @@
 	</section>
 
 	<section class="plustard">
-		<h2>...ET UN PEU PLUS TARD</h2>
+		<h2 class="hiddenBlock">...ET UN PEU PLUS TARD</h2>
 
 		<div class="wall">
 			<div class="littleline white">

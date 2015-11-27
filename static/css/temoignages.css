@@ -2,9 +2,7 @@
 /* HEADER */
 .temoignages header .logo:before{ background-image: url('../img/temoignages/logoIcon.png'); }
 .temoignages header .logo:after{ background-image: url('../img/temoignages/logoText.png'); }
-.temoignages header ul li a:hover, .temoignages header ul li.active a { color: #bd4476; }
 
-.temoignages header li a.active {color: #bd4476; }
 
 /* INTRO */
 .temoignages section.intro .bg {

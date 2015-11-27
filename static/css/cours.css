@@ -2,9 +2,6 @@
 /* HEADER */
 .cours header .logo:before{ background-image: url('../img/cours/logoIcon.png'); }
 .cours header .logo:after{ background-image: url('../img/cours/logoText.png'); }
-.cours header ul li a:hover, .cours header ul li.active a { color: #f4b251; }
-
-.cours header li a.active {color: #f4b251; }
 
 /* INTRO */
 .cours section.intro .bg {

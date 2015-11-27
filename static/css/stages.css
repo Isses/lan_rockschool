@@ -2,9 +2,7 @@
 /* HEADER */
 .stages header .logo:before{ background-image: url('../img/stages/logoIcon.png'); }
 .stages header .logo:after{ background-image: url('../img/stages/logoText.png'); }
-.stages header ul li a:hover, .stages header ul li.active a { color: #00e7e0; }
 
-.stages header li a.active {color: #00e7e0; }
 
 /* INTRO */
 .stages section.intro .bg {

@@ -2,7 +2,6 @@
 /* HEADER */
 .medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }
 .medias header .logo:after{ background-image: url('../img/medias/logoText.png'); }
-.medias header ul li a:hover, .medias header ul li.active a { color: #faad39; }
 
 /* INTRO */
 .medias section.intro .bg {

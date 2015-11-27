@@ -60,7 +60,8 @@ $('section>h2').each( function(index, item) {
 	var html = $(item).html();
 	var content = "";
 	for (var i in html) {
-		content += "<span>"+html[i]+"</span>";
+		if( html[i] == ' ' ) content += '<span style="display: inline">'+html[i]+'</span>';
+		else content += "<span>"+html[i]+"</span>";
 	}
 	$(item).html(content);
 });

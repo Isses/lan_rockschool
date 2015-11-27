@@ -2,10 +2,6 @@
 /* HEADER */
 .home header .logo:before{ background-image: url('../img/home/logoIcon.png'); }
 .home header .logo:after{ background-image: url('../img/home/logoText.png'); }
-.home header ul li a:hover, .home header ul li.active a { color: #f2563d; }
-
-.home header li a.active {color: #f2563d; }
-
 /* INTRO */
 .home section.intro .text .endIntro{ 
 	font-size: 48px;

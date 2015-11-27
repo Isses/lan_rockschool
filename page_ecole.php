@@ -23,7 +23,7 @@
 	</section>
 
 	<section class="apropos">
-		<h2>À PROPOS</h2>
+		<h2 class="hiddenBlock">À PROPOS</h2>
 		<div class="line line1">
 			<p class="left"><span class="letterspace"></span><b>La Rock School de Paris est une jeune école de musique qui enseigne le chant, la guitare, le piano, la basse et la batterie de manière ludique, fun et pédagogiqueà Paris et en proche banlieue.</b><br><br>C’est une initiative du musicien professionnel <span class="blue">Tristan Gauthier</span>, professeur de guitare sur Paris depuis <span class="blue">2007</span>.<br><br>Sa méthode séduit rapidement un grand nombre d’élèves et il recrute alors des professeurs correspondants à son profil pour satisfaire la demande toujours croissante. C'est ainsi que naît la <span class="blue">Rock School</span> de Paris en <span class="blue">2013</span> !</p>
 			<img class="right" src="<?= get_stylesheet_directory_uri() ?>/static/img/ecole/apropos_tristan_gauthier.jpg">
@@ -40,7 +40,7 @@
 	</section>
 
 	<section class="equipe">
-		<h2>L'ÉQUIPE</h2>
+		<h2 class="hiddenBlock">L'ÉQUIPE</h2>
 
 		<div class="wall">
 			

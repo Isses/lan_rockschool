@@ -24,7 +24,7 @@
 
 	<section class="formules">
 
-		<h2>LES FORMULES</h2>
+		<h2 class="hiddenBlock">LES FORMULES</h2>
 		
 		<div class="contain">
 

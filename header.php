@@ -58,12 +58,12 @@
 
         <a href="/" class="logo"></a>
         <ul>
-            <li><a <? if(is_page('ecole'))       echo 'class="active"'; ?>href="/ecole">L'ÉCOLE</a></li>
-            <li><a <? if(is_page('agenda'))      echo 'class="active"'; ?>href="/agenda">AGENDA</a></li>
-            <li><a <? if(is_page('cours'))       echo 'class="active"'; ?>href="/cours">COURS</a></li>
-            <li><a <? if(is_page('stages'))      echo 'class="active"'; ?>href="/stages">STAGES</a></li>
-            <li><a <? if(is_page('temoignages')) echo 'class="active"'; ?>href="/temoignages">TÉMOIGNAGES</a></li>
-            <li><a <? if(is_page('medias'))      echo 'class="active"'; ?>href="/medias">MÉDIAS</a></li>
+            <li <? if(is_page('ecole'))       echo 'class="active"'; ?>><a href="/ecole">L'ÉCOLE</a></li>
+            <li <? if(is_page('agenda'))      echo 'class="active"'; ?>><a href="/agenda">AGENDA</a></li>
+            <li <? if(is_page('cours'))       echo 'class="active"'; ?>><a href="/cours">COURS</a></li>
+            <li <? if(is_page('stages'))      echo 'class="active"'; ?>><a href="/stages">STAGES</a></li>
+            <li <? if(is_page('temoignages')) echo 'class="active"'; ?>><a href="/temoignages">TÉMOIGNAGES</a></li>
+            <li <? if(is_page('medias'))      echo 'class="active"'; ?>><a href="/medias">MÉDIAS</a></li>
         </ul>
         
     </header>
