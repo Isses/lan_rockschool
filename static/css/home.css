@@ -140,6 +140,10 @@
 	border-color: #0b6ca0; 
 }
 
+
+.home section.news .button .primary { background-color: #d04834;}
+.home section.news .button .secondary { background-color: #0b6ca0;}
+
 @media screen and ( min-width: 1200px) {
 	
 	.home section.news .content { width: 1160px; height: 470px; }
@@ -191,9 +195,10 @@
 
 .home section.cours .button{
 	color: #FFF;
-	border-bottom-color: #f5ba62;
-	background-color: #177fb6;
 }
+
+.home section.cours .button .primary { background-color: #f5ba62;}
+.home section.cours .button .secondary { background-color: #177fb6;}
 
 .home section.cours .hands {
 	width: 100%; height: 100%;
@@ -340,11 +345,12 @@
 .home section.prochainement .actu:nth-child(odd) .date { left: 50%; right: auto; }
 
 .home section.prochainement>.button{
-	background-color: #b0321d;
-	border-bottom-color: #6e3f2c;
 	color: #FFF;
 	margin: 65px 0;
 }
+
+.home section.prochainement .button .primary { background-color: #b0321d;}
+.home section.prochainement .button .secondary { background-color: #6e3f2c;}
 
 
 .home section.prochainement .mediators {
@@ -390,11 +396,12 @@
 }
 
 .home section.action>.button{
-	background-color: #0c6da0;
-	border-bottom-color: #f4b251;
 	color: #FFF;
 	margin: 0 0 52px 0;
 }
+
+.home section.action .button .primary { background-color: #0c6da0;}
+.home section.action .button .secondary { background-color: #f4b251;}
 
 .home section.action .content {
 	position: relative;
