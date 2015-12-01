@@ -16,7 +16,7 @@
 	add_action('admin_menu', function()
 	{
 		remove_menu_page('index.php'); //dashboard
-		remove_menu_page('edit.php'); // Posts
+		//remove_menu_page('edit.php'); // Posts
 		//remove_menu_page('upload.php'); // Media
 		remove_menu_page('link-manager.php'); // Links
 		remove_menu_page('edit-comments.php'); // Comments
@@ -112,10 +112,10 @@
 				break;
 			case 'event-date':
 				$type = get_post_meta( $post_id, 'type', true );
-				if( $type == 'Stage' ) {
-					echo 'du <b>'. get_post_meta( $post_id, 'date-debut', true ).'</b><br> au <b>'.get_post_meta( $post_id, 'date-fin', true ).'</b>';
+				if( $type == 'Période' ) {
+					echo 'du <b>'. get_post_meta( $post_id, 'début', true ).'</b><br> au <b>'.get_post_meta( $post_id, 'fin', true ).'</b>';
 				} else {
-					echo '<b>'. get_post_meta( $post_id, 'date-debut', true ).'</b>';
+					echo '<b>'. get_post_meta( $post_id, 'date', true ).'</b> à <b>'.get_post_meta( $post_id, 'heure', true ).' h</b>';
 				}
 				break;
 			case 'event-type':
@@ -126,7 +126,7 @@
 	lanfosterWP()->admin->setColumnsSizes('event', array('thumb'=>'170px;'));
 
     $event = new Super_Custom_Post_Type( 'event', 'Evènement', 'Evènements', array(
-    	'supports' => array( 'title', 'thumbnail','excerpt',  'page-attributes' )
+    	'supports' => array( 'title', 'thumbnail','editor',  'page-attributes' )
     	) );
     $event->add_meta_box(array
             (
@@ -151,13 +151,33 @@
             ));
     $event->add_meta_box(array
             (
-                'id' => 'event-date',
-                'title' => 'Date',
+                'id' => 'event-type',
+                'title' => 'Type d\'évènement',
                 'fields' => array
                 (
-                	'type' => array( 'type' => 'radio', 'options' => array( 'concert', 'Stage' ) ),
-                    'date-debut' => array( 'type' => 'date' ),
-                    'date-fin' => array( 'type' => 'date' ),
+                	'type' => array( 'type' => 'radio', 'options' => array( 'Ponctuel', 'Période' ) )
+            
+                )
+            ));
+    $event->add_meta_box(array
+            (
+                'id' => 'event-stage',
+                'title' => 'Période',
+                'fields' => array
+                (
+                	'début' => array( 'type' => 'date' ),
+                    'fin' => array( 'type' => 'date' )
+            
+                )
+            ));
+    $event->add_meta_box(array
+            (
+                'id' => 'event-date',
+                'title' => 'Ponctuel',
+                'fields' => array
+                (
+                    'date' => array( 'type' => 'date' ),
+                    'heure' => array( 'type' => 'text' )
             
                 )
             ));

@@ -34,7 +34,7 @@
 
 				$textEl = str_replace("%date%", get_the_time('d M Y') , $textEl );
 				$textEl = str_replace("%title%", get_the_title() , $textEl );
-				$textEl = str_replace("%description%", get_the_excerpt() , $textEl );
+				$textEl = str_replace("%description%", wpautop( get_the_content() ) , $textEl );
 				$textEl = str_replace("%link%", get_the_permalink() , $textEl );
 				array_push( $texts, $textEl );
 
@@ -94,48 +94,65 @@
 
 	<section class="prochainement">
 		<h2 class="hiddenBlock">prochainement</h2>
-		<div class="actu">
-			<div class="date">
-				<div class="content">
-					22 FEV <b>/</b><br>
-					24 MARS<br>
-					<b>2016</b>
-				</div>
-			</div>
-			<div class="image"><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu1.jpg" alt=""></div>
-			<div class="text">
-				<div class="content">
-					<div class="title">stage d’ hiver</div>
-					<div class="baseline">Inscriptions ouvertes</div>
-					<div class="description">
-						<p>Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</p>
+		<?	
+			// GET NEWS DATAS
+			$months = array(
+				'01' => 'JAN',
+				'02' => 'FEV',
+				'03' => 'MARS',
+				'04' => 'AVR',
+				'05' => 'MAI',
+				'06' => 'JUIN',
+				'07' => 'JUI',
+				'08' => 'AOUT',
+				'09' => 'SEPT',
+				'10' => 'OCT',
+				'11' => 'NOV',
+				'12' => 'DEC'
+				);
+			$events = get_posts( array('post_type' => 'event','posts_per_page' => 2 ) );
+			foreach ($events as $event) : setup_postdata( $event );
+				$eventMetas = get_post_meta( $event->ID );
+				if( $eventMetas['type'][0] == 'Période' ) {
+					if( strtotime($eventMetas['fin'][0]) < time() ) continue;
+				} else {
+					if( strtotime($eventMetas['date'][0]) < time() ) continue;
+				}
+			?>
+				<div class="actu">
+					<div class="date">
+						<div class="content">
+							<?
+							if( $eventMetas['type'][0] == 'Période' ) {
+								list($y, $m, $d) = split('[/.-]', $eventMetas['début'][0] );
+								echo $d.' '. $months[$m] .'<b>/</b><br>';
+								list($y, $m, $d) = split('[/.-]', $eventMetas['fin'][0] );
+								echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+							} else { 
+								echo $eventMetas['heure'][0] .'h <b>/</b><br>';
+								list($y, $m, $d) = split('[/.-]', $eventMetas['date'][0] );
+								echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+							} ?>
+							
+						</div>
 					</div>
-					<div class="button smallButton">+ détails</div>
-				</div>
-			</div>
-		</div>
-		<div class="actu">
-			<div class="date">
-				<div class="content">
-					17h <b>/</b><br>
-					12 DÉC<br>
-					<b>2015</b>
-				</div>
-			</div>
-			<div class="image"><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu2.jpg" alt=""></div>
-			<div class="text">
-				<div class="content">
-					<div class="title">concert de noël</div>
-					<div class="baseline">Pour finir ensemble 2015 en beauté !</div>
-					<div class="description">
-						<p>Rien de mieux qu'un concert des élèves et des professeurs pour se souhaiter de bonnes fêtes de fin d’année !</p>
-						<p>L'évènement se passera dans le sympathique bar le Charlie. Les élèves ouvriront le bal avec leurs morceaux et les professeurs animeront la deuxième partie de soirée.<br>
-						Concert gratuit ! P.S. : gâteaux fait maison bienvenus !</p>
-						<p>INFOS PRATIQUES : Le Charlie - 29 Rue de Cotte 75012 Paris Métro : ligne 8 station Ledru Rollin. </p>
+					<div class="image"><img src="<?= wp_get_attachment_url( get_post_thumbnail_id( $event->ID ) ) ?>" alt=""></div>
+					<div class="text">
+						<div class="content">
+							<div class="title"><?= $event->post_title ?></div>
+							<div class="baseline"><?= $eventMetas['baseline'][0] ?></div>
+							<div class="description">
+								<?= wpautop( $event->post_content ) ?>
+							</div>
+							<? if( $eventMetas['lien'][0] != '' ) { ?>
+							<a href='<?= $eventMetas['lien'][0] ?>' <?if( $eventMetas['fenetre'][0] != '' ) echo 'target="_blank"'; ?> class="button smallButton">+ détails</a>
+							<? } ?>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			<?
+			endforeach; wp_reset_postdata(); 
+		?>
 		<a href="/agenda"class="button">tout l’agenda</a>
 		<div class="mediators">
 			<div class="mediator1"></div>

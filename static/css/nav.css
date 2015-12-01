@@ -69,12 +69,12 @@ header ul li a:after{
 	background-size: 26px;
 }
 
-header ul li:nth-child(1).active a, header ul li:nth-child(1):hover a{ color: #599adf; }
-header ul li:nth-child(2).active a, header ul li:nth-child(2):hover a{ color: #7f9f4b; }
-header ul li:nth-child(3).active a, header ul li:nth-child(3):hover a{ color: #f4b251; }
-header ul li:nth-child(4).active a, header ul li:nth-child(4):hover a{ color: #00e7e0; }
-header ul li:nth-child(5).active a, header ul li:nth-child(5):hover a{ color: #bd4476; }
-header ul li:nth-child(6).active a, header ul li:nth-child(6):hover a{ color: #faad39; }
+header ul li:nth-child(1) a.active, header ul li:nth-child(1):hover a{ color: #599adf; }
+header ul li:nth-child(2) a.active, header ul li:nth-child(2):hover a{ color: #7f9f4b; }
+header ul li:nth-child(3) a.active, header ul li:nth-child(3):hover a{ color: #f4b251; }
+header ul li:nth-child(4) a.active, header ul li:nth-child(4):hover a{ color: #00e7e0; }
+header ul li:nth-child(5) a.active, header ul li:nth-child(5):hover a{ color: #bd4476; }
+header ul li:nth-child(6) a.active, header ul li:nth-child(6):hover a{ color: #faad39; }
 
 header.collapsed {
 	height: 42px;
@@ -105,7 +105,7 @@ header.collapsed ul li a:after {
 	transform: scale(0);
 }
 
-header.collapsed ul li.active a:after {
+header.collapsed ul li a.active:after {
 	-webkit-transform: scale(0.4);
 	-ms-transform: scale(0.4);
 	-o-transform: scale(0.4);
