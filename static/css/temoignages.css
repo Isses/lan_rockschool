@@ -143,10 +143,11 @@
 
 @media screen and ( min-width: 1200px) {
 
-	.temoignages section.eleves .contain { width: 1100px; }
+	.temoignages section.eleves .contain { width: 1100px; }
 	.temoignages section.eleves .line .text { margin: 110px 0 0 80px; }
 	.temoignages section.eleves .line .presentation { font-size: 16px; line-height: 23px; }
 	.temoignages section.eleves .line .img { width: auto; }
+	.temoignages section.eleves .line:nth-child(even) .full .text { margin-top: 40px; }
 
 	.temoignages section.eleves .line .presentation::before { top: -40px; }
 	.temoignages section.eleves .line .presentation::after { bottom: -40px; }
