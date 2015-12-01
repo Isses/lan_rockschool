@@ -149,6 +149,7 @@ section .button:hover .secondary{
 @media screen and ( min-width: 1200px) {
 	section .button{ font-size: 14px; line-height: 60px; height: 66px; width: 224px; border-bottom-width: 6px; }
 }
+
 /*------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------*/
 
@@ -239,3 +240,64 @@ section.intro .text h1{
 	section.intro .text .endIntro .icon{ width: 55px; height: 101px; margin-right: 5px; background-size: 55px; }
 
 }
+
+
+/*------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+
+.rollimage {
+	position: relative;
+	overflow: hidden;
+}
+.rollimage>* {
+	-webkit-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+
+	-webkit-transition-delay: .55s;
+	-moz-transition-delay: .55s;
+	-o-transition-delay: .55s;
+	transition-delay: .55s;
+}
+.rollimage::after {
+	content: '';
+	position: absolute;
+	background: #7f9f4b;
+}
+.rollimage_parent_horizontal:nth-child(even)  .rollimage::after { width: 0; height: 100%; top:  0; right:  0; }
+.rollimage_parent_horizontal:nth-child(odd) .rollimage::after { width: 0; height: 100%; top:  0; left:   0; }
+.rollimage_parent_vertical:nth-child(even)    .rollimage::after { width: 100%; height: 0; left: 0; top:    0; }
+.rollimage_parent_vertical:nth-child(odd)   .rollimage::after { width: 100%; height: 0; left: 0; bottom: 0; }
+
+.rollimage img, .rollimage .img { opacity: 0 }
+.visible .rollimage img, .visible .rollimage .img { opacity: 1 }
+
+.rollimage_parent_horizontal:nth-child(even).visible  .rollimage::after { -webkit-animation: key_rollimage_right 1s; -moz-animation: key_rollimage_right 1s; -o-animation: key_rollimage_right 1s; animation: key_rollimage_right 1s; }
+.rollimage_parent_horizontal:nth-child(odd).visible .rollimage::after { -webkit-animation: key_rollimage_left 1s;  -moz-animation: key_rollimage_left 1s;  -o-animation: key_rollimage_left 1s;  animation: key_rollimage_left 1s; }
+.rollimage_parent_vertical:nth-child(even).visible    .rollimage::after { -webkit-animation: key_rollimage_top 1s;   -moz-animation: key_rollimage_top 1s;   -o-animation: key_rollimage_top 1s;   animation: key_rollimage_top 1s; }
+.rollimage_parent_vertical:nth-child(odd).visible   .rollimage::after { -webkit-animation: key_rollimage_bot 1s;   -moz-animation: key_rollimage_bot 1s;   -o-animation: key_rollimage_bot 1s;   animation: key_rollimage_bot 1s; }
+
+.visible .rollimage::after { -webkit-animation-delay: .5s; -moz-animation-delay: .5s; -o-animation-delay: .5s; animation-delay: .5s; }
+
+@-webkit-keyframes key_rollimage_right { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@-moz-keyframes key_rollimage_right    { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@-o-keyframes key_rollimage_right      { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@keyframes key_rollimage_right         { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+
+@-webkit-keyframes key_rollimage_left  { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@-moz-keyframes key_rollimage_left     { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@-o-keyframes key_rollimage_left       { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@keyframes key_rollimage_left          { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+
+@-webkit-keyframes key_rollimage_top   { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@-moz-keyframes key_rollimage_top      { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@-o-keyframes key_rollimage_top        { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@keyframes key_rollimage_top           { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+
+@-webkit-keyframes key_rollimage_bot   { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@-moz-keyframes key_rollimage_bot      { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@-o-keyframes key_rollimage_bot        { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@keyframes key_rollimage_bot           { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+

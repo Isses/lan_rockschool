@@ -78,7 +78,7 @@
 	width: 78px; height: 78px;
 	background-color: #5b7c47;
 	line-height: 78px;
-	top: 0; right: 50%;
+	top: 0; right: -78px;
 	z-index: 2;
 	text-align: center;
 }
@@ -146,7 +146,7 @@
 
 .agenda section.prochainement .actu:nth-child(odd) .image { left: auto; right: 0; }
 .agenda section.prochainement .actu:nth-child(odd) .text { left: 0; right: auto; }
-.agenda section.prochainement .actu:nth-child(odd) .date { left: 50%; right: auto; }
+.agenda section.prochainement .actu:nth-child(odd) .date { left: -78px; right: auto; }
 
 .agenda section.prochainement .mediators {
 	width: 100%; height: 100%;
@@ -175,10 +175,22 @@
 	.agenda section.prochainement .actu .text .content .baseline{ font-size: 24px; line-height: 25px; margin-bottom: 30px; }
 	.agenda section.prochainement>.button { margin: 100px 0; }
 	.agenda section.prochainement .actu .text .content .smallButton { font-size: 12px; height: 46px; line-height: 40px; width: 185px;}
-	.agenda section.prochainement .actu .date { width: 120px; height: 120px; line-height: 120px; }
+	.agenda section.prochainement .actu .date { width: 120px; height: 120px; line-height: 120px; right: -120px; }
 	.agenda section.prochainement .actu .date .content{ font-size: 20px; line-height: 21px; }
 	.agenda section.prochainement .actu .date .content b{ font-size: 24px; }
+	.agenda section.prochainement .actu:nth-child(odd) .date { left: -120px; }
 }
+
+.agenda section.prochainement .actu.visible .date {
+	right: 0;
+	-webkit-transition-delay: 1s;
+	-moz-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;
+}
+.agenda section.prochainement .actu.visible:nth-child(odd) .date { left: 0; }
+
+
 
 /* TRANSITION2 */
 .agenda section.transition2 .content {
