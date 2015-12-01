@@ -189,12 +189,12 @@
 .agenda section.plustard {
 	padding-bottom: 100px;
 	background: url('../img/home/prochainement.jpg') center #68833d;
+	background-size: cover;
 	color: #c2cc96;
 }
 .agenda section.plustard .wall {
 	width: 730px;
 	display: inline-block;
-	background: #fff;
 	color: #666;
 	text-align: left;
 }

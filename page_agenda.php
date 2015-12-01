@@ -66,6 +66,28 @@
 				</div>
 			</div>
 		</div>
+		<div class="actu bgbrown">
+			<div class="date">
+				<div class="content">
+					17h <b>/</b><br>
+					12 DÉC<br>
+					<b>2015</b>
+				</div>
+			</div>
+			<div class="image"><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu2.jpg" alt=""></div>
+			<div class="text">
+				<div class="content">
+					<div class="title">concert de noël</div>
+					<div class="baseline">Pour finir ensemble 2015 en beauté !</div>
+					<div class="description">
+						<p>Rien de mieux qu'un concert des élèves et des professeurs pour se souhaiter de bonnes fêtes de fin d’année !</p>
+						<p>L'évènement se passera dans le sympathique bar le Charlie. Les élèves ouvriront le bal avec leurs morceaux et les professeurs animeront la deuxième partie de soirée.<br>
+						Concert gratuit ! P.S. : gâteaux fait maison bienvenus !</p>
+						<p>INFOS PRATIQUES : Le Charlie - 29 Rue de Cotte 75012 Paris Métro : ligne 8 station Ledru Rollin. </p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="mediators">
 			<div class="mediator1"></div>
 			<div class="mediator2"></div>
@@ -146,6 +168,42 @@
 					</div>
 				</div>
 				<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/baptiste.jpg') no-repeat center;"></div>
+				<div class="text">
+					<div class="title">concert de fin d’année</div>
+					<div class="baseline">En avant la musique !</div>
+					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
+					<div class="moreinfosbtn">
+						<div class="button">+ DÉTAILS</div>
+					</div>
+				</div>
+			</div>
+			<div class="littleline brown">
+				<div class="date">
+					<div class="content">
+						22 <span class="sub">FEV</span> <b>/</b><br>
+						24 <span class="sub">MARS</span><br>
+						<b class="year">2016</b>
+					</div>
+				</div>
+				<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/remi.jpg') no-repeat center;"></div>
+				<div class="text">
+					<div class="title">concert de fin d’année</div>
+					<div class="baseline">En avant la musique !</div>
+					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
+					<div class="moreinfosbtn">
+						<div class="button">+ DÉTAILS</div>
+					</div>
+				</div>
+			</div>
+			<div class="littleline white">
+				<div class="date">
+					<div class="content">
+						22 <span class="sub">FEV</span> <b>/</b><br>
+						24 <span class="sub">MARS</span><br>
+						<b class="year">2016</b>
+					</div>
+				</div>
+				<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/victor.jpg') no-repeat center;"></div>
 				<div class="text">
 					<div class="title">concert de fin d’année</div>
 					<div class="baseline">En avant la musique !</div>
