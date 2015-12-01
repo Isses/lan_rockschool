@@ -29,7 +29,7 @@
 	font-family: "Brandon_bold";
 	background: url('../img/temoignages/bg_presentation.jpg') no-repeat center;
 	background-size: cover;
-	padding-top: 80px;
+	padding-top: 70px;
 }
 .temoignages section.presentation span {
 	width: 80px; height: 6px;
@@ -81,7 +81,7 @@
 
 .temoignages section.eleves .line:nth-child(even) .img { float: right; }
 .temoignages section.eleves .line:nth-child(even) .text { float: right; margin: 110px 80px 0 0; }
-.temoignages section.eleves .line:nth-child(even) .full .text { float: left; margin: 110px 0 0 0; }
+.temoignages section.eleves .line:nth-child(even) .full .text { float: left; margin: 40px 0 0 0; }
 
 .temoignages section.eleves .line .text.left { float: left; margin-left: 80px; }
 
@@ -141,13 +141,40 @@
 	background: #bd4476;
 }
 
+@media screen and ( max-width: 1200px) {
+
+	.temoignages section.eleves .linecontain { width: 100% }
+
+	.temoignages section.eleves .line .text { float: right; margin-left: 0; }
+	.temoignages section.eleves .line:nth-child(even) .text { float: left; margin-right: 0; }
+	.temoignages section.eleves .line .text.left { float: right; margin-left: 0; }
+
+	.temoignages section.eleves .line .img { float: left; }
+	.temoignages section.eleves .line:nth-child(even) .img { float: right; }
+
+	.temoignages section.eleves .line .text.left { margin-top: 30px }
+	.temoignages section.eleves .line .text.taille3 { width: 360px; }
+
+	.temoignages section.eleves .axel .img { width: 400px; margin-top: 60px; }
+	.temoignages section.eleves .louiseval .text { margin-top: 120px !important; }
+	.temoignages section.eleves .flora .img { width: 400px }
+	.temoignages section.eleves .flora .text { margin-top: 30px !important }
+	.temoignages section.eleves .line.bertrand { top: -120px; }
+	.temoignages section.eleves .line .text.taille4 { width: 420px; }
+	.temoignages section.eleves .line.bertrand .text { margin-top: 70px; }
+	.temoignages section.eleves .line:nth-child(even) .text { margin-top: 80px; }
+	.temoignages section.eleves .raphaelle .img { width: 400px; }
+	.temoignages section.eleves .raphaelle .text { width: 290px; margin-top: 50px; }
+	.temoignages section.eleves .pia .text { margin-top: 90px; }
+	.temoignages section.eleves .matteo .text { margin-top: 40px !important; }
+}
 @media screen and ( min-width: 1200px) {
 
 	.temoignages section.eleves .contain { width: 1100px; }
 	.temoignages section.eleves .line .text { margin: 110px 0 0 80px; }
 	.temoignages section.eleves .line .presentation { font-size: 16px; line-height: 23px; }
 	.temoignages section.eleves .line .img { width: auto; }
-	.temoignages section.eleves .line:nth-child(even) .full .text { margin-top: 40px; }
+	.temoignages section.eleves .line:nth-child(even) .full .text { margin-top: 110px; }
 
 	.temoignages section.eleves .line .presentation::before { top: -40px; }
 	.temoignages section.eleves .line .presentation::after { bottom: -40px; }

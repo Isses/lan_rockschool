@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line axel">
 				<div class="linecontain full">
 					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/axel.jpg">
 					<div class="text taille1">
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line louiseval">
 				<div class="linecontain">
 					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/louise_valentina.jpg">
 					<div class="text taille3 louisevalentina">
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line flora">
 				<div class="linecontain full">
 					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/flora.jpg">
 					<div class="text taille1">
@@ -146,7 +146,7 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line pia">
 				<div class="linecontain">
 					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/pia.jpg">
 					<div class="text taille3">
@@ -161,7 +161,7 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line matteo">
 				<div class="linecontain">
 					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/matteo.jpg">
 					<div class="text taille3">
