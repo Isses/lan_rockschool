@@ -270,6 +270,7 @@ section.intro .text h1{
 }
 .rollimage img,
 .rollimage .img {
+	vertical-align: top;
 	position: relative;
 	width: 100%; height: 100%;
 	top: 0; left: 0;
@@ -379,6 +380,8 @@ section.intro .text h1{
 /*------------------------------------------------------------------------------*/
 /* APPARITION BLOCS -> textes */
 
+.hiddenBlock.paragraphintro h3,
+.hiddenBlock .text h3,
 .hiddenBlock .text .title {
 	-webkit-transition: all 400ms ease-out;
 	-ms-transition: all 400ms ease-out;
@@ -399,6 +402,9 @@ section.intro .text h1{
 	transition-delay: .4s;
 }
 
+.hiddenBlock.paragraphintro h4,
+.hiddenBlock.paragraphintro p,
+.hiddenBlock .text .description h4,
 .hiddenBlock .text .description p{
 	-webkit-transition: all 400ms ease-out;
 	-ms-transition: all 400ms ease-out;
@@ -409,24 +415,80 @@ section.intro .text h1{
 	transition-delay: .6s;
 }
 
+.hiddenBlock .text .btn{
+	-webkit-transition: all 400ms ease-out;
+	-ms-transition: all 400ms ease-out;
+	-o-transition: all 400ms ease-out;
+	transition: all 400ms ease-out;
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;
+}
+
+.hiddenBlock.paragraphintro h4:nth-child(2),
+.hiddenBlock.paragraphintro p:nth-child(2),
+.hiddenBlock .text .description h4:nth-child(2),
 .hiddenBlock .text .description p:nth-child(2){
 	-webkit-transition-delay: .7s;
 	-o-transition-delay: .7s;
 	transition-delay: .7s;
 }
 
+.hiddenBlock.paragraphintro h4:nth-child(3),
+.hiddenBlock.paragraphintro p:nth-child(3),
+.hiddenBlock .text .description h4:nth-child(3),
 .hiddenBlock .text .description p:nth-child(3){
 	-webkit-transition-delay: .8s;
 	-o-transition-delay: .8s;
 	transition-delay: .8s;
 }
 
+.hiddenBlock.paragraphintro h4:nth-child(4),
+.hiddenBlock.paragraphintro p:nth-child(4),
+.hiddenBlock .text .description h4:nth-child(4),
 .hiddenBlock .text .description p:nth-child(4){
 	-webkit-transition-delay: .9s;
 	-o-transition-delay: .9s;
 	transition-delay: .9s;
 }
 
+.hiddenBlock.paragraphintro h4:nth-child(5),
+.hiddenBlock.paragraphintro p:nth-child(5),
+.hiddenBlock .text .description h4:nth-child(5),
+.hiddenBlock .text .description p:nth-child(5){
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;
+}
+
+.hiddenBlock.paragraphintro h4:nth-child(6),
+.hiddenBlock.paragraphintro p:nth-child(6),
+.hiddenBlock .text .description h4:nth-child(6),
+.hiddenBlock .text .description p:nth-child(6){
+	-webkit-transition-delay: 1.1s;
+	-o-transition-delay: 1.1s;
+	transition-delay: 1.1s;
+}
+
+.hiddenBlock.paragraphintro h4:nth-child(7),
+.hiddenBlock.paragraphintro p:nth-child(7),
+.hiddenBlock .text .description h4:nth-child(7),
+.hiddenBlock .text .description p:nth-child(7){
+	-webkit-transition-delay: 1.2s;
+	-o-transition-delay: 1.2s;
+	transition-delay: 1.2s;
+}
+
+.hiddenBlock.paragraphintro h4:nth-child(8),
+.hiddenBlock.paragraphintro p:nth-child(8),
+.hiddenBlock .text .description h4:nth-child(8),
+.hiddenBlock .text .description p:nth-child(8){
+	-webkit-transition-delay: 1.3s;
+	-o-transition-delay: 1.3s;
+	transition-delay: 1.3s;
+}
+
+.rollimage_parent_vertical:nth-child(2n+3) .text h3,
 .rollimage_parent_vertical:nth-child(2n+3) .text .title {
 	-webkit-transition-delay: .4s;
 	-o-transition-delay: .4s;
@@ -438,6 +500,7 @@ section.intro .text h1{
 	transition-delay: .6s;
 }
 
+.rollimage_parent_vertical:nth-child(3n+3) .text h3,
 .rollimage_parent_vertical:nth-child(3n+3) .text .title {
 	-webkit-transition-delay: .6s;
 	-o-transition-delay: .6s;
@@ -449,9 +512,13 @@ section.intro .text h1{
 	transition-delay: .8s;
 }
 
+.rollimage_parent_horizontal:nth-child(even) .text h3,
 .rollimage_parent_horizontal:nth-child(even) .text .title,
 .rollimage_parent_horizontal:nth-child(even) .text .baseline,
-.rollimage_parent_horizontal:nth-child(even) .text .description p{
+.rollimage_parent_horizontal:nth-child(even) .text .description h4,
+.rollimage_parent_horizontal:nth-child(even) .text .description p,
+.rollimage_parent_horizontal:nth-child(even) .text .btn{
+
 	-webkit-transform: translateX(60px);
 	-ms-transform: translateX(60px);
 	-o-transform: translateX(60px);
@@ -459,19 +526,13 @@ section.intro .text h1{
 	opacity: 0;
 }
 
-.rollimage_parent_horizontal:nth-child(even) .text .title,
-.rollimage_parent_horizontal:nth-child(even) .text .baseline,
-.rollimage_parent_horizontal:nth-child(even) .text .description p{
-	-webkit-transform: translateX(60px);
-	-ms-transform: translateX(60px);
-	-o-transform: translateX(60px);
-	transform: translateX(60px);
-	opacity: 0;
-}
-
+.hiddenBlock.paragraphintro h3,
+.rollimage_parent_horizontal:nth-child(odd) .text h3,
 .rollimage_parent_horizontal:nth-child(odd) .text .title,
 .rollimage_parent_horizontal:nth-child(odd) .text .baseline,
-.rollimage_parent_horizontal:nth-child(odd) .text .description p{
+.rollimage_parent_horizontal:nth-child(odd) .text .description h4,
+.rollimage_parent_horizontal:nth-child(odd) .text .description p,
+.rollimage_parent_horizontal:nth-child(odd) .text .btn{
 	-webkit-transform: translateX(-60px);
 	-ms-transform: translateX(-60px);
 	-o-transform: translateX(-60px);
@@ -479,8 +540,12 @@ section.intro .text h1{
 	opacity: 0;
 }
 
+.rollimage_parent_vertical .text h3,
 .rollimage_parent_vertical .text .title,
-.rollimage_parent_vertical .text .baseline{
+.rollimage_parent_vertical .text .baseline,
+.hiddenBlock.paragraphintro h3,
+.hiddenBlock.paragraphintro h4,
+.hiddenBlock.paragraphintro p{
 	-webkit-transform: translateY(60px);
 	-ms-transform: translateY(60px);
 	-o-transform: translateY(60px);
@@ -488,9 +553,15 @@ section.intro .text h1{
 	opacity: 0;
 }
 
+.visible .text h3,
 .visible .text .title,
 .visible .text .baseline,
-.visible .text .description p{
+.visible .text .description h4,
+.visible .text .description p,
+.visible .text .btn,
+.paragraphintro.visible h3,
+.paragraphintro.visible h4,
+.paragraphintro.visible p{
 	opacity: 1!important;
 	-webkit-transform: translate(0)!important;
 	-ms-transform: translate(0)!important;

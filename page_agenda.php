@@ -42,7 +42,7 @@
 					<div class="description">
 						<p>Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</p>
 					</div>
-					<div class="button smallButton">+ détails</div>
+					<div class="btn button smallButton">+ détails</div>
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 					<div class="description">
 						<p>Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</p>
 					</div>
-					<div class="button smallButton">+ détails</div>
+					<div class="btn button smallButton">+ détails</div>
 				</div>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -145,7 +145,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -165,7 +165,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -205,7 +205,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -225,7 +225,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -245,7 +245,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
@@ -265,7 +265,7 @@
 					<div class="baseline">En avant la musique !</div>
 					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
 					<div class="moreinfosbtn">
-						<div class="button">+ DÉTAILS</div>
+						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>

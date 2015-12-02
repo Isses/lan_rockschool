@@ -147,7 +147,7 @@
 								<?= wpautop( $event->post_content ) ?>
 							</div>
 							<? if( $eventMetas['lien'][0] != '' ) { ?>
-							<a href='<?= $eventMetas['lien'][0] ?>' <?if( $eventMetas['fenetre'][0] != '' ) echo 'target="_blank"'; ?> class="button smallButton">+ détails</a>
+							<a href='<?= $eventMetas['lien'][0] ?>' <?if( $eventMetas['fenetre'][0] != '' ) echo 'target="_blank"'; ?> class="btn button smallButton">+ détails</a>
 							<? } ?>
 						</div>
 					</div>

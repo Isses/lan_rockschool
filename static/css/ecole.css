@@ -1,4 +1,4 @@
-.rollimage::after { background: #599adf }
+.rollimage::before { background: #599adf }
 
 /* HEADER */
 .ecole header .logo:before{ background-image: url('../img/ecole/logoIcon.png'); }
@@ -145,7 +145,7 @@
 	width: 100%;
 	background: #fff;
 }
-.ecole section.equipe .wall .mainline .img {
+.ecole section.equipe .wall .mainline .rollimage {
 	width: 50%; height: 100%;
 	float: left;
 	background-size: cover !important;
@@ -154,10 +154,10 @@
 .ecole section.equipe .wall .littleline {
 	width: 33.333333333%; float: left;
 }
-.ecole section.equipe .wall .littleline .img {
+.ecole section.equipe .wall .littleline .rollimage {
 	width: 100%; height: 265px;
 }
-.ecole section.equipe .wall .mainline .img>*, .ecole section.equipe .wall .littleline .img>* {
+.ecole section.equipe .wall .mainline .rollimage>*, .ecole section.equipe .wall .littleline .rollimage>* {
 	height: 100%;
 }
 
@@ -185,5 +185,5 @@
 	.ecole section.equipe .wall .baseline { font-size: 24px; }
 	.ecole section.equipe .wall .title { font-size: 36px; }
 	.ecole section.equipe .wall .mainline, .ecole section.equipe .wall .littleline { height: 540px; }
-	.ecole section.equipe .wall .littleline .img { height: 360px }
+	.ecole section.equipe .wall .littleline .rollimage { height: 360px }
 }

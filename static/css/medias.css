@@ -1,4 +1,4 @@
-.rollimage::after { background: #faad39 }
+.rollimage::before { background: #faad39 }
 
 /* HEADER */
 .medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }

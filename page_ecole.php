@@ -48,9 +48,9 @@
 
 		<div class="wall">
 			
-			<div class="mainline hiddenBlock rollimage_parent_vertical">
+			<div class="mainline hiddenBlock rollimage_parent_horizontal">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/tristan_gauthier.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/tristan_gauthier.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="content">
@@ -67,7 +67,7 @@
 
 			<div class="littleline lightblue hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/desmond.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/desmond.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">DesmonD</div>
@@ -76,7 +76,7 @@
 			</div>
 			<div class="littleline white hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/antoine.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/antoine.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">antoine</div>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="littleline blue hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/louis_marin.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/louis_marin.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">Louis marin</div>
@@ -94,7 +94,7 @@
 			</div>
 			<div class="littleline white hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/baptiste.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/baptiste.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">Baptiste</div>
@@ -103,7 +103,7 @@
 			</div>
 			<div class="littleline blue hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/remi.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/remi.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">rémi</div>
@@ -112,7 +112,7 @@
 			</div>
 			<div class="littleline lightblue hiddenBlock rollimage_parent_vertical">
 				<div class="img rollimage">
-					<div class="image" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/victor.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/victor.jpg') no-repeat center;"></div>
 				</div>
 				<div class="text">
 					<div class="title">VICTOR</div>

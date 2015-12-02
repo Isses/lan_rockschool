@@ -1,4 +1,4 @@
-.rollimage::after { background: #f4b251 }
+.rollimage::before { background: #f4b251 }
 
 
 /* HEADER */
@@ -100,7 +100,7 @@
 	color: #1572a3;
 	text-align: center;
 }
-.cours section.formules .baseline {
+.cours section.formules .line .text h4 {
 	text-align: justify;
 	color: #1572a3;
 	font-family: "Brandon_black";
@@ -108,11 +108,11 @@
 	display: block;
 	margin-bottom: 40px;
 }
-.cours section.formules .baseline::before {
+.cours section.formules h4::before {
 	content: "/ ";
 	color: #f4b251;
 }
-.cours section.formules .smallbaseline .baseline {
+.cours section.formules .smallbaseline.text h4 {
 	margin-bottom: 10px;
 }
 

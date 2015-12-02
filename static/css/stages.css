@@ -1,4 +1,4 @@
-.rollimage::after { background: #00e7e0 }
+.rollimage::before { background: #00e7e0 }
 
 /* HEADER */
 .stages header .logo:before{ background-image: url('../img/stages/logoIcon.png'); }
@@ -101,7 +101,7 @@
 	color: #f985af;
 	text-align: center;
 }
-.stages section.formules .baseline {
+.stages section.formules h4 {
 	text-align: justify;
 	color: #f985af;
 	font-family: "Brandon_black";
@@ -109,11 +109,11 @@
 	display: block;
 	margin-bottom: 20px;
 }
-.stages section.formules .baseline::before {
+.stages section.formules h4::before {
 	content: "/ ";
 	color: #09c0b8;
 }
-.stages section.formules .smallbaseline .baseline {
+.stages section.formules .smallbaseline h4 {
 	margin-bottom: 0;
 }
 

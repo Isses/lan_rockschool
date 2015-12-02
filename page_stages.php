@@ -26,7 +26,7 @@
 		
 		<div class="contain">
 
-			<div class="paragraphintro">
+			<div class="hiddenBlock paragraphintro">
 				<h3>KEEP ON SWINGING !</h3>
 
 				<p>Chaque année pendant les vacances scolaires, l'école ne ferme pas ses portes ! Au contraire, nous profitons de ce temps libre pour mettre en place des stages en groupe qui mêlent travail de composition, répétitions en studio professionnel, enregistrement et même tournage de clip !</p>
@@ -42,14 +42,14 @@
 					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_1.jpg">
 				</div>
 				<div class="text">
-					<h3>LE SUMMER CAMP</h3>
-					
-					<span class="baseline">1 semaine Rock’n’Surf pendant l’été</span>
-
-					<p>Le stage dure 1 semaine (entre le 1er juillet et le 31 août) et se déroule à Royan en Charente-Maritime (17).</p>
-					<p>Les élèves sont logés dans une grande maison de campagne typiquement charentaise. C'est une ancienne colonie de vacances avec une dizaine de chambres, un studio de musique, deux jardins, cuisine et salon.</p>
-					<p>Plusieurs chansons sont mises en place dans l’objectif de les enregistrer avec un ingénieur du son professionel.  C’est aussi l’occasion de vivre une vraie expérience de  groupe tout en améliorant le jeu de chacun !</p>
-					<p>Pour clore le stage, un ou plusieurs titres sont joués par les élèves au <a href="">tina’s café</a>, un café concert réputé de la région tenu par des artistes sur une plage de l’estuaire de la Gironde.</p>
+					<h3>LE SUMMER CAMP</h3>					
+					<div class="description">
+						<h4>1 semaine Rock’n’Surf pendant l’été</h4>
+						<p>Le stage dure 1 semaine (entre le 1er juillet et le 31 août) et se déroule à Royan en Charente-Maritime (17).</p>
+						<p>Les élèves sont logés dans une grande maison de campagne typiquement charentaise. C'est une ancienne colonie de vacances avec une dizaine de chambres, un studio de musique, deux jardins, cuisine et salon.</p>
+						<p>Plusieurs chansons sont mises en place dans l’objectif de les enregistrer avec un ingénieur du son professionel.  C’est aussi l’occasion de vivre une vraie expérience de  groupe tout en améliorant le jeu de chacun !</p>
+						<p>Pour clore le stage, un ou plusieurs titres sont joués par les élèves au <a href="">tina’s café</a>, un café concert réputé de la région tenu par des artistes sur une plage de l’estuaire de la Gironde.</p>
+					</div>
 				</div>
 			</div>
 
@@ -57,14 +57,14 @@
 				<div class="img rollimage">
 					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_2.jpg">
 				</div>
-				<div class="text">
-					<span class="baseline">Good vibrations !</span>
-
-					<p>En alternance avec les leçons, nous profiterons de l'océan (à 15 min. de l’hébergement) pour aller surfer !</p>
-					<p>Les cours se font avec un professeur diplômé d’état de l'école de surf <a href="">le spot</a>.</p>
-					<p>D'autres activités comme du bateau, une randonnée VTT, du cheval sur l'Île d'Oléron sont aussi au programme. Cette semaine sera filmée et une vidéo souvenir sera envoyée aux élèves et mise en ligne sur Youtube après le stage.</p>
-
-					<div class="btnprice">850€ <span>/</span> Personne</div>
+				<div class="text">					
+					<div class="description">
+						<h4>Good vibrations !</h4>
+						<p>En alternance avec les leçons, nous profiterons de l'océan (à 15 min. de l’hébergement) pour aller surfer !</p>
+						<p>Les cours se font avec un professeur diplômé d’état de l'école de surf <a href="">le spot</a>.</p>
+						<p>D'autres activités comme du bateau, une randonnée VTT, du cheval sur l'Île d'Oléron sont aussi au programme. Cette semaine sera filmée et une vidéo souvenir sera envoyée aux élèves et mise en ligne sur Youtube après le stage.</p>
+					</div>
+					<div class="btn btnprice">850€ <span>/</span> Personne</div>
 				</div>
 			</div>
 
@@ -79,18 +79,19 @@
 					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/stages_vacances.jpg">
 				</div>
 				<div class="text smallbaseline">
-					<span class="baseline">Printemps</span>
-					<p>Du lundi 20 Octobre au vendredi 30 Octobre</p>
+					<div class="description">
+						<h4>Printemps</h4>
+						<p>Du lundi 20 Octobre au vendredi 30 Octobre</p>
 
-					<span class="baseline">Toussaint</span>
-					<p>Du lundi 20 au vendredi 30 Octobre</p>
+						<h4>Toussaint</h4>
+						<p>Du lundi 20 au vendredi 30 Octobre</p>
 
-					<span class="baseline">Toussaint</span>
-					<p>Du lundi 20 Octobre au vendredi 30 Octobre</p>
-					<p>L'occasion pour les élèves de se rencontrer et de former un vrai groupe de rock !<br>Le stage se déroule du lundi au vendredi à raison de 3 heures par jour (en matinée ou après-midi selon la demande).</p>
-					<p>Au programme : mise en place de chansons (reprises ou compositions), répétition dans un studio professionnel ( <a href="">lA luna rossa</a>, <a href="">studio campus</a>,  <a href="">studio bleu</a> ), enregistrement audio, réalisation d'un clip et initiation aux autres instruments.</p>
-
-					<div class="btnprice">250€ <span>/</span> Personne</div>
+						<h4>Toussaint</h4>
+						<p>Du lundi 20 Octobre au vendredi 30 Octobre</p>
+						<p>L'occasion pour les élèves de se rencontrer et de former un vrai groupe de rock !<br>Le stage se déroule du lundi au vendredi à raison de 3 heures par jour (en matinée ou après-midi selon la demande).</p>
+						<p>Au programme : mise en place de chansons (reprises ou compositions), répétition dans un studio professionnel ( <a href="">lA luna rossa</a>, <a href="">studio campus</a>,  <a href="">studio bleu</a> ), enregistrement audio, réalisation d'un clip et initiation aux autres instruments.</p>
+					</div>
+					<div class="btn btnprice">250€ <span>/</span> Personne</div>
 				</div>
 			</div>
 
