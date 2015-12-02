@@ -169,7 +169,7 @@
 .agenda section.prochainement .mediators .mediator3 { background: url('../img/home/mediator.png')  center no-repeat; top: 1020px; right: 22px; }
 .agenda section.prochainement .mediators .mediator4 { background: url('../img/home/mediator3.png') center no-repeat; top: 1220px; left: 240px; }
 
-.agenda section.prochainement .bgbrown { background: #f2f4eb }
+.agenda section.prochainement .actu:nth-child(odd){ background: #f2f4eb }
 
 @media screen and ( min-width: 1200px) {
 	.agenda section.prochainement .actu { width: 1080px; height: 540px; }
@@ -247,6 +247,11 @@
 }
 .agenda section.plustard .wall .littleline .img {
 	width: 100%; height: 360px;
+}
+
+
+.agenda section.plustard .wall .littleline.empty .img {
+	width: 100%; height: 540px;
 }
 
 .agenda section.plustard .wall .littleline .text {

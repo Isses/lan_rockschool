@@ -24,74 +24,68 @@
 
 	<section class="prochainement">
 		<h2 class="hiddenBlock">prochainement...</h2>
+		<?				
+		$events 		= getEvents();
+		$eventsCount 	= count($events);
+
+		switch ($eventsCount) {
+			case 3:
+			case 2:
+			case 1:
+				$firstBlocCount = $eventsCount;
+				break;
+
+			case 5:
+			case 4:
+				$firstBlocCount = 2;
+				break;
+			
+			default:
+				if( $firstBlocCount%3 == 0 ) $firstBlocCount = 3;
+				else $firstBlocCount = 2;
+				break;
+		}
+		$eventNumber = 0 ; 
+		foreach ($events as $event) {
+			if( $eventNumber < 3 && $eventNumber < $firstBlocCount ) {
+		?>
 		<div class="actu hiddenBlock rollimage_parent_horizontal">
 			<div class="image rollimage">
 				<div class="date">
 					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
+						<?
+						if( $event['type'] == 'Période' ) {
+							list($y, $m, $d) = split('[/.-]', $event['début'] );
+							echo $d.' '. $months[$m] .'<b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['fin'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} else { 
+							echo $event['heure'][0] .'h <b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['date'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} ?>
+						
 					</div>
 				</div>
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu1.jpg" alt="">
+				<img src="<?= $event['imgSrc'] ?>" alt="">
 			</div>
 			<div class="text">
 				<div class="content">
-					<div class="title">stage d’ hiver</div>
-					<div class="baseline">Inscriptions ouvertes</div>
+					<div class="title"><?= $event['title'] ?></div>
+					<div class="baseline"><?= $event['baseline'] ?></div>
 					<div class="description">
-						<p>Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</p>
+						<?= $event['description'] ?>
 					</div>
-					<div class="btn button smallButton">+ détails</div>
+					<? if( $event['lien'] != '' ) { ?>
+					<a href='<?= $event['lien'] ?>' <?if( $event['fenetre'] != '' ) echo 'target="_blank"'; ?> class="btn button smallButton">+ détails</a>
+					<? } ?>
 				</div>
 			</div>
 		</div>
-		<div class="actu bgbrown hiddenBlock rollimage_parent_horizontal">
-			<div class="image rollimage">
-				<div class="date">
-					<div class="content">
-						17h <b>/</b><br>
-						12 DÉC<br>
-						<b>2015</b>
-					</div>
-				</div>
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu2.jpg" alt="">
-			</div>
-			<div class="text">
-				<div class="content">
-					<div class="title">concert de noël</div>
-					<div class="baseline">Pour finir ensemble 2015 en beauté !</div>
-					<div class="description">
-						<p>Rien de mieux qu'un concert des élèves et des professeurs pour se souhaiter de bonnes fêtes de fin d’année !</p>
-						<p>L'évènement se passera dans le sympathique bar le Charlie. Les élèves ouvriront le bal avec leurs morceaux et les professeurs animeront la deuxième partie de soirée.<br>
-						Concert gratuit ! P.S. : gâteaux fait maison bienvenus !</p>
-						<p>INFOS PRATIQUES : Le Charlie - 29 Rue de Cotte 75012 Paris Métro : ligne 8 station Ledru Rollin. </p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="actu hiddenBlock rollimage_parent_horizontal">
-			<div class="image rollimage">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/actu1.jpg" alt="">
-			</div>
-			<div class="text">
-				<div class="content">
-					<div class="title">stage d’ hiver</div>
-					<div class="baseline">Inscriptions ouvertes</div>
-					<div class="description">
-						<p>Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</p>
-					</div>
-					<div class="btn button smallButton">+ détails</div>
-				</div>
-			</div>
-		</div>
+		<? ++$eventNumber;
+			}
+		} ?>
+
 		<div class="mediators">
 			<div class="mediator1"></div>
 			<div class="mediator2"></div>
@@ -104,12 +98,21 @@
 	<section class="transition transition2">
 		<div class="content"></div>
 	</section>
-
+	
+	<? if( $firstBlocCount < $eventsCount ) { ?>
 	<section class="plustard">
 		<h2 class="hiddenBlock">...ET UN PEU PLUS TARD</h2>
 
 		<div class="wall">
-			<div class="littleline white hiddenBlock rollimage_parent_vertical">
+			<?
+			$wallCount = 0;
+			$wallColor = array('white','red','brown','brown','red','white');
+			foreach ($events as $event) {
+				if( $wallCount >= $firstBlocCount ){
+					$color = $wallColor[($wallCount-$firstBlocCount)%6];
+					
+			?>
+			<div class="littleline <?= $color ?> hiddenBlock rollimage_parent_vertical">
 				<div class="date">
 					<div class="content">
 						22 <span class="sub">FEV</span> <b>/</b><br>
@@ -118,158 +121,28 @@
 					</div>
 				</div>
 				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/desmond.jpg') no-repeat center;"></div>
+					<div class="img" style="background:url('<?= $event['imgSrc']?>') no-repeat center;"></div>
 				</div>
 				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
+					<div class="title"><?= $event['title'] ?></div>
+					<div class="baseline"><?= $event['baseline'] ?></div>
+					<div class="moreinfos"><?= $event['description'] ?></div>
 					<div class="moreinfosbtn">
 						<div class="button btn">+ DÉTAILS</div>
 					</div>
 				</div>
 			</div>
-			<div class="littleline red hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
+			<? } ++$wallCount; } 
+
+			if( ($wallCount-$firstBlocCount)%3 != 0 ) {?>
+			<div class="littleline empty hiddenBlock rollimage_parent_vertical">				
 				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/antoine.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
+					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/agenda/emptyEvent.jpg') no-repeat center;"></div>
+				</div>				
 			</div>
-			<div class="littleline brown hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/louis_marin.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
-			<div class="littleline red hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/baptiste.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
-			<div class="littleline brown hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/remi.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
-			<div class="littleline white hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/victor.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
-			<div class="littleline brown hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/remi.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
-			<div class="littleline white hiddenBlock rollimage_parent_vertical">
-				<div class="date">
-					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
-					</div>
-				</div>
-				<div class="rollimage">
-					<div class="img" style="background:url('<?= get_stylesheet_directory_uri() ?>/static/img/ecole/victor.jpg') no-repeat center;"></div>
-				</div>
-				<div class="text">
-					<div class="title">concert de fin d’année</div>
-					<div class="baseline">En avant la musique !</div>
-					<div class="moreinfos">Pendant une semaine, nous travaillerons la mise en place d'une ou plusieurs chansons avec répétition en studio, son enregistrement pro et en souvenir un clip vidéo !</div>
-					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
-					</div>
-				</div>
-			</div>
+			<? } ?>
 		</div>
 	</section>
+	<? } ?>
 
 <? get_footer() ?>

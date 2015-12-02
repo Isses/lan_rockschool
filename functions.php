@@ -204,5 +204,65 @@
     include( dirname(__FILE__) . '/includes/albums.php');
     $album->set_icon( 'camera-retro' );
 
+// GET NEWS DATAS
+$months = array(
+	'01' => 'JAN',
+	'02' => 'FEV',
+	'03' => 'MARS',
+	'04' => 'AVR',
+	'05' => 'MAI',
+	'06' => 'JUIN',
+	'07' => 'JUI',
+	'08' => 'AOUT',
+	'09' => 'SEPT',
+	'10' => 'OCT',
+	'11' => 'NOV',
+	'12' => 'DEC'
+	);
+
+function getEvents() {
+	$events = get_posts( array('post_type' => 'event','posts_per_page' => -1 ) );
+	$eventsList = array();
+	foreach ($events as $event) {
+		$eventMetas = get_post_meta( $event->ID );
+		if( $eventMetas['type'][0] == 'Période' ) {
+			if( strtotime($eventMetas['fin'][0]) < time() ) continue;
+		} else {
+			if( strtotime($eventMetas['date'][0]) < time() ) continue;
+		}
+
+		$availableEvent = [];
+		$availableEvent['title'] 		= $event->post_title;
+		$availableEvent['baseline'] 	= $eventMetas['baseline'][0];
+		$availableEvent['description'] 	= wpautop( $event->post_content );
+		$availableEvent['lien'] 		= $eventMetas['lien'][0];
+		$availableEvent['fenetre'] 		= $eventMetas['fenetre'][0];
+
+		$availableEvent['imgSrc'] 		= wp_get_attachment_url( get_post_thumbnail_id( $event->ID ) );
+
+		$availableEvent['type'] 		= $eventMetas['type'][0];
+		if( $availableEvent['type'] == "Période" ) {
+			$availableEvent['début'] 	= $eventMetas['début'][0];
+			$availableEvent['fin'] 		= $eventMetas['fin'][0];
+			list($y, $m, $d) 			= split('[/.-]', $availableEvent['début'] );
+			$availableEvent['time']		= mktime(0, 0, 0, $m, $d, $y);
+		} else {
+			$availableEvent['date'] 	= $eventMetas['date'][0];
+			$availableEvent['heure'] 	= $eventMetas['heure'][0];
+			list($y, $m, $d) 			= split('[/.-]', $availableEvent['date'] );
+			$availableEvent['time']		= mktime(0, 0, 0, $m, $d, $y);
+		}
+
+		array_push($eventsList, $availableEvent);
+	}
+
+	uasort($eventsList, function ($a, $b) {
+	    if ($a['time'] == $b['time']) {
+	        return 0;
+	    }
+	    return ($a['time'] < $b['time']) ? -1 : 1;
+	});
+	return $eventsList;
+}
 
 ?>

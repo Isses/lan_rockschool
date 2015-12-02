@@ -94,67 +94,52 @@
 
 	<section class="prochainement">
 		<h2 class="hiddenBlock">prochainement</h2>
-		<?	
-			// GET NEWS DATAS
-			$months = array(
-				'01' => 'JAN',
-				'02' => 'FEV',
-				'03' => 'MARS',
-				'04' => 'AVR',
-				'05' => 'MAI',
-				'06' => 'JUIN',
-				'07' => 'JUI',
-				'08' => 'AOUT',
-				'09' => 'SEPT',
-				'10' => 'OCT',
-				'11' => 'NOV',
-				'12' => 'DEC'
-				);
-			$events = get_posts( array('post_type' => 'event','posts_per_page' => 2 ) );
-			foreach ($events as $event) : setup_postdata( $event );
-				$eventMetas = get_post_meta( $event->ID );
-				if( $eventMetas['type'][0] == 'Période' ) {
-					if( strtotime($eventMetas['fin'][0]) < time() ) continue;
-				} else {
-					if( strtotime($eventMetas['date'][0]) < time() ) continue;
-				}
-			?>
-				<div class="actu hiddenBlock rollimage_parent_horizontal">
-					<div class="image rollimage">
-						<div class="date">
-							<div class="content">
-								<?
-								if( $eventMetas['type'][0] == 'Période' ) {
-									list($y, $m, $d) = split('[/.-]', $eventMetas['début'][0] );
-									echo $d.' '. $months[$m] .'<b>/</b><br>';
-									list($y, $m, $d) = split('[/.-]', $eventMetas['fin'][0] );
-									echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
-								} else { 
-									echo $eventMetas['heure'][0] .'h <b>/</b><br>';
-									list($y, $m, $d) = split('[/.-]', $eventMetas['date'][0] );
-									echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
-								} ?>
-								
-							</div>
-						</div>
-						<img src="<?= wp_get_attachment_url( get_post_thumbnail_id( $event->ID ) ) ?>" alt="">
-					</div>
-					<div class="text">
-						<div class="content">
-							<div class="title"><?= $event->post_title ?></div>
-							<div class="baseline"><?= $eventMetas['baseline'][0] ?></div>
-							<div class="description">
-								<?= wpautop( $event->post_content ) ?>
-							</div>
-							<? if( $eventMetas['lien'][0] != '' ) { ?>
-							<a href='<?= $eventMetas['lien'][0] ?>' <?if( $eventMetas['fenetre'][0] != '' ) echo 'target="_blank"'; ?> class="btn button smallButton">+ détails</a>
-							<? } ?>
-						</div>
+		
+		<?				
+		$events = getEvents();
+		$eventNumber = 0 ; 
+		foreach ($events as $event) {
+			if( $eventNumber < 3 ) {
+		?>
+		<div class="actu hiddenBlock rollimage_parent_horizontal">
+			<div class="image rollimage">
+				<div class="date">
+					<div class="content">
+						<?
+						if( $event['type'] == 'Période' ) {
+							list($y, $m, $d) = split('[/.-]', $event['début'] );
+							echo $d.' '. $months[$m] .'<b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['fin'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} else { 
+							echo $event['heure'][0] .'h <b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['date'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} ?>
+						
 					</div>
 				</div>
-			<?
-			endforeach; wp_reset_postdata(); 
+				<img src="<?= $event['imgSrc'] ?>" alt="">
+			</div>
+			<div class="text">
+				<div class="content">
+					<div class="title"><?= $event['title'] ?></div>
+					<div class="baseline"><?= $event['baseline'] ?></div>
+					<div class="description">
+						<?= $event['description'] ?>
+					</div>
+					<? if( $event['lien'] != '' ) { ?>
+					<a href='<?= $event['lien'] ?>' <?if( $event['fenetre'] != '' ) echo 'target="_blank"'; ?> class="btn button smallButton">+ détails</a>
+					<? } ?>
+				</div>
+			</div>
+		</div>
+		<?
+			++$eventNumber;  
+			}
+		}
 		?>
+
 		<a href="/agenda"class="button">tout l’agenda</a>
 		<div class="mediators">
 			<div class="mediator1"></div>
