@@ -69,16 +69,26 @@
 
 	<section class="cours">
 		<h2 class="hiddenBlock">les cours</h2>
-		<div class="text">
-			<p>La Rock School de Paris est une jeune école de musique qui enseigne le chant, la guitare, le piano, la basse et la batterie de manière ludique, fun et pédagogique à Paris et en proche banlieue. Les cours sont adaptés à la demande de l' élève et sont ouverts à tous âges et tous niveaux.
-			L’école enseigne aussi bien du rock que du blues, de la funk, du reggae ou du jazz. A vous de décider !
-			</p>
-			<p>Car nous avons pleinement conscience que le solfège rebute beaucoup d'entre vous (nous récupérons un grand nombre d'élèves du conservatoire), nos professeurs en enseignent seulement les bases théoriques afin d'avoir les clés essentielles pour avancer rapidement.</p>
-			<p>Dans les cas particuliers de la guitare et de la basse, nous utilisons aussi l'écriture simplifiée par tablatures (système de notation basé sur la position des doigts sur les cases et les cordes de l' instrument).</p>
-			<p><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/coursTablature.jpg"  width="100%" alt=""></p>
-			<p>Cette méthode permet d'acquérir des résultats rapidement et donne goût à la musique aux élèves en quelques accords.Bien évidemment, si nos musiciens en herbe souhaitent approfondir leurs connaissances solfègiques, nous serons tout à fait en mesure de leur enseigner.</p>
-			<p class="subtitle">Le Petit Plus</p>
-			<p>Lorsqu'un thème ou une chanson est en place, le professeur réalise une vidéo avec l'élève pour la partager sur notre site sur la page médias et les réseaux sociaux !</p>
+		<div class="paragraphintro hiddenBlock">
+			<div class="text" >
+				<div class="description" >
+					<p>La Rock School de Paris est une jeune école de musique qui enseigne le chant, la guitare, le piano, la basse et la batterie de manière ludique, fun et pédagogique à Paris et en proche banlieue. Les cours sont adaptés à la demande de l' élève et sont ouverts à tous âges et tous niveaux.
+					L’école enseigne aussi bien du rock que du blues, de la funk, du reggae ou du jazz. A vous de décider !
+					</p>
+					<p>Car nous avons pleinement conscience que le solfège rebute beaucoup d'entre vous (nous récupérons un grand nombre d'élèves du conservatoire), nos professeurs en enseignent seulement les bases théoriques afin d'avoir les clés essentielles pour avancer rapidement.</p>
+					<p>Dans les cas particuliers de la guitare et de la basse, nous utilisons aussi l'écriture simplifiée par tablatures (système de notation basé sur la position des doigts sur les cases et les cordes de l' instrument).</p>
+				</div>
+			</div>
+		</div>
+		<div class="partition hiddenBlock"><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/coursTablature.jpg"  width="100%" alt=""></div>
+		<div class="paragraphintro hiddenBlock">
+			<div class="text" >
+				<div class="description" >
+					<p>Cette méthode permet d'acquérir des résultats rapidement et donne goût à la musique aux élèves en quelques accords.Bien évidemment, si nos musiciens en herbe souhaitent approfondir leurs connaissances solfègiques, nous serons tout à fait en mesure de leur enseigner.</p>
+					<p class="subtitle">Le Petit Plus</p>
+					<p>Lorsqu'un thème ou une chanson est en place, le professeur réalise une vidéo avec l'élève pour la partager sur notre site sur la page médias et les réseaux sociaux !</p>
+				</div>
+			</div>
 		</div>
 		<a href="/cours"class="button">En savoir + sur les cours</a>
 		<div class="hands">

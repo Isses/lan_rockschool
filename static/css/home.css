@@ -175,6 +175,32 @@
 	text-align: justify;
 }
 
+.home section.cours .partition {
+	width: 462px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.home section.cours .partition img{
+	-webkit-transition: all .4s ease-out .8s;
+	-o-transition: all .4s ease-out .8s;
+	transition: all .4s ease-out .8s;
+	opacity: 0;
+	-webkit-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	transform: translateY(100px);
+}
+
+
+.home section.cours .partition.visible img{
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
 .home section.cours .text p{
 	margin-bottom: 20px;
 }
@@ -232,6 +258,7 @@
 	.home section.cours { padding-top: 100px; padding-bottom: 52px; }
 	.home section.cours .title { font-size: 80px; margin-bottom: 80px; }
 	.home section.cours .text { width: 710px; }
+	.home section.cours .partition { width: 710px; }
 	.home section.cours .text p { font-size: 14px; line-height: 22px; margin-bottom: 30px;}
 	.home section.cours .text p:first-child { font-size: 18px; line-height: 26px;}
 	.home section.cours .text p.subtitle { font-size: 24px; margin-bottom: 10px;}
