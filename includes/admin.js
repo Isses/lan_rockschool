@@ -35,13 +35,19 @@ jQuery(document).ready( function() {
 			parent.find('.content[data-link='+link+']').addClass('current');
 		});
 
-		jQuery('.tableList .content .header input').not('.tableList .content .header .blocposition input').change( function() {
+		jQuery('#album-type input[type=radio]').change( function() {
 			var parent = jQuery(jQuery(this).parents('.content')[0]);
-			var blocVideo = parent.find('.blocVideo').removeClass('active');
-			var blocImage = parent.find('.blocImage').removeClass('active');
-			if( this.value == 'video') blocVideo.addClass('active');
-			else blocImage.addClass('active');
+			var blocVideo = jQuery('#album-videos').hide();
+			var blocImage = jQuery('#album-photos').hide();
+			if( this.value == 'Photos') blocImage.show();
+			else if( this.value == 'Vidéos') blocVideo.show();
 		});
+
+		if( jQuery('#album-type input[type=radio]:checked').length == 0 ) {
+			jQuery('#album-type input[type=radio]').first().prop("checked", true);
+		} 
+		jQuery('#album-type input[type=radio]:checked').change();
+		
 
 		jQuery('.tableList .content .header .blocposition input').change( function() {
 			var parent = jQuery(jQuery(this).parents('.blocposition').first());

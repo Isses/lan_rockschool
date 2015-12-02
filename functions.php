@@ -193,7 +193,8 @@
 				break;
 			case 'medias':
 				$mediaCount = get_post_meta( $post_id, 'mediaCount', true );
-				echo $mediaCount['videos']." vidéo(s), ".$mediaCount['photos']." photo(s)";
+				$mediaType = get_post_meta( $post_id, 'type', true );
+				echo $mediaCount." ".$mediaType;
 				break;
 		}
 	});
@@ -201,6 +202,15 @@
 	lanfosterWP()->admin->setColumnsorder('album', array('thumb'=>'couverture','title' => __('Title'),'medias'=>'medias', 'date' => __('Date') ));
 
     $album = new Super_Custom_Post_Type( 'album', 'albums', 'album' );
+    $album->add_meta_box(array
+            (
+                'id' => 'album-type',
+                'title' => 'Type d\'album',
+                'fields' => array
+                (
+                    'type' => array( 'type' => 'radio', 'options' => array( 'Photos', 'Vidéos' ) )
+                )
+            ));
     include( dirname(__FILE__) . '/includes/albums.php');
     $album->set_icon( 'camera-retro' );
 

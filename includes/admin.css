@@ -111,13 +111,6 @@ Text Domain: lanfoster_ittranslation
 	display: none;
 }
 
-
-.tableList .content .bloc { 
-	display: none;
-} 
-
-.tableList .content .bloc.active { display: block;}
-
 .tableList .image {
 	background-color: #e8f1f1;
 	border: 1px solid #DDD;

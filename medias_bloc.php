@@ -26,17 +26,13 @@
                             <div class="title"><?= get_the_title( $post->ID ); ?></div>
                             <div class="baseline">
                                 <?
-                                    $nbVideos   =  $mediasCount["videos"];
-                                    $nbPhotos   =  $mediasCount["photos"];
-                                    if( $nbPhotos > 0 ) {
-                                        if( $nbPhotos == 1 ) echo '1 Photo';
-                                        else echo $nbPhotos.' Photos';
-                                    }
-                                    if( $nbPhotos > 0 && $nbVideos > 0 ) echo ' / ';
-
-                                    if( $nbVideos > 0 ) {
-                                        if( $nbVideos == 1 ) echo '1 Vidéo';
-                                        else echo $nbVideos.' Vidéos';
+                                    echo $mediasCount .' ';
+                                    if( $infos['type'][0] == 'Photos') {
+                                        if( $mediasCount > 1 ) echo 'photos';
+                                        else echo 'photo';
+                                    } else {
+                                        if( $mediasCount > 1 ) echo 'vidéos';
+                                        else echo 'vidéo';
                                     }
                                 ?>
                             </div>
