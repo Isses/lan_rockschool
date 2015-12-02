@@ -115,9 +115,18 @@
 			<div class="littleline <?= $color ?> hiddenBlock rollimage_parent_vertical">
 				<div class="date">
 					<div class="content">
-						22 <span class="sub">FEV</span> <b>/</b><br>
-						24 <span class="sub">MARS</span><br>
-						<b class="year">2016</b>
+						<?
+						if( $event['type'] == 'Période' ) {
+							list($y, $m, $d) = split('[/.-]', $event['début'] );
+							echo $d.' '. $months[$m] .'<b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['fin'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} else { 
+							echo $event['heure'][0] .'h <b>/</b><br>';
+							list($y, $m, $d) = split('[/.-]', $event['date'] );
+							echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+						} ?>
+						
 					</div>
 				</div>
 				<div class="rollimage">
@@ -127,9 +136,12 @@
 					<div class="title"><?= $event['title'] ?></div>
 					<div class="baseline"><?= $event['baseline'] ?></div>
 					<div class="moreinfos"><?= $event['description'] ?></div>
+					<? if( $event['lien'] != '' ) { ?>
 					<div class="moreinfosbtn">
-						<div class="button btn">+ DÉTAILS</div>
+						<a href='<?= $event['lien'] ?>' <?if( $event['fenetre'] != '' ) echo 'target="_blank"'; ?> class="button btn">+ DÉTAILS</a>
 					</div>
+					<? } ?>
+					
 				</div>
 			</div>
 			<? } ++$wallCount; } 
