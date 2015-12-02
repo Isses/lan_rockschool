@@ -1,4 +1,8 @@
 
+.rollimage::before {
+	background: #d04834;
+}
+
 /* HEADER */
 .home header .logo:before{ background-image: url('../img/home/logoIcon.png'); }
 .home header .logo:after{ background-image: url('../img/home/logoText.png'); }
@@ -270,7 +274,7 @@
 	width: 78px; height: 78px;
 	background-color: #5b7c47;
 	line-height: 78px;
-	top: 0; right: 50%;
+	top: 0; right: 0;
 	z-index: 2;
 	text-align: center;
 }
@@ -338,7 +342,7 @@
 
 .home section.prochainement .actu:nth-child(odd) .image { left: auto; right: 0; }
 .home section.prochainement .actu:nth-child(odd) .text { left: 0; right: auto; }
-.home section.prochainement .actu:nth-child(odd) .date { left: 50%; right: auto; }
+.home section.prochainement .actu:nth-child(odd) .date { left: 0; right: auto; }
 
 .home section.prochainement>.button{
 	color: #FFF;

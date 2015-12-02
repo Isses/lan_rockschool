@@ -1,3 +1,7 @@
+.rollimage::before {
+	background: #7f9f4b;
+}
+
 /* HEADER */
 .agenda header .logo:before{ background-image: url('../img/agenda/logoIcon.png'); }
 .agenda header .logo:after{ background-image: url('../img/agenda/logoText.png'); }
@@ -78,7 +82,7 @@
 	width: 78px; height: 78px;
 	background-color: #5b7c47;
 	line-height: 78px;
-	top: 0; right: -78px;
+	top: 0; right: 0px;
 	z-index: 2;
 	text-align: center;
 }
@@ -146,7 +150,7 @@
 
 .agenda section.prochainement .actu:nth-child(odd) .image { left: auto; right: 0; }
 .agenda section.prochainement .actu:nth-child(odd) .text { left: 0; right: auto; }
-.agenda section.prochainement .actu:nth-child(odd) .date { left: -78px; right: auto; }
+.agenda section.prochainement .actu:nth-child(odd) .date { left: 0; right: auto; }
 
 .agenda section.prochainement .mediators {
 	width: 100%; height: 100%;
