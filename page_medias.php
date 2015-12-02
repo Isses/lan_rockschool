@@ -26,8 +26,10 @@
 		<h2>EN PHOTOS</h2>
 
 		<div class="wall">
-			<div class="littleline white">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline white hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -36,8 +38,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline orange">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline orange hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -46,8 +50,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline lightpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline lightpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -56,8 +62,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline darkpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline darkpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -66,11 +74,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline fullimg">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline fullimg hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 			</div>
-			<div class="littleline darkpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline darkpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -93,8 +105,10 @@
 		<h2>EN VIDÉOS</h2>
 
 		<div class="wall">
-			<div class="littleline white">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline white hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -103,8 +117,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline orange">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline orange hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -113,8 +129,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline lightpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline lightpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -123,8 +141,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline darkpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline darkpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>
@@ -133,11 +153,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="littleline fullimg">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline fullimg hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 			</div>
-			<div class="littleline darkpurple">
-				<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+			<div class="littleline darkpurple hiddenBlock rollimage_parent_vertical">
+				<div class="rollimage">
+					<div class="img" style="background:url('static/img/ecole/desmond.jpg') no-repeat center;"></div>
+				</div>
 				<div class="text">
 					<div class="title">concert de fin d’année 2015</div>
 					<div class="baseline">10 Photos</div>

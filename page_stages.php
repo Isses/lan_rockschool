@@ -37,8 +37,10 @@
 				<p>Nous proposons également une formule <b>stage intensiF individuel</b> où l'élève et le professeur se rencontre du lundi au vendredi pour se focaliser sur un style de musique en particulier ou bien une technique de jeu spécifique.<br>Nous vous invitons à nous <a href="">CONTACTER</a> afin de vous proposer un devis adapté.</p>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_1.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_1.jpg">
+				</div>
 				<div class="text">
 					<h3>LE SUMMER CAMP</h3>
 					
@@ -51,8 +53,10 @@
 				</div>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_2.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/summer_camp_2.jpg">
+				</div>
 				<div class="text">
 					<span class="baseline">Good vibrations !</span>
 
@@ -70,8 +74,10 @@
 
 			<h3 class="blue">et pendant les <span>(petites)</span> vacances</h3>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/stages_vacances.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/stages/stages_vacances.jpg">
+				</div>
 				<div class="text smallbaseline">
 					<span class="baseline">Printemps</span>
 					<p>Du lundi 20 Octobre au vendredi 30 Octobre</p>

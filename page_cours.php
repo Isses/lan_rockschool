@@ -42,8 +42,10 @@
 				<p><b>Tous nos nouveaux inscrits recevront un pack de Bienvenue Rock School de Paris contenant des médiators, stickers, casquette, t-shirt !</b></p>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_domicile.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_domicile.jpg">
+				</div>
 				<div class="text smallbaseline">
 					<div class="alignparent">
 						<div class="alignchild">
@@ -60,8 +62,10 @@
 				</div>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_duo.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_duo.jpg">
+				</div>
 				<div class="text smallbaseline">
 					<div class="alignparent">
 						<div class="alignchild">
@@ -75,8 +79,10 @@
 				</div>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_famille.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_famille.jpg">
+				</div>
 				<div class="text smallbaseline">
 					<div class="alignparent">
 						<div class="alignchild">
@@ -90,8 +96,10 @@
 				</div>
 			</div>
 
-			<div class="line">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_groupe.jpg" class="img">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
+				<div class="img rollimage">
+					<img src="<?= get_stylesheet_directory_uri() ?>/static/img/cours/cours_groupe.jpg">
+				</div>
 				<div class="text smallbaseline">
 					<div class="alignparent">
 						<div class="alignchild">

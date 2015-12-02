@@ -181,16 +181,6 @@
 	.agenda section.prochainement .actu:nth-child(odd) .date { left: -120px; }
 }
 
-.agenda section.prochainement .actu.visible .date {
-	right: 0;
-	-webkit-transition-delay: 1s;
-	-moz-transition-delay: 1s;
-	-o-transition-delay: 1s;
-	transition-delay: 1s;
-}
-.agenda section.prochainement .actu.visible:nth-child(odd) .date { left: 0; }
-
-
 
 /* TRANSITION2 */
 .agenda section.transition2 .content {

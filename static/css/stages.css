@@ -1,3 +1,4 @@
+.rollimage::after { background: #00e7e0 }
 
 /* HEADER */
 .stages header .logo:before{ background-image: url('../img/stages/logoIcon.png'); }

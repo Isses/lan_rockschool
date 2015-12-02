@@ -1,3 +1,5 @@
+.rollimage::after { background: #f4b251 }
+
 
 /* HEADER */
 .cours header .logo:before{ background-image: url('../img/cours/logoIcon.png'); }

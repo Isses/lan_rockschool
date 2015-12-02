@@ -255,52 +255,53 @@ section.intro .text h1{
 	-ms-transition: all 250ms ease-in-out;
 	-o-transition: all 250ms ease-in-out;
 	transition: all 250ms ease-in-out;
-
-	-webkit-transition-delay: .55s;
-	-moz-transition-delay: .55s;
-	-o-transition-delay: .55s;
-	transition-delay: .55s;
 }
 .rollimage::after {
 	content: '';
 	position: absolute;
 	background: #7f9f4b;
 }
-.rollimage_parent_horizontal:nth-child(even) .rollimage::after { width: 0; height: 100%; top:  0; right:  0; }
-.rollimage_parent_horizontal:nth-child(odd)  .rollimage::after { width: 0; height: 100%; top:  0; left:   0; }
-.rollimage_parent_vertical:nth-child(even)   .rollimage::after { width: 100%; height: 0; left: 0; top:    0; }
-.rollimage_parent_vertical:nth-child(odd)    .rollimage::after { width: 100%; height: 0; left: 0; bottom: 0; }
+.rollimage_parent_horizontal:nth-child(odd)  .rollimage::after { width: 0; height: 100%; top:  0; right:  0; }
+.rollimage_parent_horizontal:nth-child(even) .rollimage::after { width: 0; height: 100%; top:  0; left:   0; }
+.rollimage_parent_vertical:nth-child(odd)    .rollimage::after { width: 100%; height: 0; left: 0; top:    0; }
+.rollimage_parent_vertical:nth-child(even)   .rollimage::after { width: 100%; height: 0; left: 0; bottom: 0; }
 
-.rollimage img, .rollimage .img { opacity: 0 }
-.visible .rollimage img, .visible .rollimage .img { opacity: 1 }
+.rollimage img, .rollimage .img, .rollimage .image { opacity: 0 }
+.visible .rollimage img, .visible .rollimage .img, .visible .rollimage .image { opacity: 1 }
 
-.rollimage_parent_horizontal:nth-child(even).visible .rollimage::after { -webkit-animation: key_rollimage_right 1s; -moz-animation: key_rollimage_right 1s; -o-animation: key_rollimage_right 1s; animation: key_rollimage_right 1s; }
-.rollimage_parent_horizontal:nth-child(odd).visible  .rollimage::after { -webkit-animation: key_rollimage_left 1s;  -moz-animation: key_rollimage_left 1s;  -o-animation: key_rollimage_left 1s;  animation: key_rollimage_left 1s; }
-.rollimage_parent_vertical:nth-child(even).visible   .rollimage::after { -webkit-animation: key_rollimage_top 1s;   -moz-animation: key_rollimage_top 1s;   -o-animation: key_rollimage_top 1s;   animation: key_rollimage_top 1s; }
-.rollimage_parent_vertical:nth-child(odd).visible    .rollimage::after { -webkit-animation: key_rollimage_bot 1s;   -moz-animation: key_rollimage_bot 1s;   -o-animation: key_rollimage_bot 1s;   animation: key_rollimage_bot 1s; }
+.visible .rollimage .date { right: 0; -webkit-transition-delay: 1s; -moz-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; }
+.visible:nth-child(odd) .rollimage .date { left: 0; }
 
-.visible .rollimage::after { -webkit-animation-delay: .5s; -moz-animation-delay: .5s; -o-animation-delay: .5s; animation-delay: .5s; }
-.rollimage_parent_vertical:nth-child(1).visible .rollimage::after { -webkit-animation-delay: .25s; -moz-animation-delay: .25s; -o-animation-delay: .25s; animation-delay: .25s; }
-.rollimage_parent_vertical:nth-child(2).visible .rollimage::after { -webkit-animation-delay: .50s; -moz-animation-delay: .50s; -o-animation-delay: .50s; animation-delay: .50s; }
-.rollimage_parent_vertical:nth-child(3).visible .rollimage::after { -webkit-animation-delay: .75s; -moz-animation-delay: .57s; -o-animation-delay: .75s; animation-delay: .75s; }
+.rollimage_parent_horizontal:nth-child(odd).visible  .rollimage::after { -webkit-animation: key_rollimage_right .6s; -moz-animation: key_rollimage_right .6s; -o-animation: key_rollimage_right .6s; animation: key_rollimage_right .6s; }
+.rollimage_parent_horizontal:nth-child(even).visible .rollimage::after { -webkit-animation: key_rollimage_left .6s;  -moz-animation: key_rollimage_left .6s;  -o-animation: key_rollimage_left .6s;  animation: key_rollimage_left .6s; }
+.rollimage_parent_vertical:nth-child(odd).visible    .rollimage::after { -webkit-animation: key_rollimage_top .6s;   -moz-animation: key_rollimage_top .6s;   -o-animation: key_rollimage_top .6s;   animation: key_rollimage_top .6s; }
+.rollimage_parent_vertical:nth-child(even).visible   .rollimage::after { -webkit-animation: key_rollimage_bot .6s;   -moz-animation: key_rollimage_bot .6s;   -o-animation: key_rollimage_bot .6s;   animation: key_rollimage_bot .6s; }
 
-@-webkit-keyframes key_rollimage_right { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
-@-moz-keyframes key_rollimage_right    { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
-@-o-keyframes key_rollimage_right      { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
-@keyframes key_rollimage_right         { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+.rollimage_parent_vertical:nth-child(3n+1).visible  .rollimage>* { -webkit-transition-delay: .3s; -moz-transition-delay: .3s; -o-transition-delay: .3s; transition-delay: .3s; }
+.rollimage_parent_vertical:nth-child(3n+2).visible  .rollimage>* { -webkit-transition-delay: .6s; -moz-transition-delay: .6s; -o-transition-delay: .6s; transition-delay: .6s; }
+.rollimage_parent_vertical:nth-child(3n+3).visible  .rollimage>* { -webkit-transition-delay: .9s; -moz-transition-delay: .9s; -o-transition-delay: .9s; transition-delay: .9s; }
 
-@-webkit-keyframes key_rollimage_left  { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
-@-moz-keyframes key_rollimage_left     { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
-@-o-keyframes key_rollimage_left       { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
-@keyframes key_rollimage_left          { 0%{ width: 0; }  40%{ width: 100%; }  60%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+.rollimage_parent_vertical:nth-child(3n+1).visible  .rollimage::after { -webkit-animation-delay: .25s; -moz-animation-delay: .25s; -o-animation-delay: .25s; animation-delay: .25s; }
+.rollimage_parent_vertical:nth-child(3n+2).visible  .rollimage::after { -webkit-animation-delay: .50s; -moz-animation-delay: .50s; -o-animation-delay: .50s; animation-delay: .50s; }
+.rollimage_parent_vertical:nth-child(3n+3).visible  .rollimage::after { -webkit-animation-delay: .75s; -moz-animation-delay: .75s; -o-animation-delay: .75s; animation-delay: .75s; }
 
-@-webkit-keyframes key_rollimage_top   { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
-@-moz-keyframes key_rollimage_top      { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
-@-o-keyframes key_rollimage_top        { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
-@keyframes key_rollimage_top           { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@-webkit-keyframes key_rollimage_right { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@-moz-keyframes key_rollimage_right    { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@-o-keyframes key_rollimage_right      { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
+@keyframes key_rollimage_right         { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; right: 0; } 100%{ width: 100%; right: 100%; }}
 
-@-webkit-keyframes key_rollimage_bot   { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
-@-moz-keyframes key_rollimage_bot      { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
-@-o-keyframes key_rollimage_bot        { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
-@keyframes key_rollimage_bot           { 0%{ height: 0; } 40%{ height: 100%; } 60%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@-webkit-keyframes key_rollimage_left  { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@-moz-keyframes key_rollimage_left     { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@-o-keyframes key_rollimage_left       { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+@keyframes key_rollimage_left          { 0%{ width: 0; }  50%{ width: 100%; }  51%{ width: 100%; left: 0; }  100%{ width: 100%; left: 100%; }}
+
+@-webkit-keyframes key_rollimage_top   { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@-moz-keyframes key_rollimage_top      { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@-o-keyframes key_rollimage_top        { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+@keyframes key_rollimage_top           { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; top: 0; }  100%{ height: 0; top: 100%; }}
+
+@-webkit-keyframes key_rollimage_bot   { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@-moz-keyframes key_rollimage_bot      { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@-o-keyframes key_rollimage_bot        { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
+@keyframes key_rollimage_bot           { 0%{ height: 0; } 50%{ height: 100%; } 51%{ height: 100%; bottom: 0; } 100%{ height: 0; bottom: 100%; }}
 

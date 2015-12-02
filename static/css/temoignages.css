@@ -1,3 +1,4 @@
+.rollimage::after { background: #bd4476 }
 
 /* HEADER */
 .temoignages header .logo:before{ background-image: url('../img/temoignages/logoIcon.png'); }

@@ -119,24 +119,26 @@
 					if( strtotime($eventMetas['date'][0]) < time() ) continue;
 				}
 			?>
-				<div class="actu">
-					<div class="date">
-						<div class="content">
-							<?
-							if( $eventMetas['type'][0] == 'Période' ) {
-								list($y, $m, $d) = split('[/.-]', $eventMetas['début'][0] );
-								echo $d.' '. $months[$m] .'<b>/</b><br>';
-								list($y, $m, $d) = split('[/.-]', $eventMetas['fin'][0] );
-								echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
-							} else { 
-								echo $eventMetas['heure'][0] .'h <b>/</b><br>';
-								list($y, $m, $d) = split('[/.-]', $eventMetas['date'][0] );
-								echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
-							} ?>
-							
+				<div class="actu hiddenBlock rollimage_parent_horizontal">
+					<div class="image rollimage">
+						<div class="date">
+							<div class="content">
+								<?
+								if( $eventMetas['type'][0] == 'Période' ) {
+									list($y, $m, $d) = split('[/.-]', $eventMetas['début'][0] );
+									echo $d.' '. $months[$m] .'<b>/</b><br>';
+									list($y, $m, $d) = split('[/.-]', $eventMetas['fin'][0] );
+									echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+								} else { 
+									echo $eventMetas['heure'][0] .'h <b>/</b><br>';
+									list($y, $m, $d) = split('[/.-]', $eventMetas['date'][0] );
+									echo $d.' '. $months[$m] .'<br><b>'.$y.'</b>';
+								} ?>
+								
+							</div>
 						</div>
+						<img src="<?= wp_get_attachment_url( get_post_thumbnail_id( $event->ID ) ) ?>" alt="">
 					</div>
-					<div class="image"><img src="<?= wp_get_attachment_url( get_post_thumbnail_id( $event->ID ) ) ?>" alt=""></div>
 					<div class="text">
 						<div class="content">
 							<div class="title"><?= $event->post_title ?></div>

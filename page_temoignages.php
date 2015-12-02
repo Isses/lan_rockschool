@@ -26,9 +26,11 @@
 	<section class="eleves">
 		<div class="contain">
 			
-			<div class="line">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/lola.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/lola.jpg">
+					</div>
 					<div class="text taille1">
 						<p class="presentation"><span class="space"></span>Je suis très contente des cours de la Rock School de Paris, j’arrive maintenant à chanter et jouer du piano en même temps !</p>
 						<div class="separator"></div>
@@ -41,9 +43,11 @@
 				</div>
 			</div>
 			
-			<div class="line axel">
+			<div class="line axel hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain full">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/axel.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/axel.jpg">
+					</div>
 					<div class="text taille1">
 						<p class="presentation"><span class="space"></span>Axel adore enregistrer avec son professeur les vidéos des chansons qu’il apprend pour la page Facebook de l’école.<br><br>Je trouve que c’est une excellente méthode qui permet de donner un objectif motivant à ses cours. Et ça me rend très fière de le voir progresser si vite !</p>
 						<div class="separator"></div>
@@ -56,9 +60,11 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain full">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/gabin.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/gabin.jpg">
+					</div>
 					<div class="text taille2 left">
 						<p class="presentation"><span class="space"></span>C’est simple, toutes les semaines j’attends mon cours en groupe. C’est convivial, sans pression, on échange avec les autres élèves tout en progressant.<br><br>On met en place les chansons petit à petit et on a vraiment pas le temps de s’ennuyer.<br>D’ailleurs, je prendrais bien une heure de plus !</p>
 						<div class="separator"></div>
@@ -71,9 +77,11 @@
 				</div>
 			</div>
 			
-			<div class="line louiseval">
+			<div class="line louiseval hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/louise_valentina.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/louise_valentina.jpg">
+					</div>
 					<div class="text taille3 louisevalentina">
 						<p class="presentation"><span class="space"></span>C’était trop cool de chanter et jouer <span class="yellow">La Vie En Rose</span> au concert de fin d’année toutes les deux ! Vivement le prochain !</p>
 						<div class="separator"></div>
@@ -86,9 +94,11 @@
 				</div>
 			</div>
 			
-			<div class="line flora">
+			<div class="line flora hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain full">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/flora.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/flora.jpg">
+					</div>
 					<div class="text taille1">
 						<p class="presentation"><span class="space"></span>Ça fait longtemps que je gratte ma guitare classique mais depuis que je prends des cours avec la Rock School, j’ai vraiment progressé et enfin réussi à jouer <span class="yellow">Blackbird</span>, ma chanson préférée des <span class="yellow">Beatles</span>.</p>
 						<div class="separator"></div>
@@ -101,9 +111,11 @@
 				</div>
 			</div>
 			
-			<div class="line">
+			<div class="line hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/alex.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/alex.jpg">
+					</div>
 					<div class="text taille3">
 						<p class="presentation"><span class="space"></span>	J’ai commencé par la guitare il y a 3 ans et la qualité des cours m’a donné envie de toucher à plusieurs instruments.<br><br>Me voilà donc batteur et guitariste à 16 ans, c’est génial !</p>
 						<div class="separator"></div>
@@ -116,9 +128,11 @@
 				</div>
 			</div>
 			
-			<div class="line bertrand">
+			<div class="line bertrand hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain full">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/bertrand.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/bertrand.jpg">
+					</div>
 					<div class="text taille4">
 						<p class="presentation"><span class="space"></span>J’ai commencé par les cours de guitare pour moi et les cours de basse pour mon fils cadet et le goût de la musique a vite envahi la maison.<br><br>Du coup, on joue maintenant en famille dans mon ancien bureau qui s’est transformé en un véritable studio de musique. Le bonheur !</p>
 						<div class="separator"></div>
@@ -131,9 +145,11 @@
 				</div>
 			</div>
 			
-			<div class="line raphaelle">
+			<div class="line raphaelle hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain full">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/raphaelle.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/raphaelle.jpg">
+					</div>
 					<div class="text taille5 ">
 						<p class="presentation"><span class="space"></span>C’est vraiment une équipe formidable qui sait transmettre le goût de la musique aux enfants.<br><br>Raphaëlle adore son professeur et fait de réels progrès, du coup on vient de lui offrir une guitare électrique.</p>
 						<div class="separator"></div>
@@ -146,9 +162,11 @@
 				</div>
 			</div>
 			
-			<div class="line pia">
+			<div class="line pia hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/pia.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/pia.jpg">
+					</div>
 					<div class="text taille3">
 						<p class="presentation"><span class="space"></span>J’étais complètement débutante quand je me suis inscrite et maintenant j’emmène ma guitare et mes partitions partout avec moi pour chanter avec mes amis !</p>
 						<div class="separator"></div>
@@ -161,9 +179,11 @@
 				</div>
 			</div>
 			
-			<div class="line matteo">
+			<div class="line matteo hiddenBlock rollimage_parent_horizontal">
 				<div class="linecontain">
-					<img class="img" src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/matteo.jpg">
+					<div class="rollimage img">	
+						<img src="<?= get_stylesheet_directory_uri() ?>/static/img/temoignages/matteo.jpg">
+					</div>
 					<div class="text taille3">
 						<p class="presentation"><span class="space"></span>Apprendre la guitare avec la Rock School de Paris a vraiment été le début d’ une véritable passion.<br><br>Mon professeur a su me guider petit à petit vers des horizons auxquels je ne serai pas allé de moi-même, comme le jazz manouche que j’adore par exemple !<br><br>Du coup je m’éclate à passer de la guitare classique pour jouer du Django Reinhardt, à la folk pour jouer Road Trippin‘ des Red Hot Chili Peppers pour finir à l’électrique pour du Guns’n’Roses, c’est top !</p>
 						<div class="separator"></div>

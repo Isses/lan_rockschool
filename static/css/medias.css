@@ -1,3 +1,4 @@
+.rollimage::after { background: #faad39 }
 
 /* HEADER */
 .medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }
@@ -100,7 +101,7 @@
 	width: 100%; height: 265px;
 	background-size: cover !important;
 }
-.medias .wall .littleline.fullimg .img {
+.medias .wall .littleline.fullimg .rollimage, .medias .wall .littleline.fullimg .img {
 	height: 100%;
 }
 
