@@ -7,8 +7,10 @@ var nav = $('header');
 var transitionEl = $('section.transition');
 
 var hiddenBlocks = $('.hiddenBlock');
-var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
+
+
 var mediators = $('.mediators .mediator');
+if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
 
 w.scroll(function() {
 	var scrollValue = w.scrollTop();
@@ -42,10 +44,12 @@ w.scroll(function() {
 		}
 	}
 
-	mediators.each( function( index, item ) {
-		var mediatorPos = $(item);
-		$(item).css({ y: (scrollValue-mediatorParentPos)*.1*(index%2==0?1.5:3) });
-	});	
+	if( mediators.length > 0 ) {
+		mediators.each( function( index, item ) {
+			var mediatorPos = $(item);
+			$(item).css({ y: (scrollValue-mediatorParentPos)*.1*(index%2==0?1.5:3) });
+		});	
+	}
 
 });
 

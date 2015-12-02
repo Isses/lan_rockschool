@@ -386,141 +386,21 @@
 
 
 /* EN ACTION  */
-.home section.action {
-	background-color: #fff; 
-	padding-bottom: 0;
-}
-
-.home section.action h2{
-	color: #0c6da0;
-}
-
-.home section.action>.button{
-	color: #FFF;
-	margin: 0 0 52px 0;
-}
-
+.home section.action { background-color: #fff; }
+.home section.action h2{ color: #0c6da0; }
+.home section.action>.button{ color: #FFF; }
 .home section.action .button .primary { background-color: #0c6da0;}
 .home section.action .button .secondary { background-color: #f4b251;}
+.home section.action .arrow{ background-color: #f4b251; }
 
-.home section.action .content {
-	position: relative;
-	width: 806px;
-	height: 325px;
-	margin: 0 auto;
-}
-
-.home section.action .arrow{
-	position: absolute;
-	left: 0; top: 97px;
-	width: 40px; height: 40px;
-	background-color: #f4b251;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-.home section.action .arrow.next {
-	left: auto; right: 0;
-	-webkit-transform: scale(-1, 1);
-	-ms-transform: scale(-1, 1);
-	-o-transform: scale(-1, 1);
-	transform: scale(-1, 1);
-}
-
-.home section.action .arrow .icon{
-	width: 80px; height: 40px;
-	background-image: url('../img/home/arrow.png');
-	background-size: 40px; 
--webkit-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-   -moz-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-     -o-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-        transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
-}
-
-.home section.action .arrow:hover .icon{
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%)
--webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-}
-
-
-.home section.action .slider {
-	position: relative;
-	overflow: hidden;
-	width: 702px; height: 325px;
-	margin: 0 auto;
-}
-
-.home section.action .albums {
-	text-align: left;
-	font-size: 0;
-	width: 10000px;
-}
-
-.home section.action .albums .album{
-	position: relative;
-	display: inline-block;
-	width: 234px; height: 234px;
-	background-color: #ddd;
-}
-
-.home section.action .albums .album img{
-	width: 100%; height: 100%;
-}
-
-.home section.action .albums .album .text{
-	padding: 14px;
-}
-
-.home section.action .albums .album .text .title{
-	font-size: 16px;
-	color: #0c6da0;
-	margin: 0;
-}
-
-.home section.action .albums .album .text .infos{
-	display: inline-block;
-	color: #f4b251;
-	font-family: "Brandon_black";
-	font-size: 13px;
-	margin-right: 10px;
-}
-
-.home section.action .albums .album .text .infos:before{ content: "/ "; }
+.home section.action .albums .album .text .title{ color: #0c6da0; }
+.home section.action .albums .album .text .infos{ color: #f4b251; }
 
 .home section.action .albums .album .hover {
-	width: 100%; height: 100%;
-	position: absolute;
-	top: 0; left: 0;
 	background: rgba(244,178,81,.6);
 	border: 6px solid rgb(244,178,81);
-	opacity: 0;
-	cursor: pointer;
-}
-.home section.action .albums .album .hover span {
-	width: 100%; height: 100%;
-	position: absolute;
-	left: 0; top: 0;
-	background: url('../img/home/mediator_hover.png') center no-repeat;
-	background-size: 20%;
-}
-.home section.action .albums .album:hover .hover {
-	opacity: 1;
 }
 
-@media screen and ( min-width: 1200px) {
-	.home section.action>.button { margin: 0 0 80px 0; }
-	.home section.action .arrow{ width: 60px; height: 60px; top:150px;}
-	.home section.action .arrow .icon{ width: 120px; height: 60px; background-size: 60px; }
-	.home section.action .content { width: 1240px; height: 500px; }
-	.home section.action .slider { width: 1080px; height: 500px;}
-	.home section.action .albums .album { width: 360px; height: 360px;}
-	.home section.action .albums .album .text{ padding: 20px }
-	.home section.action .albums .album .text .title{ font-size: 24px; }
-	.home section.action .albums .album .text .infos{ font-size: 20px; }
+.home section.action .albums .album .hover span {
+	background: url('../img/home/mediator_hover.png') center no-repeat;
 }
