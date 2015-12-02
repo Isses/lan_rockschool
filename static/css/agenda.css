@@ -134,14 +134,15 @@
 }
 
 .agenda section.prochainement .actu .text .content .smallButton{
-	background-color: #b0321d;
-	border-bottom-color: #6e3f2c;
 	color: #FFF;
 	text-align: center;
 	line-height: 26px; height: 30px;
 	font-size: 10px;
 	width: 120px;
 }
+
+.agenda section.prochainement .actu .text .content .button .primary { background-color: #b0321d;}
+.agenda section.prochainement .actu .text .content .button .secondary { background-color: #6e3f2c;}
 
 .agenda section.prochainement .actu .text .content .baseline:before {
 	content: "/ ";
@@ -310,12 +311,19 @@
 .agenda section.plustard .wall .date .content .sub { font-size: 10px; }
 .agenda section.plustard .wall .date .content .year { top: -2px; position: relative; }
 
-
+.agenda section.plustard .wall .button {
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+}
 .agenda section.plustard .wall .white, .agenda section.plustard .wall .white .text { background: #fff }
 .agenda section.plustard .wall .white .date { background: #5b7c47; }
 .agenda section.plustard .wall .white .moreinfos { color: #888; }
 .agenda section.plustard .wall .white .moreinfosbtn { background: #b0321d; }
-.agenda section.plustard .wall .white .button { background: #fff; border-color: #6e3f2c; color: #6e3f2c; }
+.agenda section.plustard .wall .white .button { color: #6e3f2c; }
+.agenda section.plustard .wall .white .button:hover { color: #fff; }
+.agenda section.plustard .wall .white .button .primary { background-color: #fff;}
+.agenda section.plustard .wall .white .button .secondary { background-color: #6e3f2c;}
 
 .agenda section.plustard .wall .red, .agenda section.plustard .wall .red .text { background: #b0321d }
 .agenda section.plustard .wall .red .title { color: #fff; }
@@ -323,7 +331,9 @@
 .agenda section.plustard .wall .red .baseline::before { color: #fff; }
 .agenda section.plustard .wall .red .date { background: #6e3f2c; }
 .agenda section.plustard .wall .red .moreinfosbtn { background: #fff; }
-.agenda section.plustard .wall .red .button { background: #b0321d; border-color: #6e3f2c; color: #fff; }
+.agenda section.plustard .wall .red .button { color:#FFF;}
+.agenda section.plustard .wall .red .button .primary { background-color: #b0321d;}
+.agenda section.plustard .wall .red .button .secondary { background-color: #6e3f2c;}
 
 .agenda section.plustard .wall .brown, .agenda section.plustard .wall .brown .text { background: #6e3f2c; }
 .agenda section.plustard .wall .brown .title { color: #c2cc96 }
@@ -331,7 +341,9 @@
 .agenda section.plustard .wall .brown .baseline::before { color: #fff; }
 .agenda section.plustard .wall .brown .date { background: #c2cc96; }
 .agenda section.plustard .wall .brown .moreinfosbtn { background: #fff; }
-.agenda section.plustard .wall .brown .button { background: #6e3f2c; border-color: #b0321d; color: #fff; }
+.agenda section.plustard .wall .brown .button { color:#FFF;}
+.agenda section.plustard .wall .brown .button .primary { background-color: #6e3f2c;}
+.agenda section.plustard .wall .brown .button .secondary { background-color: #b0321d;}
 
 @media screen and ( min-width: 1100px) {
 

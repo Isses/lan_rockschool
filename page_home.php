@@ -142,9 +142,9 @@
 
 		<a href="/agenda"class="button">tout l’agenda</a>
 		<div class="mediators">
-			<div class="mediator1"></div>
-			<div class="mediator2"></div>
-			<div class="mediator3"></div>
+			<div class="mediator mediator1"></div>
+			<div class="mediator mediator2"></div>
+			<div class="mediator mediator3"></div>
 		</div>
 	</section>
 

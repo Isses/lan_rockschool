@@ -7,6 +7,8 @@ var nav = $('header');
 var transitionEl = $('section.transition');
 
 var hiddenBlocks = $('.hiddenBlock');
+var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
+var mediators = $('.mediators .mediator');
 
 w.scroll(function() {
 	var scrollValue = w.scrollTop();
@@ -31,7 +33,7 @@ w.scroll(function() {
 	if( hiddenBlocks.length > 0 ) {
 		var keepShowing = true;
 		while( keepShowing ) {
-			if( hiddenBlocks.first().offset().top - scrollValue - wh + 100 < 0 ) {
+			if( hiddenBlocks.length > 0 && hiddenBlocks.first().offset().top - scrollValue - wh + 100 < 0 ) {
 				hiddenBlocks.first().addClass('visible');
 				hiddenBlocks.splice(0,1);
 			} else {
@@ -39,6 +41,12 @@ w.scroll(function() {
 			}
 		}
 	}
+
+	mediators.each( function( index, item ) {
+		var mediatorPos = $(item);
+		$(item).css({ y: (scrollValue-mediatorParentPos)*.1*(index%2==0?1.5:3) });
+	});	
+
 });
 
 // Resize window

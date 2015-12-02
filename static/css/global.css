@@ -119,6 +119,12 @@ section .button{
 	overflow: hidden;
 }
 
+section .button:hover{
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
 section .button .primary,
 section .button .secondary {
 	position: absolute;
@@ -277,6 +283,11 @@ section.intro .text h1{
 	-webkit-transition-delay: .2s;
 	-o-transition-delay: .2s;
 	transition-delay: .2s;
+}
+
+.rollimage .img {
+	background-position: center;
+	background-size: cover;
 }
 
 

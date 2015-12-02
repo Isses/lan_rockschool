@@ -87,10 +87,10 @@
 		} ?>
 
 		<div class="mediators">
-			<div class="mediator1"></div>
-			<div class="mediator2"></div>
-			<div class="mediator3"></div>
-			<div class="mediator4"></div>
+			<div class="mediator mediator1"></div>
+			<div class="mediator mediator2"></div>
+			<div class="mediator mediator3"></div>
+			<div class="mediator mediator4"></div>
 		</div>
 	</section>
 
@@ -130,17 +130,20 @@
 					</div>
 				</div>
 				<div class="rollimage">
-					<div class="img" style="background:url('<?= $event['imgSrc']?>') no-repeat center;"></div>
+					<div class="img" style="background-image:url('<?= $event['imgSrc']?>');"></div>
 				</div>
 				<div class="text">
 					<div class="title"><?= $event['title'] ?></div>
 					<div class="baseline"><?= $event['baseline'] ?></div>
 					<div class="moreinfos"><?= $event['description'] ?></div>
-					<? if( $event['lien'] != '' ) { ?>
+					<? /*if( $event['lien'] != '' ) { ?>
 					<div class="moreinfosbtn">
 						<a href='<?= $event['lien'] ?>' <?if( $event['fenetre'] != '' ) echo 'target="_blank"'; ?> class="button btn">+ DÉTAILS</a>
 					</div>
-					<? } ?>
+					<? } */?>
+					<div class="moreinfosbtn">
+						<a href='#' class="button btn">+ DÉTAILS</a>
+					</div>
 					
 				</div>
 			</div>
