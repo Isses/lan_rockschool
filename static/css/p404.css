@@ -1,0 +1,27 @@
+.p404 section {
+	height: 100%;
+	background-color: #DDD;
+	margin-bottom: -179px;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin-top: -100px;
+}
+.alert {
+	font-size: 80px;
+	font-family: "Brandon_black";
+	text-transform: uppercase;
+}
+
+.backHome {
+	font-size: 80px;
+	font-family: "Brandon_black";
+	text-transform: uppercase;
+}
+
+@media screen and ( min-width: 1200px) {
+	.p404 section { margin-bottom: -179px; }
+}

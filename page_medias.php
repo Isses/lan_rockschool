@@ -8,8 +8,8 @@
 	global $rockschool_pageDesc;
 
     $rockschool_pageurl 	= '';
-    $rockschool_pagecss 	= 'EN IMAGES';
-    $rockschool_pagetitle 	= 'PAROLES D\'ÉLÈVES';
+    $rockschool_pagecss 	= 'medias';
+    $rockschool_pagetitle 	= 'EN IMAGES';
     $rockschool_pageDesc 	= 'Souvenirs souvenirs ! Les archives de la Rock School en photos et vidéos';
 
     get_header()

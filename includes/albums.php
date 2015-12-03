@@ -26,11 +26,12 @@ add_action( 'wp_ajax_nopriv_openAlbum', 'getAjaxAlbum' );
 add_action( 'wp_ajax_openAlbum', 'getAjaxAlbum' );
 
 // PARAMETRES URL
-add_filter('query_vars', 'parameter_queryvars' );
 function parameter_queryvars( $qvars ) {
     $qvars[] = 'albumID';
     return $qvars;
 }
+add_filter('query_vars', 'parameter_queryvars' );
+ 
 
 function createProjectMeta() {
     $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;

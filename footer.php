@@ -32,7 +32,11 @@
 			<div class="arrow prev"><div class="icon"></div></div>
 			<div class="arrow next"><div class="icon"></div></div>
 			<div class="share"></div>
-			<div class="slider"></div>
+			<div class="slider">
+				<ul class="albumsList">
+					
+				</ul>
+			</div>
 		</div>
 		
 		<div class="close">FERMER</div>

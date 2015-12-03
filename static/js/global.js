@@ -140,11 +140,12 @@ initBlicMedias();
 // 		POPIN MEDIAS
 // ==================
 
-var albumViewer = $('#albumViewer');
-var avTitle = albumViewer.find('.title');
-var avClose = albumViewer.find('.close');
-var avPrev 	= albumViewer.find('.arrow.prev');
-var avNext 	= albumViewer.find('.arrow.next');
+var albumViewer 	= $('#albumViewer');
+var avTitle 		= albumViewer.find('.title');
+var avClose 		= albumViewer.find('.close');
+var avPrev 			= albumViewer.find('.arrow.prev');
+var avNext 			= albumViewer.find('.arrow.next');
+var albumContainer 	= albumViewer.find('ul.albumsList');
 
 function initAlbumViewer() {
 	avClose.click( closeAlbumViewer );
@@ -162,6 +163,10 @@ function openAlbum(albumID) {
 	$.post(ajaxurl, data, function(response) {
 		console.log( response );
 		avTitle.html( response.title );
+		albumContainer.empty();
+		for( var i in response.medias) {
+			albumContainer.append( "<li><img src='"+response.medias[i]+"' ></li>");
+		}
 		albumViewer.show().css({ opacity: 1 });
 	});
 }
