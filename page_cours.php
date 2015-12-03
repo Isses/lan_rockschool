@@ -2,8 +2,15 @@
     /*
     Template Name: page cours
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'cours';
+    global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'cours';
+    $rockschool_pagetitle 	= 'LES COURS';
+    $rockschool_pageDesc 	= 'Des cours ludiques adaptés pour tout âge, tout niveau, tout style pour progresser seul, en duo, en groupe et en famille !';
 
     get_header()
 ?>

@@ -2,8 +2,15 @@
     /*
     Template Name: page home
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'home';
+    global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'home';
+    $rockschool_pagetitle 	= 'home';
+    $rockschool_pageDesc 	= 'La Rock School de Paris est une jeune école de musique qui enseigne le chant, la guitare, le piano, la basse et la batterie de manière ludique, fun et pédagogique à Paris et en proche banlieue.';
 
     get_header()
 ?>

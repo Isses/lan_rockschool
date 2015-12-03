@@ -97,7 +97,8 @@ var blocMedias = $('section.action');
 var blocMediasPrev = blocMedias.find('.arrow.prev');
 var blocMediasNext = blocMedias.find('.arrow.next');
 var blocMediasSlider = blocMedias.find('.slider .albums');
-var nbAlbums = blocMedias.find('.slider .albums .album').length;
+var albums = blocMedias.find('.slider .albums .album');
+var nbAlbums = albums.length;
 var blocMediasIndex = 0;
 
 blocMediasPrev.hide()
@@ -129,8 +130,57 @@ function initBlicMedias() {
 	blocMediasNext.click( mediasNext );
 }
 
+albums.click( function() {
+	openAlbum( $(this).data('link') );
+})
 
 initBlicMedias();
+
+// ==================
+// 		POPIN MEDIAS
+// ==================
+
+var albumViewer = $('#albumViewer');
+var avTitle = albumViewer.find('.title');
+var avClose = albumViewer.find('.close');
+var avPrev 	= albumViewer.find('.arrow.prev');
+var avNext 	= albumViewer.find('.arrow.next');
+
+function initAlbumViewer() {
+	avClose.click( closeAlbumViewer );
+}
+
+function closeAlbumViewer() {
+	albumViewer.hide().css({ opacity: 0 });
+}
+
+function openAlbum(albumID) {
+	var data = {
+	    'action': 'openAlbum',
+	    'album-ID': albumID
+	};
+	$.post(ajaxurl, data, function(response) {
+		console.log( response );
+		avTitle.html( response.title );
+		albumViewer.show().css({ opacity: 1 });
+	});
+}
+
+initAlbumViewer();
+
+// AUTO OPEN 
+var RS_searchURL = decodeURIComponent(window.location.search );
+// Si il y a des paramètres GET
+if( RS_searchURL != "" ) { 
+	RS_URLVariables = RS_searchURL.substr(1).split('&');
+	for (i = 0; i < RS_URLVariables.length; i++) {
+        RS_param = RS_URLVariables[i].split('=');
+
+        if (RS_param[0] == 'albumID' && !isNaN(RS_param[1])) {
+            openAlbum(RS_param[1]);
+        }
+    }
+}
 
 // ==================
 //        HOME

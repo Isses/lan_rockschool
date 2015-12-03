@@ -2,8 +2,15 @@
     /*
     Template Name: page medias
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'medias';
+    global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'EN IMAGES';
+    $rockschool_pagetitle 	= 'PAROLES D\'ÉLÈVES';
+    $rockschool_pageDesc 	= 'Souvenirs souvenirs ! Les archives de la Rock School en photos et vidéos';
 
     get_header()
 ?>
@@ -60,7 +67,7 @@
                         ?>
 					</div>
 					<div class="moreinfosbtn">
-						<div class="button">VOIR</div>
+						<div class="button" data-link="<?= $post->ID ?>">VOIR</div>
 					</div>
 				</div>
 			</div>
@@ -99,7 +106,7 @@
                         ?>
 					</div>
 					<div class="moreinfosbtn">
-						<div class="button">VOIR</div>
+						<div class="button" data-link="<?= $post->ID ?>" >VOIR</div>
 					</div>
 				</div>
 			</div>

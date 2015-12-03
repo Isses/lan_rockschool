@@ -2,8 +2,15 @@
     /*
     Template Name: page temoignages
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'temoignages';
+    global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'temoignages';
+    $rockschool_pagetitle 	= 'PAROLES D\'ÉLÈVES';
+    $rockschool_pageDesc 	= 'Élèves débutants ou confirmés, ils racontent leurs parcours, leurs progrès et leurs envies musicales.';
 
     get_header()
 ?>

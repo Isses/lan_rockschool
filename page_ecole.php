@@ -2,8 +2,15 @@
     /*
     Template Name: page ecole
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'ecole';
+    global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'ecole';
+    $rockschool_pagetitle 	= 'L\'ÉCOLE';
+    $rockschool_pageDesc 	= 'Une équipe de jeunes musiciens professionnels et passionnés à votre service !';
 
     get_header()
 ?>

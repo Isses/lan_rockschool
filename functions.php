@@ -88,7 +88,7 @@
 	});
 	function r_remove($e)
 	{
-		remove_meta_box( 'postexcerpt'		, $e, 'normal' );
+		//remove_meta_box( 'postexcerpt'		, $e, 'normal' );
 		remove_meta_box( 'icl_div_config'	, $e, 'normal' );
 		remove_meta_box( 'commentstatusdiv'	, $e, 'normal' );
 		remove_post_type_support($e,  'editor');

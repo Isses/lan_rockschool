@@ -2,8 +2,15 @@
     /*
     Template Name: page agenda
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'agenda';
+  	global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'agenda';
+    $rockschool_pagetitle 	= 'L\'AGENDA';
+    $rockschool_pageDesc 	= 'C\'est quand le tournage de mon prochain clip ? Et le prochain concert ? à vos agendas !';
 
     get_header()
 ?>

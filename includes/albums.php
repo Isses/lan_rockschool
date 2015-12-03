@@ -4,6 +4,34 @@ add_action( 'admin_menu', 'createProjectMeta' );
 add_action( 'save_post', 'saveProjectMeta', 10, 2 );
 add_action( 'edit_post', 'saveProjectMeta', 10, 2 );
 
+// AJAX
+function getAjaxAlbum() {    
+    $ID    = intval( $_POST['album-ID'] );
+   
+    $album = get_post( $ID );
+    $metas = get_post_meta( $ID );
+
+    wp_send_json( array( 
+            "ID"    => $ID,
+            "title" => $album->post_title,
+            "type"  => $metas['type'][0],
+            "count" => $metas['mediaCount'][0],
+            "medias" => get_post_meta( $ID, ($metas['type'][0]=="Photos")?"photos":"videos", true )
+        ) 
+    );
+
+    wp_die(); 
+};
+add_action( 'wp_ajax_nopriv_openAlbum', 'getAjaxAlbum' );
+add_action( 'wp_ajax_openAlbum', 'getAjaxAlbum' );
+
+// PARAMETRES URL
+add_filter('query_vars', 'parameter_queryvars' );
+function parameter_queryvars( $qvars ) {
+    $qvars[] = 'albumID';
+    return $qvars;
+}
+
 function createProjectMeta() {
     $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
     $post = get_post($post_id);

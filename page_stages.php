@@ -2,8 +2,15 @@
     /*
     Template Name: page stages
     */
-    global $rockschool_pagename; 
-    $rockschool_pagename = 'stages';
+   	global $rockschool_pageurl;
+	global $rockschool_pagecss;
+	global $rockschool_pagetitle;
+	global $rockschool_pageDesc;
+
+    $rockschool_pageurl 	= '';
+    $rockschool_pagecss 	= 'stages';
+    $rockschool_pagetitle 	= 'LES STAGES';
+    $rockschool_pageDesc 	= 'Des stages pour progresser et s’amuser tout au long de l’année !';
 
     get_header()
 ?>

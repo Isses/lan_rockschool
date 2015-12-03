@@ -24,6 +24,21 @@
 
 	</footer>
 
+	<div id="albumViewer">
+		
+		<div class="content">
+			<div class="title"></div>
+			<div class="count"></div>
+			<div class="arrow prev"><div class="icon"></div></div>
+			<div class="arrow next"><div class="icon"></div></div>
+			<div class="share"></div>
+			<div class="slider"></div>
+		</div>
+		
+		<div class="close">FERMER</div>
+		
+	</div>
+
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery.easing.1.3.min.js"></script>
