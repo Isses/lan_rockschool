@@ -83,16 +83,54 @@ $('section .button').each( function(index, item) {
 	$(item).html('<div class="primary"></div><div class="secondary"></div><div class="buttonText">'+html+'</div>');
 });
 //
-//
-//
 
-//
+// SLIDER HOME
 $('.appearImg').each( function(index, item ) {
 	var el = $(this);
 	el.wrapInner('<div class="wrapper"></div>');
 	el.find('.wrapper').prepend('<div class="bg"></div>')
 })
+// ==================
+// 		BLOC MEDIAS
+// ==================
+var blocMedias = $('section.action');
+var blocMediasPrev = blocMedias.find('.arrow.prev');
+var blocMediasNext = blocMedias.find('.arrow.next');
+var blocMediasSlider = blocMedias.find('.slider .albums');
+var nbAlbums = blocMedias.find('.slider .albums .album').length;
+var blocMediasIndex = 0;
 
+blocMediasPrev.hide()
+
+function mediasPrev() {
+	--blocMediasIndex;
+	if( blocMediasIndex < 0 ) blocMediasIndex = 0;
+	setMediasIndex(blocMediasIndex);
+}
+
+function mediasNext() {
+	++blocMediasIndex;
+	if( blocMediasIndex > (nbAlbums-3) ) blocMediasIndex = (nbAlbums-3);
+	setMediasIndex(blocMediasIndex);	
+}
+
+function setMediasIndex( index ) {
+	if( index == 0 ) blocMediasPrev.hide()
+	else blocMediasPrev.show()
+
+	if( index == nbAlbums-3 ) blocMediasNext.hide()
+	else blocMediasNext.show()
+
+	blocMediasSlider.stop(true).animate({ 'margin-left': -(index*33)+'%' });
+}
+
+function initBlicMedias() {
+	blocMediasPrev.click( mediasPrev );
+	blocMediasNext.click( mediasNext );
+}
+
+
+initBlicMedias();
 
 // ==================
 //        HOME
