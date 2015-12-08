@@ -257,27 +257,40 @@
 
 .agenda section.plustard .wall .littleline .text {
 	width: 100%;
-	padding: 45px;
+	padding: 20px;
 	position: absolute;
 	bottom: 0; left: 0;
+	height: 120px;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
 }
 .agenda section.plustard .wall .littleline .title { font-size: 24px; }
 .agenda section.plustard .wall .littleline .baseline { font-size: 20px; margin-bottom: 16px; }
 .agenda section.plustard .wall .littleline .moreinfos {
 	font-family: "Casper";
 	color: #fff;
-	font-size: 12px;
+	font-size: 10px;
 	text-align: justify;
 	height: 0;
 	opacity: 0;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
 }
 .agenda section.plustard .wall .littleline .moreinfosbtn {
 	width: 100%;
-	padding: 30px 0;
+	padding: 20px 0;
 	position: absolute;
 	bottom: -150px; left: 0;
 	background: #fff;
 	text-align: center;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+	-webkit-transition-delay: .0s;
+	-o-transition-delay: .0s;
+	transition-delay: .0s;
 }
 .agenda section.plustard .wall .littleline .moreinfosbtn .button {
 	width: 190px; height: 46px;
@@ -286,7 +299,9 @@
 
 .agenda section.plustard .wall .littleline:hover .text { height: 340px; }
 .agenda section.plustard .wall .littleline:hover .moreinfos { opacity: 1; height: auto; }
-.agenda section.plustard .wall .littleline:hover .moreinfosbtn { bottom: 0; }
+.agenda section.plustard .wall .littleline:hover .moreinfosbtn { bottom: 0; -webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;}
 
 .agenda section.plustard .wall .date {
 	position: absolute;
@@ -360,6 +375,9 @@
 	.agenda section.plustard .wall .littleline { height: 540px; }
 	.agenda section.plustard .wall .littleline .img { height: 360px }
 
-	.agenda section.plustard .wall .littleline .text { padding: 30px; }
-.agenda section.plustard .wall .littleline:hover .text { height: 460px; }
+	.agenda section.plustard .wall .littleline .moreinfos { font-size: 12px; }
+	.agenda section.plustard .wall .littleline .moreinfosbtn { padding: 30px 0; }
+	
+	.agenda section.plustard .wall .littleline .text { padding: 45px; height: 155px;}
+	.agenda section.plustard .wall .littleline:hover .text { height: 460px; }
 }
