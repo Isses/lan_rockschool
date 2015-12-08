@@ -143,7 +143,65 @@
 	background: #bd4476;
 }
 
+
+
+.temoignages section.eleves .line .presentation,
+.temoignages section.eleves .line .separator,
+.temoignages section.eleves .line .auteur .prenom,
+.temoignages section.eleves .line .auteur .age,
+.temoignages section.eleves .line .auteur .pratiques {
+	opacity: 0; 
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	transform: translateY(50px);
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+}
+
+.temoignages section.eleves .line.visible .presentation,
+.temoignages section.eleves .line.visible .separator,
+.temoignages section.eleves .line.visible .auteur .prenom,
+.temoignages section.eleves .line.visible .auteur .age,
+.temoignages section.eleves .line.visible .auteur .pratiques {
+	opacity: 1; 
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.temoignages section.eleves .line .separator {
+	-webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;
+}
+
+.temoignages section.eleves .line .auteur .prenom {
+	-webkit-transition-delay: .2s;
+	-o-transition-delay: .2s;
+	transition-delay: .2s;
+}
+
+.temoignages section.eleves .line .auteur .age {
+	-webkit-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.temoignages section.eleves .line .auteur .pratiques {
+	-webkit-transition-delay: .4s;
+	-o-transition-delay: .4s;
+	transition-delay: .4s;
+}
+
+
 @media screen and ( max-width: 1200px) {
+	
+	.temoignages section.eleves .line .auteur { font-size: 20px; }
+	.temoignages section.eleves .line .auteur .prenom b { font-size: 20px ;}
+	.temoignages section.eleves .line .auteur .prenom { font-size: 24px ;}
 
 	.temoignages section.eleves .linecontain { width: 100% }
 
@@ -165,12 +223,16 @@
 	.temoignages section.eleves .line .text.taille4 { width: 420px; }
 	.temoignages section.eleves .line.bertrand .text { margin-top: 70px; }
 	.temoignages section.eleves .line:nth-child(even) .text { margin-top: 80px; }
-	.temoignages section.eleves .raphaelle .img { width: 400px; }
+	.temoignages section.eleves .raphaelle .img { width: 520px; }
 	.temoignages section.eleves .raphaelle .text { width: 290px; margin-top: 50px; }
 	.temoignages section.eleves .pia .text { margin-top: 90px; }
 	.temoignages section.eleves .matteo .text { margin-top: 40px !important; }
 }
 @media screen and ( min-width: 1200px) {
+
+	.temoignages section.eleves .line .auteur { font-size: 28px; }
+	.temoignages section.eleves .line .auteur .prenom b { font-size: 28px ;}
+	.temoignages section.eleves .line .auteur .prenom { font-size: 36px ;}
 
 	.temoignages section.eleves .contain { width: 1100px; }
 	.temoignages section.eleves .line .text { margin: 110px 0 0 80px; }
