@@ -40,9 +40,63 @@
 .ecole section.apropos .line .left { float: left; width: 300px;  }
 .ecole section.apropos .line .right { float: right; width: 380px; }
 .ecole section.apropos .line.line1 { margin-bottom: 80px; }
-.ecole section.apropos .line.line1 p { width: 300px; margin-top: 30px }
+.ecole section.apropos .line.line1 p { 	width: 300px; margin-top: 30px; }
 .ecole section.apropos .line.line1 .blue { color: #538fcf; }
-.ecole section.apropos .line.line2 p { width: 460px; margin-top: 30px }
+.ecole section.apropos .line.line2 .circle { 
+	background: url('../img/ecole/apropos_logo.jpg') no-repeat center;
+	background-size: cover;
+	width: 300px; height: 300px;
+	border-radius: 300px; 
+	z-index: 1; 
+	-webkit-transition: all 400ms ease-out;
+	-ms-transition: all 400ms ease-out;
+	-o-transition: all 400ms ease-out;
+	transition: all 400ms ease-out;
+	-webkit-transform: scale(0, 0);
+	-ms-transform: scale(0, 0);
+	-o-transform: scale(0, 0);
+	transform: scale(0, 0);
+}
+
+.ecole section.apropos .line.line2.visible .circle { 
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+.ecole section.apropos .line p { 
+	-webkit-transition: all 400ms ease-out;
+	-ms-transition: all 400ms ease-out;
+	-o-transition: all 400ms ease-out;
+	transition: all 400ms ease-out;
+	opacity: 0;
+}
+
+.ecole section.apropos .line.line1 p { 
+	-webkit-transform: translateX(-50px);
+	-ms-transform: translateX(-50px);
+	-o-transform: translateX(-50px);
+	transform: translateX(-50px);
+}
+
+.ecole section.apropos .line.line2 p { 
+	-webkit-transform: translateX(50px);
+	-ms-transform: translateX(50px);
+	-o-transform: translateX(50px);
+	transform: translateX(50px);
+}
+
+.ecole section.apropos .line.visible p { 
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+
+.ecole section.apropos .line.line2 p { width: 380px; margin-top: 30px }
 .ecole section.apropos .line.line2 a { color: #d04834; text-decoration: underline; font-family: "Brandon_black"; }
 .ecole section.apropos .line b { width: 300px; font-family: "Brandon_bold"; }
 .ecole section.apropos .line a.button {
@@ -61,6 +115,8 @@
 	.ecole section.apropos .line .right { width: 720px; }
 	.ecole section.apropos .line.line1 p { margin-top: 80px }
 	.ecole section.apropos .line.line2 p { margin-top: 80px; width: 460px;  }
+
+	.ecole section.apropos .line.line2 .circle { width: 460px; height: 460px; }
 }
 
 /* TRANSITION2 */

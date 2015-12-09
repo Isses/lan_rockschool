@@ -38,9 +38,7 @@
 			</div>
 		</div>
 		<div class="line line2 hiddenBlock rollimage_parent_horizontal">
-			<div class="rollimage left" style="border-radius: 160px; z-index:1;">
-				<img src="<?= get_stylesheet_directory_uri() ?>/static/img/ecole/apropos_logo.jpg" >
-			</div>
+			<div class="left circle"></div>
 			<p class="right"><span class="letterspace"></span>L’équipe dee professeurs est constituée de jeunes professionnels multi-instrumentistes, pédagogues et bilingues qui transmettent le goût de la musique de la meilleure manière qu'il soit : ludique, adaptée aux envies et goûts de chacun !<br><br>L'école propose essentiellement des cours à domicile (le professeur se déplace chez l'élève), des cours en groupe en studio (plutôt destinés aux étudiants et jeunes travailleurs), ainsi que des stages de perfectionnement pendant les vacances tels que le <a href="/stages">SUMMER CAMP ROCK & SURF</a> à Royan en Charente-Maritime.<br><br><a href="/cours" class="button">En savoir + sur les cours</a></p>
 		</div>
 
