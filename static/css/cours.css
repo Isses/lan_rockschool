@@ -19,30 +19,8 @@
 }
 
 /* PRESENTATION */
-.cours section.presentation {
-	height: 264px;
-	color: #fff;
-	font-size: 34px;
-	font-family: "Brandon_bold";
-	background: url('../img/cours/bg_presentation.jpg') no-repeat center;
-	background-size: cover;
-	padding-top: 80px;
-}
-.cours section.presentation span {
-	width: 80px; height: 6px;
-	position: relative;
-	margin-top: 25px;
-	display: inline-block;
-	background: #0b6ca0;
-}
-.cours section.presentation span::after {
-	content: '';
-	width: 80px; height: 6px;
-	position: absolute;
-	top: 6px; left: 0;
-	display: inline-block;
-	background: #fff;
-}
+.cours section.presentation { background-image: url('../img/cours/bg_presentation.jpg'); }
+.cours section.presentation span { background: #0b6ca0; }
 
 /* TRANSITION */
 .cours section.transition .content {

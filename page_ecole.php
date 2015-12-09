@@ -21,8 +21,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>Une équipe de jeunes musiciens professionnels<br>et passionnés à votre service !<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>Une équipe de jeunes musiciens professionnels</p><p>et passionnés à votre service !</p><span></span>
 	</section>
 
 	<section class="transition">

@@ -24,30 +24,8 @@
 }
 
 /* PRESENTATION */
-.temoignages section.presentation {
-	height: 264px;
-	color: #fff;
-	font-size: 34px;
-	font-family: "Brandon_bold";
-	background: url('../img/temoignages/bg_presentation.jpg') no-repeat center;
-	background-size: cover;
-	padding-top: 70px;
-}
-.temoignages section.presentation span {
-	width: 80px; height: 6px;
-	position: relative;
-	margin-top: 25px;
-	display: inline-block;
-	background: #ddb371;
-}
-.temoignages section.presentation span::after {
-	content: '';
-	width: 80px; height: 6px;
-	position: absolute;
-	top: 6px; left: 0;
-	display: inline-block;
-	background: #fff;
-}
+.temoignages section.presentation { background-image: url('../img/temoignages/bg_presentation.jpg'); }
+.temoignages section.presentation span { background: #ddb371; }
 
 /* TRANSITION */
 .temoignages section.transition .content {

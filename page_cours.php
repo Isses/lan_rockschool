@@ -21,8 +21,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>Des cours ludiques adaptés pour tout âge, tout niveau,<br>tout style pour progresser seul, en duo, en groupe<br>et en famille !<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>Des cours ludiques adaptés pour tout âge, tout niveau,</p><p>tout style pour progresser seul, en duo, en groupe</p><p>et en famille !</p><span></span>
 	</section>
 
 	<section class="transition">

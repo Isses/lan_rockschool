@@ -12,7 +12,8 @@ var hiddenBlocks = $('.hiddenBlock');
 var mediators = $('.mediators .mediator');
 if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
 
-w.scroll(function() {
+w.scroll(function(e) {
+	//window.scrollTo(0, 0);
 	var scrollValue = w.scrollTop();
 	var headSize = (ww > 1200)?65:42;
 	if(scrollValue >= wh - headSize) {	

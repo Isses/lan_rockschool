@@ -21,8 +21,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>C'est quand le tournage de mon prochain clip ?<br>Et le prochain concert ? à vos agendas !<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>C'est quand le tournage de mon prochain clip ?</p><p>Et le prochain concert ? à vos agendas !</p><span></span>
 	</section>
 
 	<section class="transition">

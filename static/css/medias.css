@@ -18,30 +18,8 @@
 }
 
 /* PRESENTATION */
-.medias section.presentation {
-	height: 264px;
-	color: #fff;
-	font-size: 34px;
-	font-family: "Brandon_bold";
-	background: url('../img/medias/bg_presentation.jpg') no-repeat center;
-	background-size: cover;
-	padding-top: 60px;
-}
-.medias section.presentation span {
-	width: 80px; height: 6px;
-	position: relative;
-	margin-top: 25px;
-	display: inline-block;
-	background: #8a66c3;
-}
-.medias section.presentation span::after {
-	content: '';
-	width: 80px; height: 6px;
-	position: absolute;
-	top: 6px; left: 0;
-	display: inline-block;
-	background: #fff;
-}
+.medias section.presentation { background-image: url('../img/medias/bg_presentation.jpg'); }
+.medias section.presentation span { background: #8a66c3; }
 
 /* TRANSITION */
 .medias section.transition .content {

@@ -21,8 +21,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>Des stages pour progresser et s’amuser<br>tout au long de l’année !<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>Des stages pour progresser et s’amuser</p><p>tout au long de l’année !</p><span></span>
 	</section>
 
 	<section class="unis">TRISTAN SKATE</section>

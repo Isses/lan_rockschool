@@ -22,8 +22,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>Élèves débutants ou confirmés,<br>ils racontent leurs parcours, leurs progrès<br>et leurs envies musicales.<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>Élèves débutants ou confirmés,</p><p>ils racontent leurs parcours, leurs progrès</p><p>et leurs envies musicales.</p><span></span>
 	</section>
 
 	<section class="transition">

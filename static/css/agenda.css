@@ -20,30 +20,8 @@
 }
 
 /* PRESENTATION */
-.agenda section.presentation {
-	height: 264px;
-	color: #fff;
-	font-size: 34px;
-	font-family: "Brandon_bold";
-	background: url('../img/agenda/bg_presentation.jpg') no-repeat center;
-	background-size: cover;
-	padding-top: 80px;
-}
-.agenda section.presentation span {
-	width: 80px; height: 6px;
-	position: relative;
-	margin-top: 25px;
-	display: inline-block;
-	background: #602337;
-}
-.agenda section.presentation span::after {
-	content: '';
-	width: 80px; height: 6px;
-	position: absolute;
-	top: 6px; left: 0;
-	display: inline-block;
-	background: #fff;
-}
+.agenda section.presentation { background-image: url('../img/agenda/bg_presentation.jpg'); }
+.agenda section.presentation span { background: #602337; }
 
 /* TRANSITION */
 .agenda section.transition .content {

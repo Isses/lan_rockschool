@@ -21,8 +21,8 @@
 		<div class="scrolldown"></div>
 	</section>
 
-	<section class="presentation">
-		<p>Souvenirs souvenirs !<br>Les archives de la Rock School<br>en photos et vidéos<br><span></span></p>
+	<section class="presentation hiddenBlock">
+		<p>Souvenirs souvenirs !</p><p>Les archives de la Rock School</p><p>en photos et vidéos</p><span></span>
 	</section>
 
 	<section class="transition">
