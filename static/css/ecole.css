@@ -71,6 +71,9 @@
 	-o-transition: all 400ms ease-out;
 	transition: all 400ms ease-out;
 	opacity: 0;
+	-webkit-transition-delay: .2s;
+	-o-transition-delay: .2s;
+	transition-delay: .2s;
 }
 
 .ecole section.apropos .line.line1 p { 

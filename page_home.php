@@ -49,27 +49,31 @@
 		?>
 
 		<div class="content">
-			<div class="pictures appearImg">
+			<div class="pictures appearImg hiddenBlock">
+				<div class="wrapper">
+					<? 
+						foreach ($pictures as $picture) {
+							echo $picture; 
+						} 
+					?>
+				</div>
 				<div class="navigation">
 					<div class="btn prevBtn"><div class="icon"></div></div>
 					<div class="count">1 / <?= $newsCount ?></div>
 					<div class="btn nextBtn"><div class="icon"></div></div>
 				</div>
-				<? 
-					foreach ($pictures as $picture) {
-						echo $picture; 
-					} 
-				?>
 			</div>
 
 			
 
-			<div class="texts">
+			<div class="texts hiddenBlock">
+				<div class="wrapper">
 				<? 
 					foreach ($texts as $text) {
 						echo $text; 
 					}
 				?>
+				</div>
 			</div>	
 		</div>		
 	</section>

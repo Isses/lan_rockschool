@@ -1,4 +1,8 @@
-.rollimage::before { background: #00e7e0 }
+:before .rollimage::before { background: #00e7e0 }
+
+
+.stages .button .primary { background-color: #f985af;}
+.stages .button .secondary { background-color: #00e7e0;}
 
 /* HEADER */
 .stages header .logo:before{ background-image: url('../img/stages/logoIcon.png'); }
@@ -183,7 +187,7 @@
 .stages section.action .albums .album{background-color: #ddd; }
 .stages section.action .albums .album .text .title{	color: #fff; }
 .stages section.action .albums .album .text .baseline{	color: #c10566; }
-.stages section.action .albums .album .hover {
+.stages section.action .albums .album .hover:before  {
 	background: rgba(27,175,169,.6);
 	border: 6px solid rgb(27,175,169);
 }

@@ -1,5 +1,7 @@
 .rollimage::before { background: #f4b251 }
 
+.cours .button .primary { background-color: #0b6ca0;}
+.cours .button .secondary { background-color: #f4b251;}
 
 /* HEADER */
 .cours header .logo:before{ background-image: url('../img/cours/logoIcon.png'); }
@@ -176,7 +178,7 @@
 .cours section.action .arrow{ background-color: #f4b251; }
 .cours section.action .albums .album .text .title{ color: #fff; }
 .cours section.action .albums .album .text .baseline{ color: #f4b251; }
-.cours section.action .albums .album .hover {
+.cours section.action .albums .album .hover:before  {
 	background: rgba(244,178,81,.6);
 	border: 6px solid rgb(244,178,81);
 }

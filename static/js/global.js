@@ -1,16 +1,23 @@
-var w 	= $(window);
-var ww 	= w.width();
-var wh 	= w.height();
-var doc = $(document);
+$("body").hide();
+$(window).on("load", function(){
+	$("body").show();
 
-var nav = $('header');
-var transitionEl = $('section.transition');
+	var w 	= $(window);
+	var ww 	= w.width();
+	var wh 	= w.height();
+	var doc = $(document);
 
-var hiddenBlocks = $('.hiddenBlock');
+	var nav = $('header');
+	var transitionEl = $('section.transition');
+
+	var hiddenBlocks = $('.hiddenBlock');
 
 
-var mediators = $('.mediators .mediator');
-if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
+	var mediators = $('.mediators .mediator');
+	if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
+
+
+	
 
 w.scroll(function(e) {
 	//window.scrollTo(0, 0);
@@ -85,12 +92,6 @@ $('section .button').each( function(index, item) {
 });
 //
 
-// SLIDER HOME
-$('.appearImg').each( function(index, item ) {
-	var el = $(this);
-	el.wrapInner('<div class="wrapper"></div>');
-	el.find('.wrapper').prepend('<div class="bg"></div>')
-})
 // ==================
 // 		BLOC MEDIAS
 // ==================
@@ -192,7 +193,7 @@ if( RS_searchURL != "" ) {
 //        HOME
 // ==================
 var homeNewsNbNews 		= 0;
-var homeNewsCurrent		= -1;
+var homeNewsCurrent		= 0;
 var homeNewPictures 	= $('.home .news .pictures');
 var homeNewTexts 	 	= $('.home .news .texts');
 var homeNewPicturesList = $('.home .news .pictures .picture');
@@ -202,18 +203,10 @@ var homeNewsPrevBtn 	= $('.home .news .pictures .navigation .prevBtn');
 var homeNewsNextBtn 	= $('.home .news .pictures .navigation .nextBtn');
 
 function homeInitNews() {
-	homeNewPicturesList.each( function( index, item){
-		$(item).css({ opacity: 0, x: -100 });
-	});
-
-	homeNewTextsList.each( function( index, item){
-		$(item).css({ opacity: 0, x: -100 });
-	});
-
-	homeNewsCount.html( '0 / '+ homeNewsNbNews );
+	homeNewsCount.html( '1 / '+ homeNewsNbNews );
 	homeNewsPrevBtn.click( homePrevNews );
 	homeNewsNextBtn.click( homeNextNews );
-	homeSetNews(0)
+	//homeSetNews(0)
 }
 
 function  homeNextNews() {
@@ -227,15 +220,15 @@ function homePrevNews() {
 function homeSetNews( index ) {
 	if( homeNewsCurrent == index ) return;
 	if( homeNewsCurrent < index ) {
-		$(homeNewPicturesList[homeNewsCurrent]).stop(true).animate({ opacity: 0, x: 100 }, 1300, 'easeInOutExpo' );
-		$(homeNewTextsList[homeNewsCurrent]).stop(true).delay(100).animate({ opacity: 0, x: 100 }, 1300, 'easeInOutExpo' );
-		$(homeNewPicturesList[index]).stop(true).css({ opacity: 0, x: -100 });
-		$(homeNewTextsList[index]).stop(true).css({ opacity: 0, x: -100 });
+		$(homeNewPicturesList[homeNewsCurrent]).stop(true).animate({ opacity: 0, x: 100 }, 1300, 'easeInOutExpo', function() { $(this).hide() ;} );
+		$(homeNewTextsList[homeNewsCurrent]).stop(true).delay(100).animate({ opacity: 0, x: 100 }, 1300, 'easeInOutExpo', function() { $(this).hide() ;} );
+		$(homeNewPicturesList[index]).stop(true).show().css({ opacity: 0, x: -100 });
+		$(homeNewTextsList[index]).stop(true).show().css({ opacity: 0, x: -100 });
 	} else {
-		$(homeNewPicturesList[homeNewsCurrent]).stop(true).animate({ opacity: 0, x: -100 }, 1300, 'easeInOutExpo' );
-		$(homeNewTextsList[homeNewsCurrent]).stop(true).delay(100).animate({ opacity: 0, x: -100 }, 1300, 'easeInOutExpo' );
-		$(homeNewPicturesList[index]).stop(true).css({ opacity: 0, x: 100 });
-		$(homeNewTextsList[index]).stop(true).css({ opacity: 0, x: 100 });
+		$(homeNewPicturesList[homeNewsCurrent]).stop(true).animate({ opacity: 0, x: -100 }, 1300, 'easeInOutExpo', function() { $(this).hide() ;} );
+		$(homeNewTextsList[homeNewsCurrent]).stop(true).delay(100).animate({ opacity: 0, x: -100 }, 1300, 'easeInOutExpo', function() { $(this).hide() ;} );
+		$(homeNewPicturesList[index]).stop(true).show().css({ opacity: 0, x: 100 });
+		$(homeNewTextsList[index]).stop(true).show().css({ opacity: 0, x: 100 });
 	}
 	homeNewsCurrent = index;
 	$(homeNewPicturesList[homeNewsCurrent]).stop(true).animate({ opacity: 1, x: 0 }, 1300, 'easeInOutExpo' );
@@ -247,3 +240,5 @@ if( $('body.home').length == 1 ) {
 	homeNewsNbNews = homeNewPicturesList.length;
 	homeInitNews();
 }
+
+})
