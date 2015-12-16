@@ -138,19 +138,67 @@ albums.click( function() {
 
 initBlicMedias();
 
+//PAGE MEDIAS
+$('.medias .moreinfosbtn .button').click( function() {
+	openAlbum( $(this).data('link') );
+})
+
 // ==================
 // 		POPIN MEDIAS
 // ==================
 
 var albumViewer 	= $('#albumViewer');
 var avTitle 		= albumViewer.find('.title');
+var avCount 		= albumViewer.find('.count');
 var avClose 		= albumViewer.find('.close');
 var avPrev 			= albumViewer.find('.arrow.prev');
 var avNext 			= albumViewer.find('.arrow.next');
 var albumContainer 	= albumViewer.find('ul.albumsList');
+var avIndex = 0;
+var avMaxIndex = 0;
+var avPictures;
+var avCurrentDatas;
 
 function initAlbumViewer() {
 	avClose.click( closeAlbumViewer );
+	avPrev.click( prevViewer );
+	avNext.click( nextViewer );
+	albumViewer.find('.share.facebook').click(shareFacebookViewer);
+	albumViewer.find('.share.twitter').click(shareTwitterViewer);
+}
+
+function prevViewer() {
+	if( --avIndex < 0 ) avIndex = 0;
+	else setPictureViewer(avIndex,true);
+}
+
+function nextViewer() {
+	if( ++avIndex >= avMaxIndex ) avIndex = avMaxIndex-1;
+	else setPictureViewer(avIndex,true);
+}
+
+function setPictureViewer(avindex, animated) {
+	avCount.find('b').html(avindex+1);
+	avPictures.each( function(index, item) {
+		$(item).stop(true).animate({ scale:(avindex==index)?1:.75, x:((index-avindex)*125)+"%" },(animated?700:0), "easeInOutExpo")
+	});
+}
+
+function shareFacebookViewer() {
+	var link = 'https://www.facebook.com/sharer/sharer.php?u=';
+	link += encodeURIComponent( 'http://rockschool.paris/medias/?albumID='+ avCurrentDatas.ID );
+	window.open( link, 'Share Rockschool', 'width=626,height=436');return false;
+}
+
+function shareTwitterViewer() {
+	var link = 'https://www.twitter.com/share';
+	link += '?text='+encodeURIComponent( avCurrentDatas.title );
+	link += '?url='+encodeURIComponent( 'http://rockschool.paris/medias/?albumID='+ avCurrentDatas.ID );
+	window.open( link, 'Share Rockschool', 'width=626,height=436');return false;
+}
+
+function closeAlbumViewer() {
+	albumViewer.hide().css({ opacity: 0 });
 }
 
 function closeAlbumViewer() {
@@ -163,13 +211,29 @@ function openAlbum(albumID) {
 	    'album-ID': albumID
 	};
 	$.post(ajaxurl, data, function(response) {
-		console.log( response );
+		avCurrentDatas = response;
+		albumViewer.data('albumID', albumID);
+		avCount.find('b').html('1');
+		avCount.find('span').html(response.count);
 		avTitle.html( response.title );
 		albumContainer.empty();
 		for( var i in response.medias) {
-			albumContainer.append( "<li><img src='"+response.medias[i]+"' ></li>");
+			albumContainer.append( "<li style='background-image:url(\""+response.medias[i]+"\");'></li>");
 		}
+		avIndex = 0;
+		avMaxIndex = response.count;
+		avPictures = albumContainer.find('li');
+		setPictureViewer(0);
 		albumViewer.show().css({ opacity: 1 });
+		if( response.count==1) {
+			avPrev.hide();
+			avNext.hide();
+			avCount.hide();
+		} else {
+			avPrev.show();			
+			avNext.show();
+			avCount.show();
+		}
 	});
 }
 

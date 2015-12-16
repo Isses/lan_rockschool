@@ -8,6 +8,15 @@
 	z-index: 20;
 }
 
+/* CONTENT */
+#albumViewer .content {
+	position: absolute;
+	top: 50%; left: 50%;
+	margin-left: -400px; margin-top: -270px;
+	width: 800px; height: 530px;
+}
+
+/* CLOSE */
 #albumViewer .close {
 	position: absolute;
 	font-size: 11px;
@@ -18,17 +27,15 @@
 	cursor: pointer;
 }
 
-#albumViewer .content {
-	position: absolute;
-	top: 50%; left: 50%;
-	margin-left: -400px; margin-top: -320px;
-	width: 800px; height: 640px;
+@media screen and ( min-width: 1200px) {
+	#albumViewer .close { font-size: 14px; right: 30px; top: 30px; }
 }
 
 /* TITLE */
 #albumViewer .title{
 	position: absolute;
-	left: 0px; top: 0;
+	left: 0px; bottom: 100%;
+	margin-bottom: 40px;
 	color: #fff;
 	font-family: "Brandon_black";
 	text-transform: uppercase;
@@ -40,15 +47,40 @@
 	color: #fa9f19;
 }
 
+@media screen and ( min-width: 1200px) {
+	#albumViewer .title{ font-size: 24px }
+}
+
+/* count */
+#albumViewer .count{
+	position: absolute;
+	right: 0px; bottom: 100%;
+	margin-bottom: 40px;
+	color: #fff;
+	font-family: "Brandon_black";
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+#albumViewer .count b{
+	color: #fa9f19;
+}
+
+@media screen and ( min-width: 1200px) {
+	#albumViewer .title{ font-size: 14px }
+}
+
 /* ARROWS */
 #albumViewer .arrow{
 	position: absolute;
+	z-index: 3;
 	right: -20px; top: 50%;
 	margin-top: -45px;
 	width: 40px; height: 40px;
 	border: 1px solid #f4b251;
 	overflow: hidden;
 	cursor: pointer;
+	background-color: rgba(0,0,0,.75);
 }
 
 #albumViewer .arrow.next {
@@ -80,7 +112,97 @@
         transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
 }
 
-@media screen and ( min-width: 1200px) {
-	#albumViewer .title{ font-size: 24px }
-	#albumViewer .close { font-size: 14px; right: 30px; top: 30px; }
+#albumViewer ul {
+	position: absolute;
+	width: 100%; height: 100%;
+	text-align: center;
 }
+
+#albumViewer ul li {
+	position: absolute;	
+	left: 0;
+	height: 100%; width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-color: #111;
+}
+
+
+#albumViewer ul li.active {
+	z-index: 2;	
+}
+
+/* MORE */
+#albumViewer .more {
+	position: absolute;
+	right: 0; top: 100%; 
+	margin-top: 40px;
+	color: #f4b251;
+	font-family: "Brandon_black";
+	text-decoration: underline;
+	font-size: 11px; 
+	line-height: 30px;
+}
+
+@media screen and ( min-width: 1200px) {
+	#albumViewer .more {
+		font-size: 14px; 
+		line-height: 50px;
+	}
+}
+
+/* SHARE */
+#albumViewer .share {
+	position: absolute;
+	width: 30px; height: 30px;
+	cursor: pointer;
+	top: 100%; 
+	margin-top: 40px;
+	overflow: hidden;
+	background-color: #000;
+	border: 1px solid  transparent;
+}
+
+#albumViewer .share:hover {
+	border: 1px solid  #f4b251;
+}
+
+#albumViewer .share.facebook .icon {
+	background-image: url('../img/common/facebook.png');
+}
+
+#albumViewer .share.twitter .icon {
+	background-image: url('../img/common/twitter.png');
+}
+
+#albumViewer .share.twitter {
+	left: 40px;
+}
+
+#albumViewer .share .icon{
+	width: 30px; height: 60px;	
+	background-size: 30px; 
+-webkit-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 1ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+#albumViewer .share:hover .icon{
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%)
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+}
+
+@media screen and ( min-width: 1200px) {
+	#albumViewer .share.twitter { left: 60px;}
+	#albumViewer .share .icon{ 	width: 50px; height: 100px; background-size: 50px; }
+	#albumViewer .share { width: 50px; height: 50px; }
+}
+

@@ -28,10 +28,12 @@
 		
 		<div class="content">
 			<div class="title"></div>
-			<div class="count"></div>
+			<div class="count"><b></b> / <span></span></div>
 			<div class="arrow prev"><div class="icon"></div></div>
 			<div class="arrow next"><div class="icon"></div></div>
-			<div class="share"></div>
+			<div class="share facebook"><div class="icon"></div></div>
+			<div class="share twitter"><div class="icon"></div></div>
+			<a href='https://www.facebook.com/LaRockSchoolDeParis/' target='_blank' class="more">Plus de photos sur notre page facebook</a>
 			<div class="slider">
 				<ul class="albumsList">
 					

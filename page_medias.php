@@ -48,12 +48,15 @@
 
 		<div class="wall">
 		<?
+		$wallCount = -1;
+		$wallColor = array('orange','lightpurple','darkpurple','lightpurple','darkpurple','orange');
 		foreach ($photosList as $album) { 
+			$color = $wallColor[ (++$wallCount)%6 ];
 			$infos = get_post_meta( $album->ID );
             $mediasCount = maybe_unserialize($infos['mediaCount'][0]);
             $urlCouverture = wp_get_attachment_url( get_post_thumbnail_id($album->ID) );
 		?>
-			<div class="littleline white hiddenBlock rollimage_parent_vertical">
+			<div class="littleline hiddenBlock rollimage_parent_vertical <?= $color ?>" >
 				<div class="rollimage">
 					<div class="img" style="background-image: url('<?= $urlCouverture; ?>');" ></div>
 				</div>
@@ -67,7 +70,7 @@
                         ?>
 					</div>
 					<div class="moreinfosbtn">
-						<div class="button" data-link="<?= $post->ID ?>">VOIR</div>
+						<div class="button" data-link="<?= $album->ID ?>">VOIR</div>
 					</div>
 				</div>
 			</div>

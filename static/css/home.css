@@ -257,13 +257,171 @@
 	text-align: justify;
 }
 
+/* PARTITIONS */
 .home section.cours .partition {
-	width: 462px;
+	position: relative;
+	width: 710px; height: 240px;
 	margin: 0 auto;
 	margin-bottom: 20px;
+	-webkit-transform: scale(.65, .65);
+	-ms-transform: scale(.65, .65);
+	-o-transform: scale(.65, .65);
+	transform: scale(.65, .65);
+}
+	
+
+.home section.cours .partition .name {
+	position: absolute;
+	z-index: 2;
+	width: 80px;
+	text-align: right;
+	left: 10px;
+	-webkit-transform: rotate(-12deg) translateX(-50px);
+	-ms-transform: rotate(-12deg) translateX(-50px);
+	-o-transform: rotate(-12deg) translateX(-50px);
+	transform: rotate(-12deg) translateX(-50px);
+	font-family: "Brandon_bold";
+	font-size: 20px;
+	color: #177fb6;
+	-webkit-transition: all .4s ease-out .1s;
+	-o-transition: all .4s ease-out .1s;
+	transition: all .4s ease-out .1s;
+	opacity: 0;
+}
+
+.home section.cours .partition.visible .name {
+	-webkit-transform: rotate(-12deg);
+	-ms-transform: rotate(-12deg);
+	-o-transform: rotate(-12deg);
+	transform: rotate(-12deg);
+	opacity: 1;
+}
+
+.home section.cours .partition .solfegeTitle { top: 60px; }
+.home section.cours .partition .tablatureTitle { top: 170px; 
+	-webkit-transition-delay: .4s;
+	-o-transition-delay: .4s;
+	transition-delay: .4s;
+}
+
+.home section.cours .partition .line {
+	position: absolute;
+	width: 0;
+	background-size: 455px;
+	background-repeat: no-repeat;
+	-webkit-transition: all .4s ease-out .2s;
+	-o-transition: all .4s ease-out .2s;
+	transition: all .4s ease-out .2s;
+	z-index: 1;
+	left: 140px; 
+}
+
+.home section.cours .partition.visible .line {
+	width: 455px;
+}
+
+.home section.cours .partition .line.solfege { 
+	top: 42px; height: 35px;
+	background-image: url('../img/home/solfege_lines.png');
+}
+
+.home section.cours .partition .line.tablature { 
+	top: 146px; height: 64px;
+	background-image: url('../img/home/tablature_lines.png');
+	-webkit-transition-delay: .6s;
+	-o-transition-delay: .6s;
+	transition-delay: .6s;
+}
+
+.home section.cours .partition .plus { 
+	position: absolute;
+	left: 346px; top: 105px;
+	width: 16px; height: 16px;
+	background-image: url('../img/home/partition_plus.png');
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275) .6s; 
+   	-moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275) .6s; 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275) .6s; 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275) .6s; 
+
+	-webkit-transform: scale(0, 0);
+	-ms-transform: scale(0, 0);
+	-o-transform: scale(0, 0);
+	transform: scale(0, 0);
+}
+
+.home section.cours .partition .line .note {
+	position: absolute;
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   	-moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+
+	-webkit-transform: scale(0, 0);
+	-ms-transform: scale(0, 0);
+	-o-transform: scale(0, 0);
+	transform: scale(0, 0);
+}
+.home section.cours .partition.visible .plus ,
+.home section.cours .partition.visible .line .note {
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+.home section.cours .partition .line.solfege .note:nth-child(1) { 
+	top: -11px; left: 59px; width: 55px; height: 55px; background: url('../img/home/solfege_note1.png');
+	-webkit-transition-delay: .8s; -o-transition-delay: .8s; transition-delay: .8s;
+}
+.home section.cours .partition .line.solfege .note:nth-child(2) { 
+	top: -26px; left: 143px; width: 55px; height: 70px; background: url('../img/home/solfege_note2.png');
+	-webkit-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s;
+}
+.home section.cours .partition .line.solfege .note:nth-child(3) { 
+	top: -9px; left: 228px; width: 85px; height: 50px; background: url('../img/home/solfege_note3.png');
+	-webkit-transition-delay: 1.2s; -o-transition-delay: 1.2s; transition-delay: 1.2s;
+}
+.home section.cours .partition .line.solfege .note:nth-child(4) { 
+	top: -5px; left: 319px; width: 65px; height: 70px; background: url('../img/home/solfege_note4.png');
+	-webkit-transition-delay: 1.4s; -o-transition-delay: 1.4s; transition-delay: 1.4s;
+}
+
+.home section.cours .partition .line.tablature .note { width: 12px; height: 21px; }
+.home section.cours .partition .line.tablature .note:nth-child(1) { 
+	top: 28px; left: 57px; background: url('../img/home/tablature_note1.png');
+	-webkit-transition-delay: .8s; -o-transition-delay: .8s; transition-delay: .8s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(2) { 
+	top: 15px; left: 101px; background: url('../img/home/tablature_note2.png');
+	-webkit-transition-delay: .9s; -o-transition-delay: .9s; transition-delay: .9s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(3) { 
+	height: 32px; top: -7px; left: 144px; background: url('../img/home/tablature_note3.png');
+	-webkit-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(4) { 
+	top: 28px; left: 187px; background: url('../img/home/tablature_note1.png');
+	-webkit-transition-delay: 1.1s; -o-transition-delay: 1.1s; transition-delay: 1.1s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(5) { 
+	top: 28px; left: 227px; background: url('../img/home/tablature_note4.png');
+	-webkit-transition-delay: 1.2s; -o-transition-delay: 1.2s; transition-delay: 1.2s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(6) { 
+	width: 41px; height:35px; top: 2px; left: 272px; background: url('../img/home/tablature_note5.png');
+	-webkit-transition-delay: 1.3s; -o-transition-delay: 1.3s; transition-delay: 1.3s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(7) { 
+	height: 32px; top: -7px; left: 330px; background: url('../img/home/tablature_note3.png');
+	-webkit-transition-delay: 1.4s; -o-transition-delay: 1.4s; transition-delay: 1.4s;
+}
+.home section.cours .partition .line.tablature .note:nth-child(8) { 
+	top: 28px; left: 373px; background: url('../img/home/tablature_note4.png');
+	-webkit-transition-delay: 1.5s; -o-transition-delay: 1.5s; transition-delay: 1.5s;
 }
 
 .home section.cours .partition img{
+	z-index: -1;
 	-webkit-transition: all .4s ease-out .8s;
 	-o-transition: all .4s ease-out .8s;
 	transition: all .4s ease-out .8s;
@@ -282,6 +440,17 @@
 	-o-transform: translateY(0);
 	transform: translateY(0);
 }
+
+@media screen and ( min-width: 1200px) {
+	.home section.cours .partition { 
+		-webkit-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1);
+	}
+}
+
+/***/
 
 .home section.cours .text p{
 	margin-bottom: 20px;
@@ -340,7 +509,6 @@
 	.home section.cours { padding-top: 100px; padding-bottom: 52px; }
 	.home section.cours .title { font-size: 80px; margin-bottom: 80px; }
 	.home section.cours .text { width: 710px; }
-	.home section.cours .partition { width: 710px; }
 	.home section.cours .text p { font-size: 14px; line-height: 22px; margin-bottom: 30px;}
 	.home section.cours .text p:first-child { font-size: 18px; line-height: 26px;}
 	.home section.cours .text p.subtitle { font-size: 24px; margin-bottom: 10px;}

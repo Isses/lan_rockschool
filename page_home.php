@@ -91,11 +91,31 @@
 				</div>
 			</div>
 		</div>
-		<div class="partition hiddenBlock"><img src="<?= get_stylesheet_directory_uri() ?>/static/img/home/coursTablature.jpg"  width="100%" alt=""></div>
+		<div class="partition hiddenBlock">
+			<div class="name solfegeTitle">Solfège</div>
+			<div class="name tablatureTitle">Tablatures</div>
+			<div class="line solfege">
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+			</div>
+			<div class="plus"></div>
+			<div class="line tablature">
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+				<div class="note"></div>
+			</div>
+		</div>
 		<div class="paragraphintro hiddenBlock">
 			<div class="text" >
 				<div class="description" >
-					<p>Cette méthode permet d'acquérir des résultats rapidement et donne goût à la musique aux élèves en quelques accords.Bien évidemment, si nos musiciens en herbe souhaitent approfondir leurs connaissances solfègiques, nous serons tout à fait en mesure de leur enseigner.</p>
+					<p>Cette méthode permet d'acquérir des résultats rapidement et donne goût à la musique aux élèves en quelques accords.Bien évidemment, si nos musiciens en herbe souhaitent approfondir leurs connaissances solfègiques, nous serons tout à fait en mesure de leur enseigner.</p>
 					<p class="subtitle">Le Petit Plus</p>
 					<p>Lorsqu'un thème ou une chanson est en place, le professeur réalise une vidéo avec l'élève pour la partager sur notre site sur la page médias et les réseaux sociaux !</p>
 				</div>

@@ -1,5 +1,8 @@
 .rollimage::before { background: #faad39 }
 
+.medias .button .primary { background-color: #faa639;}
+.medias .button .secondary { background-color: #826cd4;}
+
 /* HEADER */
 .medias header .logo:before{ background-image: url('../img/medias/logoIcon.png'); }
 .medias header .logo:after{ background-image: url('../img/medias/logoText.png'); }
@@ -42,29 +45,20 @@
 
 .medias .wall .title {
 	font-family: "Brandon_black";
-	font-size: 28px;
+	font-size: 16px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 	color: #617528;
 }
 .medias .wall .baseline {
 	font-family: 'Brandon_black';
-	font-size: 18px;
+	font-size: 13px;
 	margin-bottom: 20px;
 	color: #aab283;
 }
 .medias .wall .baseline::before {
 	content: "/ ";
 	color: #b0321d;
-}
-.medias .wall .description {
-	font-size: 12px;
-}
-.medias .wall .description a {
-	color: #d04834;
-	text-decoration: underline;
-	font-family: "Brandon_black";
-	text-transform: uppercase;
 }
 
 .medias .wall .littleline { height: 420px; }
@@ -85,12 +79,14 @@
 
 .medias .wall .littleline .text {
 	width: 100%;
-	padding: 45px;
+	padding: 30px;
 	position: absolute;
 	bottom: 0; left: 0;
+	height: 120px;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
 }
-.medias .wall .littleline .title { font-size: 24px; }
-.medias .wall .littleline .baseline { font-size: 20px; margin-bottom: 16px; }
 .medias .wall .littleline .moreinfos {
 	font-family: "Casper";
 	color: #fff;
@@ -98,6 +94,9 @@
 	text-align: justify;
 	height: 0;
 	opacity: 0;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
 }
 .medias .wall .littleline .moreinfosbtn {
 	width: 100%;
@@ -106,6 +105,12 @@
 	bottom: -150px; left: 0;
 	background: #fff;
 	text-align: center;
+	-webkit-transition: all .4s;
+	-o-transition: all .4s;
+	transition: all .4s;
+	-webkit-transition-delay: .0s;
+	-o-transition-delay: .0s;
+	transition-delay: .0s;
 }
 .medias .wall .littleline .moreinfosbtn .button {
 	width: 190px; height: 46px;
@@ -116,29 +121,12 @@
 .medias .wall .littleline:hover .moreinfos { opacity: 1; height: auto; }
 .medias .wall .littleline:hover .moreinfosbtn { bottom: 0; }
 
-.medias .wall .date {
-	position: absolute;
-	width: 60px; height: 60px;
-	background-color: #5b7c47;
-	line-height: 60px;
-	top: 0; left: 0;
-	z-index: 1;
-	text-align: center;
+.medias .wall .littleline:hover .text { height: 340px; }
+.medias .wall .littleline:hover .moreinfos { opacity: 1; height: auto; }
+.medias .wall .littleline:hover .moreinfosbtn { bottom: 0; -webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;
 }
-.medias .wall .date .content{
-	display: inline-block;
-	vertical-align: middle;
-	line-height: normal;
-	font-family: 'Brandon_bold';
-	font-size: 13px;
-	line-height: 15px;
-	color: #FFF;
-	text-align: left;
-}
-.medias .wall .date .content b { color: #c2cc96; font-size: 10px; }
-.medias .wall .date .content .sub { font-size: 10px; }
-.medias .wall .date .content .year { top: -2px; position: relative; }
-
 
 .medias .wall .white, .medias .wall .white .text { background: #fff }
 .medias .wall .white .title { color: #4f368f; }
@@ -169,13 +157,12 @@
 .medias .wall .darkpurple .button { background: #faa639; border-color: #826cd4; color: #fff; }
 
 
-@media screen and ( min-width: 1100px) {
+@media screen and ( min-width: 1200px) {
 	
 	.medias .wall { width: 1080px; }
-	.medias .wall .text { padding: 65px 65px 0 65px; }
-	.medias .wall .description { font-size: 14px; }
-	.medias .wall .baseline { font-size: 24px; }
-	.medias .wall .title { font-size: 36px; }
+	.medias .wall .text { padding: 40px; }
+	.medias .wall .baseline { font-size: 20px; }
+	.medias .wall .title { font-size: 24px; }
 	.medias .wall .littleline { height: 540px; }
 	.medias .wall .littleline .img { height: 360px }
 }
