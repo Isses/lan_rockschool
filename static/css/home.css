@@ -50,10 +50,10 @@
 	top: 0; right: 0px;
 	z-index: 10;
 	
-	-webkit-transform: translateX(40px);
-	-ms-transform: translateX(40px);
-	-o-transform: translateX(40px);
-	transform: translateX(40px);
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
 
 	-webkit-transition: all 400ms ease-out 800ms;
 	-ms-transition: all 400ms ease-out 800ms;
