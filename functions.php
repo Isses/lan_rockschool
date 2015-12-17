@@ -275,4 +275,20 @@ function getEvents() {
 	return $eventsList;
 }
 
+function getLinkButton($atts) {
+	
+    $pull_quote_atts = shortcode_atts( array(
+        'text' => 'En savoir +',
+        'link' => ''
+    ), $atts );
+
+    if( $pull_quote_atts[ 'link' ] == '' ) return '';
+ 
+    return '</div><a href="'.$pull_quote_atts[ 'link' ].'" class="button">'.$pull_quote_atts[ 'text' ].'</a><div>';
+ 
+}
+
+add_shortcode('linkButton', 'getLinkButton');
+
+
 ?>

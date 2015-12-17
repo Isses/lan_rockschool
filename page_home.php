@@ -37,12 +37,11 @@
 				array_push( $pictures, str_replace("%linkThumbnail%", wp_get_attachment_url(get_post_thumbnail_id($post->ID)) , $pictureEl ) );
 
 				// TEXT
-				$textEl = '<div class="text"><div class="date">%date%</div><div class="title">%title%</div><div class="description">%description%</div><a href="%link%" class="button">En savoir +</a></div>';
+				$textEl = '<div class="text"><div class="date">%date%</div><div class="title">%title%</div><div class="description">%description%</div></div>';
 
 				$textEl = str_replace("%date%", get_the_time('d M Y') , $textEl );
 				$textEl = str_replace("%title%", get_the_title() , $textEl );
-				$textEl = str_replace("%description%", wpautop( get_the_content() ) , $textEl );
-				$textEl = str_replace("%link%", get_the_permalink() , $textEl );
+				$textEl = str_replace("%description%", wpautop( do_shortcode( get_the_content() ) ) , $textEl );
 				array_push( $texts, $textEl );
 
 			endforeach; wp_reset_postdata(); 
