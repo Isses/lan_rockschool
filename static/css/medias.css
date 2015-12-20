@@ -156,6 +156,57 @@
 .medias .wall .darkpurple .moreinfosbtn { background: #fff; }
 .medias .wall .darkpurple .button { background: #faa639; border-color: #826cd4; color: #fff; }
 
+.medias .wall .empty {
+	background: url('../img/medias/empty.jpg') bottom no-repeat;
+	background-size: 100%;
+}
+
+
+.medias .wall .smallAlbum.empty {
+	background-position: 0 -230px;
+
+}
+
+.medias .wall .smallAlbum {
+	display: none;
+	opacity: 0;
+	position: relative;
+	height: 100px;
+	width: 33.33333333%;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.medias .wall .smallAlbum:after {
+	box-sizing: border-box;
+	content: "";
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+	border: 4px solid #FFF;
+	opacity: 0; 
+	-webkit-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+.medias .wall .smallAlbum:hover:after {
+	opacity: .5; 
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+.medias .wall .smallAlbum .text {
+    padding: 30px;
+    width: 100%; height: 100%;
+}
 
 @media screen and ( min-width: 1200px) {
 	
@@ -165,6 +216,7 @@
 	.medias .wall .title { font-size: 24px; }
 	.medias .wall .littleline { height: 540px; }
 	.medias .wall .littleline .img { height: 360px }
+	.medias .wall .smallAlbum.empty { background-position: 0 -370px; }
 }
 
 /* ENPHOTOS */

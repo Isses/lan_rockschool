@@ -49,13 +49,25 @@
 		<div class="wall">
 		<?
 		$wallCount = -1;
+		$nbAlbums = count($photosList);
+		$restModulo = 3-($nbAlbums - intval($nbAlbums/3)*3);
+		$extra = 0;
 		$wallColor = array('orange','lightpurple','darkpurple','lightpurple','darkpurple','orange');
+		
 		foreach ($photosList as $album) { 
 			$color = $wallColor[ (++$wallCount)%6 ];
 			$infos = get_post_meta( $album->ID );
             $mediasCount = maybe_unserialize($infos['mediaCount'][0]);
             $urlCouverture = wp_get_attachment_url( get_post_thumbnail_id($album->ID) );
-		?>
+            if( $restModulo == 2 && $wallCount == 5 ) { --$restModulo; ++$extra; ?>
+					<div class="littleline hiddenBlock empty" ></div>
+        		<? } elseif( $restModulo == 1 && $restModulo == $nbAlbums%3 && $wallCount == 5) { --$restModulo; ++$extra;?>
+					<div class="littleline hiddenBlock empty" ></div>
+        		<? }
+            if( $wallCount + $extra <= 5 ){ 
+            	
+
+            	?>
 			<div class="littleline hiddenBlock rollimage_parent_vertical <?= $color ?>" >
 				<div class="rollimage">
 					<div class="img" style="background-image: url('<?= $urlCouverture; ?>');" ></div>
@@ -73,8 +85,31 @@
 						<div class="button" data-link="<?= $album->ID ?>">VOIR</div>
 					</div>
 				</div>
+			</div>	
+            
+
+        <?    } else {  
+
+        	if( $restModulo == 1 && ($wallCount+$extra)%3 == 1 ){ 
+        		--$restModulo; ++$extra;
+        		echo '<div class="smallAlbum empty" ></div>';
+        	}
+        	?>
+
+
+        	<div class="smallAlbum <?= $color ?>" data-link="<?= $album->ID ?>">
+				<div class="text">
+					<div class="title"><?= $album->post_title ?></div>
+					<div class="baseline">
+				 		<?
+                            echo $mediasCount .' ';
+                            if( $mediasCount > 1 ) echo 'photos';
+                            else echo 'photo'; 
+                        ?>
+					</div>
+				</div>
 			</div>
-		<? } ?>
+		<? }} ?>
 		</div>
 		<div>
 			<div class="button morepictures">+ DE PHOTOS</div>

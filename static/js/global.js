@@ -139,8 +139,18 @@ albums.click( function() {
 initBlicMedias();
 
 //PAGE MEDIAS
-$('.medias .moreinfosbtn .button').click( function() {
+$('.medias .moreinfosbtn .button,.medias .wall .smallAlbum' ).click( function() {
 	openAlbum( $(this).data('link') );
+})
+
+$('.medias .morepictures.button').click( function() {
+	$('.medias .wall .smallAlbum').each( function( index, item) {
+		$(this).show().css({opacity: 0, y:30 }).transition({ opacity: 1, y: 0, delay: 100*index }, 700 );
+	})
+
+	$(this).unbind('click');
+	$(this).hide();
+
 })
 
 // ==================
