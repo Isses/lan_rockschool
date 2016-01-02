@@ -1,5 +1,13 @@
 .rollimage::before { background: #faad39 }
 
+
+.medias .pageIntro .primary { background-color: #826cd4; }
+.medias .pageIntro .secondary { background-color: #faa639; }
+.medias .pageIntro .hand { 
+	background-color: #4e3396; 
+	background-image: url('../img/medias/hand_boucle.gif');
+}
+
 .medias .button .primary { background-color: #faa639;}
 .medias .button .secondary { background-color: #826cd4;}
 

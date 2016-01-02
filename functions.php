@@ -208,7 +208,7 @@
                 'title' => 'Type d\'album',
                 'fields' => array
                 (
-                    'type' => array( 'type' => 'radio', 'options' => array( 'Photos', 'Vidéos' ) )
+                    'type' => array( 'type' => 'radio', 'options' => array( 'Photos', 'Videos' ) )
                 )
             ));
     include( dirname(__FILE__) . '/includes/albums.php');

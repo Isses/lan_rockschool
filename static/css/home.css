@@ -3,6 +3,15 @@
 	background: #d04834;
 }
 
+
+
+.home .pageIntro .primary { background-color: #538FCF; }
+.home .pageIntro .secondary { background-color: #d04834; }
+.home .pageIntro .hand { 
+	background-color: #0b6ca0; 
+	background-image: url('../img/home/hand_boucle.gif');
+}
+
 /* HEADER */
 .home header .logo:before{ background-image: url('../img/home/logoIcon.png'); }
 .home header .logo:after{ background-image: url('../img/home/logoText.png'); }

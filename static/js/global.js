@@ -1,7 +1,4 @@
-$("body").hide();
 $(window).on("load", function(){
-	$("body").show();
-
 	var w 	= $(window);
 	var ww 	= w.width();
 	var wh 	= w.height();
@@ -17,7 +14,30 @@ $(window).on("load", function(){
 	if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
 
 
-	
+	setTimeout( function() { window.scrollTo(0,0); $("body").css({opacity:1}); }, 10 );
+	setTimeout( 
+	function() {
+		var intro = $('.pageIntro');
+		var loader = $('.pageLoader');	
+		var primary 	= intro.find('.primary');
+		var secondary 	= intro.find('.secondary');
+		var hand 		= intro.find('.hand');
+
+		primary.transition({ x: 0}, 700, "easeInOutExpo");
+		secondary.transition({ x: 0, delay: 100}, 750, "easeInOutExpo");
+		hand.transition({ x: 0, delay: 200}, 800, "easeInOutExpo", function() {
+			loader.hide();
+			hand.transition({ x: "100%", delay: 400}, 700, "easeInOutExpo");
+			secondary.transition({ x: "100%", delay: 500}, 750, "easeInOutExpo");
+			primary.transition({ x: "100%", delay: 600}, 800, "easeInOutExpo", function() {
+				intro.hide();
+				$('body').addClass('loaded');
+			});
+		});
+
+		
+
+	}, 2000 );
 
 w.scroll(function(e) {
 	//window.scrollTo(0, 0);
@@ -103,7 +123,7 @@ var albums = blocMedias.find('.slider .albums .album');
 var nbAlbums = albums.length;
 var blocMediasIndex = 0;
 
-blocMediasPrev.hide()
+blocMediasPrev.css({ opacity:0 });
 
 function mediasPrev() {
 	--blocMediasIndex;
@@ -118,13 +138,19 @@ function mediasNext() {
 }
 
 function setMediasIndex( index ) {
-	if( index == 0 ) blocMediasPrev.hide()
-	else blocMediasPrev.show()
+	if( index == 0 ) { 
+		blocMediasPrev.stop(true).animate({ opacity:0 }, 300);
+	} else { 
+		blocMediasPrev.stop(true).animate({ opacity:1 }, 300);
+	}
 
-	if( index == nbAlbums-3 ) blocMediasNext.hide()
-	else blocMediasNext.show()
+	if( index == nbAlbums-3 ) {
+		blocMediasNext.stop(true).animate({ opacity:0 }, 300);
+	} else { 
+		blocMediasNext.stop(true).animate({ opacity:1 }, 300);
+	}
 
-	blocMediasSlider.stop(true).animate({ 'margin-left': -(index*33)+'%' });
+	blocMediasSlider.stop(true).animate({ 'margin-left': -(index*33.33333)+'%' });
 }
 
 function initBlicMedias() {
@@ -227,8 +253,14 @@ function openAlbum(albumID) {
 		avCount.find('span').html(response.count);
 		avTitle.html( response.title );
 		albumContainer.empty();
-		for( var i in response.medias) {
-			albumContainer.append( "<li style='background-image:url(\""+response.medias[i]+"\");'></li>");
+		if( response.type == "Photos" ) {
+			for( var i in response.medias) {
+				albumContainer.append( "<li style='background-image:url(\""+response.medias[i]+"\");'></li>");
+			}
+		} else if( response.type == "Videos" ) {
+			for( var i in response.medias) {
+				albumContainer.append( "<li>"+response.medias[i]+"</li>");
+			}
 		}
 		avIndex = 0;
 		avMaxIndex = response.count;

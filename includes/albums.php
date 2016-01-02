@@ -97,9 +97,8 @@ function saveProjectMeta( $post_id, $post ) {
         }
 
         if ( get_post_meta( $post_id, 'photos', true )       != $albumMediasSorted ) update_post_meta( $post_id, 'photos', $albumMediasSorted );
-    }
 
-    if( $_POST['type'] == 'Vidéos' ) {
+    } else if( $_POST['type'] == 'Videos' ) {
         foreach ($_POST['videos'] as $key => $value) {
             ++$mediasCount;
 

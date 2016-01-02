@@ -2,6 +2,12 @@
 	background: #7f9f4b;
 }
 
+.agenda .pageIntro .primary { background-color: #c2cc96; }
+.agenda .pageIntro .secondary { background-color: #b0321d; }
+.agenda .pageIntro .hand { 
+	background-color: #68833d; 
+	background-image: url('../img/agenda/hand_boucle.gif');
+}
 /* HEADER */
 .agenda header .logo:before{ background-image: url('../img/agenda/logoIcon.png'); }
 .agenda header .logo:after{ background-image: url('../img/agenda/logoText.png'); }

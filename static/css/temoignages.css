@@ -1,5 +1,12 @@
 .rollimage::before { background: #bd4476 }
 
+.temoignages .pageIntro .primary { background-color: #bd4476; }
+.temoignages .pageIntro .secondary { background-color: #f6b34a; }
+.temoignages .pageIntro .hand { 
+	background-color: #551f36; 
+	background-image: url('../img/temoignages/hand_boucle.gif');
+}
+
 
 /* HEADER */
 .temoignages header .logo:before{ background-image: url('../img/temoignages/logoIcon.png'); }

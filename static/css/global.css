@@ -3,6 +3,65 @@
 .alignchild { display: table-cell !important; vertical-align: middle; }
 
 /*------*/
+html {
+	background-color: #fff;
+}
+body {
+	overflow: hidden;
+	opacity: 0;
+}
+
+body.loaded {
+	overflow: auto;
+}
+
+.pageLoader {
+	position: absolute;
+	z-index: 100;
+	width: 100%; height: 100%;
+	background: url('../img/common/loader.gif') center no-repeat #FFF;
+	background-size: 300px;
+}
+
+.pageIntro {
+	position: absolute;
+	z-index: 110;
+	width: 100%; height: 100%;
+}
+
+.pageIntro .hand,
+.pageIntro .primary,
+.pageIntro .secondary {
+	position: absolute;
+	width: 100%; height: 100%;
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.pageIntro .primary { background-color: #CCC; }
+.pageIntro .secondary { background-color: #999; }
+.pageIntro .hand { 
+	background-color: #666; 
+	background-image: url('../img/common/hand_boucle.gif');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 600px;
+}
+
+.pageIntro .hand:after,
+.pageIntro .primary:after,
+.pageIntro .secondary:after{
+	content: "";
+	position: absolute;
+	width: 100%; height: 100%;
+	left: 0; top: 0;
+	background: url('../img/common/texture.png');
+	background-size: cover;
+}
+
+/*------*/
 
 section {
 	padding-top: 65px;

@@ -1,5 +1,11 @@
 :before .rollimage::before { background: #00e7e0 }
 
+.stages .pageIntro .primary { background-color: #00e7e0; }
+.stages .pageIntro .secondary { background-color: #f985af; }
+.stages .pageIntro .hand { 
+	background-color: #045555; 
+	background-image: url('../img/stages/hand_boucle.gif');
+}
 
 .stages .button .primary { background-color: #f985af;}
 .stages .button .secondary { background-color: #00e7e0;}

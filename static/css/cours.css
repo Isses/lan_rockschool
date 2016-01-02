@@ -1,5 +1,12 @@
 .rollimage::before { background: #f4b251 }
 
+.cours .pageIntro .primary { background-color: #538FCF; }
+.cours .pageIntro .secondary { background-color: #f4b251; }
+.cours .pageIntro .hand { 
+	background-color: #0b6ca0; 
+	background-image: url('../img/home/hand_boucle.gif');
+}
+
 .cours .button .primary { background-color: #0b6ca0;}
 .cours .button .secondary { background-color: #f4b251;}
 

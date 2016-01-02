@@ -144,7 +144,7 @@
                         ?>
 					</div>
 					<div class="moreinfosbtn">
-						<div class="button" data-link="<?= $post->ID ?>" >VOIR</div>
+						<div class="button" data-link="<?= $album->ID ?>" >VOIR</div>
 					</div>
 				</div>
 			</div>

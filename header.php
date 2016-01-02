@@ -69,6 +69,13 @@
 </head>
 
 <body class="<?= $rockschool_pagecss ?>">
+    
+    <div class="pageIntro">
+        <div class="primary"></div>
+        <div class="secondary"></div>
+        <div class="hand"></div>
+    </div>
+    <div class="pageLoader"></div>
 
     <!-- HEADER -->
     <header>

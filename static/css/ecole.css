@@ -1,5 +1,12 @@
 .rollimage::before { background: #599adf }
 
+.ecole .pageIntro .primary { background-color: #538FCF; }
+.ecole .pageIntro .secondary { background-color: #d04834; }
+.ecole .pageIntro .hand { 
+	background-color: #0b6ca0; 
+	background-image: url('../img/home/hand_boucle.gif');
+}
+
 /* HEADER */
 .ecole header .logo:before{ background-image: url('../img/ecole/logoIcon.png'); }
 .ecole header .logo:after{ background-image: url('../img/ecole/logoText.png'); }

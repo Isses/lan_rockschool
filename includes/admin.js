@@ -40,7 +40,7 @@ jQuery(document).ready( function() {
 			var blocVideo = jQuery('#album-videos').hide();
 			var blocImage = jQuery('#album-photos').hide();
 			if( this.value == 'Photos') blocImage.show();
-			else if( this.value == 'Vidéos') blocVideo.show();
+			else if( this.value == 'Videos') blocVideo.show();
 		});
 
 		if( jQuery('#album-type input[type=radio]:checked').length == 0 ) {
