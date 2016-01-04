@@ -49,6 +49,7 @@
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery.easing.1.3.min.js"></script>
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery.transit.js"></script>
+	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/jquery.vide.min.js"></script>
 	<script type="text/javascript" src="<?= get_stylesheet_directory_uri() ?>/static/js/global.js"></script>
 
 </body>

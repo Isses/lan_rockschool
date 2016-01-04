@@ -29,6 +29,10 @@
 	background-size: 35px;
 }
 
+.home section.intro {
+	z-index: 2;
+}
+
 /* NEWS */
 
 

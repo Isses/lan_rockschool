@@ -8,6 +8,7 @@
 	background-color: #68833d; 
 	background-image: url('../img/agenda/hand_boucle.gif');
 }
+
 /* HEADER */
 .agenda header .logo:before{ background-image: url('../img/agenda/logoIcon.png'); }
 .agenda header .logo:after{ background-image: url('../img/agenda/logoText.png'); }

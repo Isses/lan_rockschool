@@ -1,4 +1,4 @@
-$(window).on("load", function(){
+$(document).ready( function(){
 	var w 	= $(window);
 	var ww 	= w.width();
 	var wh 	= w.height();
@@ -14,7 +14,17 @@ $(window).on("load", function(){
 	if( mediators.length > 0 ) var mediatorParentPos = $('.mediators').parents('section').first().offset().top;
 
 
-	setTimeout( function() { window.scrollTo(0,0); $("body").css({opacity:1}); }, 10 );
+	setTimeout( function() { window.scrollTo(0,0); }, 200 );
+	$("body").css({opacity:1});
+
+	$(window).on('beforeunload', function() {
+		$("body").css({opacity:0});
+	    window.scrollTo(0,0); 
+	});
+
+	$(window).on("load", function(){
+		
+
 	setTimeout( 
 	function() {
 		var intro = $('.pageIntro');
@@ -37,7 +47,8 @@ $(window).on("load", function(){
 
 		
 
-	}, 2000 );
+	}, 1000 );
+	})
 
 w.scroll(function(e) {
 	//window.scrollTo(0, 0);

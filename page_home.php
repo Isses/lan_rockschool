@@ -14,8 +14,9 @@
 
     get_header()
 ?>
-	<section class="intro">
-		<div class="bg"></div>
+	<section class="intro"
+		data-vide-bg="<?= get_stylesheet_directory_uri() ?>/static/video/home" 
+		data-vide-options="posterType: 'jpg', loop: true, autoplay:true, position: 0% 50%">
 		<div class="text">Bienvenue à la <h1>rock school</h1><span class="endIntro">de P<span class="icon"></span>ris</span></div>
 		<div class="scrolldown"></div>
 	</section>
