@@ -42,6 +42,7 @@ $(document).ready( function(){
 			primary.transition({ x: "100%", delay: 600}, 800, "easeInOutExpo", function() {
 				intro.hide();
 				$('body').addClass('loaded');
+				$(".scrolldown").transition({ scale:1 }, 500, "easeOutBack");
 			});
 		});
 
@@ -51,6 +52,9 @@ $(document).ready( function(){
 	})
 
 w.scroll(function(e) {
+	if( !$('body').hasClass('loaded') ){
+		e.originalEvent.preventDefault();
+	}
 	//window.scrollTo(0, 0);
 	var scrollValue = w.scrollTop();
 	var headSize = (ww > 1200)?65:42;
