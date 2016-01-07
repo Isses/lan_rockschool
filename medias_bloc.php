@@ -17,7 +17,7 @@
                         $infos = get_post_meta( $post->ID );
                         $mediasCount = maybe_unserialize($infos['mediaCount'][0]);
                         $urlCouverture = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-                ?>      
+                ?>
                     <li class="album" data-link="<?= $post->ID ?>">
                         <div class="image rollimage">
                             <div class="img" style="background-image: url('<?= $urlCouverture; ?>');" ></div>

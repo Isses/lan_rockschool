@@ -260,6 +260,7 @@ function openAlbum(albumID) {
 	var data = {
 	    'action': 'openAlbum',
 	    'album-ID': albumID
+
 	};
 	$.post(ajaxurl, data, function(response) {
 		avCurrentDatas = response;
@@ -274,7 +275,7 @@ function openAlbum(albumID) {
 			}
 		} else if( response.type == "Videos" ) {
 			for( var i in response.medias) {
-				albumContainer.append( "<li>"+response.medias[i]+"</li>");
+				albumContainer.append( '<li><iframe width="800" height="530" src="https://www.youtube.com/embed/'+response.medias[i]+'" frameborder="0" allowfullscreen=""></iframe></li>');
 			}
 		}
 		avIndex = 0;
@@ -287,7 +288,7 @@ function openAlbum(albumID) {
 			avNext.hide();
 			avCount.hide();
 		} else {
-			avPrev.show();			
+			avPrev.show();
 			avNext.show();
 			avCount.show();
 		}
